@@ -12,7 +12,7 @@ import sys
 
 path = os.path.dirname(os.path.dirname(__file__))
 if path not in sys.path:
-    os.path.abspath(path)
+    sys.path.append(path)
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "shopit.settings")
 
