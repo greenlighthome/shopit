@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    <h1>Index</h1>
+    {% for product in product_list %}
+        {{ product.name }}<br/>
+        {{ product.description }}<br/><br/>
+        {{ product.image }}  <!-- IMPORTANT: product.image.url -->
+    {% endfor %}
+{% endblock %}
+
+

@@ -1,0 +1,12 @@
+body {
+  background-color: #d58512;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+body form input#id_name {
+  width: 200px;
+}
+body form select#id_category {
+  height: 25px;
+  min-width: 80px;
+}
