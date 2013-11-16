@@ -6,7 +6,6 @@ body {
 .navbar-fixed-top {
   width: auto;
   height: auto;
-  background-color: #000000;
 }
 form input#id_name {
   width: 200px;
