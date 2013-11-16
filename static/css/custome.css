@@ -20,6 +20,4 @@ form div#image-holder {
   height: 200px;
   border: solid 1px;
 }
-@media screen and (max-width: 768px) {
-  
-}
+

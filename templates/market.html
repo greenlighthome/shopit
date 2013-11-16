@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    <h1>Index</h1>
+    {% for product in product_list %}
+        <hr>
+        <h2>{{ product.name }}</h2>
+        {{ product.description }}<br>
+        <a href="{{ product.image.url }}"> <img src="{{ product.image.url }}"></a>
+    {% endfor %}
+
+    <hr>
+{% endblock %}
+{% block footer %}
+{% endblock %}
+
+

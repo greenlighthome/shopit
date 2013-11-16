@@ -13,8 +13,9 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', views.index),
-    url(r'^add$', views.add),
+    url(r'^$', views.welcome),
+    url('^add_product$', views.add_product),
+    url('^market/$', views.market),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT, 'show_indexes':True}),
 
 
