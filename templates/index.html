@@ -8,9 +8,12 @@
         <hr>
         {{ product.name }}<br>
         {{ product.description }}<br>
-        {{ product.image.url }}<br><br>
+        <a href="{{ product.image.url }}"> <img src="{{ product.image.url }}"></a>
     {% endfor %}
+
     <hr>
+{% endblock %}
+{% block footer %}
 {% endblock %}
 
 
