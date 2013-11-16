@@ -6,7 +6,7 @@
     <h1>Index</h1>
     {% for product in product_list %}
         <hr>
-        {{ product.name }}<br>
+        <h2>{{ product.name }}</h2>
         {{ product.description }}<br>
         <a href="{{ product.image.url }}"> <img src="{{ product.image.url }}"></a>
     {% endfor %}

@@ -1,17 +1,25 @@
 body {
-  background-color: #d58512;
   padding-left: 30px;
   padding-right: 30px;
+  padding-top: 90px;
 }
-body form input#id_name {
+.navbar-fixed-top {
+  width: auto;
+  height: auto;
+  background-color: #000000;
+}
+form input#id_name {
   width: 200px;
 }
-body form select#id_category {
+form select#id_category {
   height: 25px;
   min-width: 80px;
 }
-body form div#image-holder {
+form div#image-holder {
   width: 200px;
   height: 200px;
   border: solid 1px;
+}
+@media screen and (max-width: 768px) {
+  
 }

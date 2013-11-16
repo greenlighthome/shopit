@@ -24,9 +24,6 @@ class ProductForm(ModelForm):
         fields = ['name', 'description', 'category', 'image']
         widgets = {
             'name': TextInput(attrs={'required': True}),
-            'description': Textarea(attrs={'cols': 60, 'rows': 8,
-                                           'required': True,
-                                           'placeholder': 'Short description of the product'}
-            ),
-            'category': Select(attrs={'required': True})
+            'category': Select(attrs={'required': True}),
+            'description': Textarea(attrs={'cols': 60, 'rows': 8,'required': True})
         }
