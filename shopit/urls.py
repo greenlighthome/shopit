@@ -14,10 +14,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.welcome),
-    url('^add_product$', views.add_product),
-    url('^market/$', views.market),
+    url(r'^add_product$', views.add_product),
+    url(r'^market/$', views.market),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT, 'show_indexes':True}),
-
-
-
 )

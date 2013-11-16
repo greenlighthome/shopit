@@ -13,7 +13,7 @@ def welcome(request):
 
 def market(request):
     product_list = Product.objects.all()
-    return render_to_response('market.html', {'title': 'index', 'product_list': product_list})
+    return render_to_response('market.html', {'title': 'Maket place', 'product_list': product_list})
 
 
 def add_product(request):
@@ -21,7 +21,7 @@ def add_product(request):
     if product_form.is_valid():
         product_form.save()
         return redirect(market)
-    return render_to_response('add_product.html', {'title': 'Add Product', 'product': product_form, 'media_url': MEDIA_URL},
+    return render_to_response('add_product.html', {'title': 'Add a new product', 'product': product_form, 'media_url': MEDIA_URL},
                             context_instance=RequestContext(request))
 
 
