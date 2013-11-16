@@ -10,3 +10,8 @@ body form select#id_category {
   height: 25px;
   min-width: 80px;
 }
+body form div#image-holder {
+  width: 200px;
+  height: 200px;
+  border: solid 1px;
+}

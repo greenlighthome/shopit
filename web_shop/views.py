@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from web_shop.models import ProductForm, Product
-
+import os
 
 def index(request):
     product_list = Product.objects.all()
@@ -14,4 +14,4 @@ def add(request):
         form.save()
         return redirect(index)
     return render_to_response('add_product.html', {'title': 'Add Product', 'product': form},
-                              context_instance=RequestContext(request))
+                            context_instance=RequestContext(request))

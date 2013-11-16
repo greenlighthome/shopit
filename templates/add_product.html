@@ -3,7 +3,7 @@
 
 {% block content %}
     <h1>Product</h1>
-    <form method="post" action="">
+    <form enctype="multipart/form-data" method="post" action="">
         {% csrf_token %}
         <div class="form-group">
             <label for="name">Product name: </label>
