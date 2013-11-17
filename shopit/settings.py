@@ -36,7 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'web_shop'
+    'web_shop',
+    'accounts',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,11 +59,11 @@ WSGI_APPLICATION = 'shopit.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE':'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'sqlite3'),
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'NAME': 'shopit',
+        'USER': 'postgres',
+        'PASSWORD': 'neubaugasse99',
+        'HOST': 'localhost',
         'PORT': '',
     }
 }
@@ -95,6 +96,8 @@ MEDIA_URL = '/media/'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = "587"
-EMAIL_HOST_USER = '<your email address>'
-EMAIL_HOST_PASSWORD = '<your email password>'
+EMAIL_HOST_USER = 'vour-email-here'
+EMAIL_HOST_PASSWORD = 'your-password-here'
 EMAIL_USE_TLS = True
+
+

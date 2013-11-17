@@ -1,5 +1,5 @@
+from django.contrib.auth.views import password_change
 from django.shortcuts import render
-
 
 from django.contrib.auth.models import User
 from django.shortcuts import render_to_response, get_object_or_404
@@ -36,7 +36,7 @@ def signup(request, template_name='registration/signup.html',
             return HttpResponseRedirect(post_signup_redirect)
     else:
         form = signup_form()
-    return render_to_response(template_name, {'form': form,},
+    return render_to_response(template_name, {'form': form},
                               context_instance=RequestContext(request))
 
 
@@ -76,3 +76,4 @@ def signup_complete(request, template_name='registration/signup_complete.html'):
 
 def profile(request):
     return render_to_response('accounts/profile.html', {'title': 'Profile'}),
+
