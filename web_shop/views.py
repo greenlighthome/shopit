@@ -25,5 +25,12 @@ def add_product(request):
                             context_instance=RequestContext(request))
 
 
+def myview(requst):
+    return render_to_response('mypage.html', {'title': 'My Page'})
+
+
+
+
+
 
 # See: http://www.djangobook.com/en/2.0/chapter09.html
