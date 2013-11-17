@@ -11,10 +11,14 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'shopit.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
+    #include('django.contrib.auth.urls'),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.welcome),
     url(r'^add_product$', views.add_product),
     url(r'^market/$', views.market),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT, 'show_indexes':True}),
+    url(r'^accounts/', include('accounts.urls')),
+
+
 )
