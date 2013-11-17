@@ -13,9 +13,9 @@ from django.utils.http import urlquote, base36_to_int
 from django.contrib.sites.models import Site, RequestSite
 
 
-#from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.csrf import csrf_protect
 
-#@csrf_protect
+@csrf_protect
 def signup(request, template_name='registration/signup.html',
            email_template_name='registration/signup_email.html',
            signup_form=UserCreationForm,

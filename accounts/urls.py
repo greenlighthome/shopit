@@ -1,7 +1,8 @@
-from django.conf.urls import patterns, url
-
+from django.conf.urls import patterns, url, include
 
 urlpatterns = patterns('',
+    url(r'^accounts/', include('django.contrib.auth.urls')),
+
     url(r'^login/$', 'django.contrib.auth.views.login',
                     {'template_name': 'accounts/login.html'}),
 
@@ -39,4 +40,5 @@ urlpatterns = patterns('',
                     {'template_name': 'accounts/signup_complete.html'}),
 
     url(r'^profile/$', 'accounts.views.profile'),
+
 )
