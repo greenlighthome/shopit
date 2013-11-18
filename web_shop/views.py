@@ -8,12 +8,12 @@ from shopit.settings import MEDIA_URL
 
 
 def welcome(request):
-    return render_to_response('index.html', {'title': 'Welcome to Shopit'})
+    return render_to_response('web_shop/index.html', {'title': 'Welcome to Shopit'})
 
 
 def market(request):
     product_list = Product.objects.all()
-    return render_to_response('market.html', {'title': 'Maket place', 'product_list': product_list})
+    return render_to_response('web_shop/market.html', {'title': 'Maket place', 'product_list': product_list})
 
 
 def add_product(request):
@@ -21,7 +21,7 @@ def add_product(request):
     if product_form.is_valid():
         product_form.save()
         return redirect(market)
-    return render_to_response('add_product.html', {'title': 'Add a new product', 'product': product_form, 'media_url': MEDIA_URL},
+    return render_to_response('web_shop/add_product.html', {'title': 'Add a new product', 'product': product_form, 'media_url': MEDIA_URL},
                             context_instance=RequestContext(request))
 
 
