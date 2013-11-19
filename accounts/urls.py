@@ -2,11 +2,11 @@ from django.conf.urls import patterns, url
 
 urlpatterns = patterns('',
     url(r'^login/$', 'django.contrib.auth.views.login'),
+
     url(r'^logout/$', 'django.contrib.auth.views.logout'),
     url(r'^profile/$', 'accounts.views.profile'),
 
     url(r'^signup/$', 'accounts.views.signup', {'template_name': 'registration/signup_form.html',
-
                         'email_template_name': 'registration/signup_email.html'}),
 
     url(r'^signup/done/$', 'accounts.views.signup_done',

@@ -12,7 +12,8 @@ class Category(models.Model):
 
 class Product(models.Model):
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=90)
+    title = models.TextField(max_length=100)
+    name = models.CharField(max_length=50)
     description = models.TextField()
     category = models.ForeignKey(Category)
     image = models.ImageField(upload_to='images/products/%Y/%m/%d', blank=True)
@@ -25,5 +26,5 @@ class ProductForm(ModelForm):
         widgets = {
             'name': TextInput(attrs={'required': True}),
             'category': Select(attrs={'required': True}),
-            'description': Textarea(attrs={'cols': 60, 'rows': 8,'required': True})
+            'description': Textarea(attrs={'cols': 60, 'rows': 8, 'required': True})
         }
