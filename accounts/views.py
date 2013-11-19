@@ -1,5 +1,5 @@
-from django.contrib.auth.views import password_change
-from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render_to_response
 
 from django.contrib.auth.models import User
 from django.shortcuts import render_to_response, get_object_or_404
@@ -12,8 +12,13 @@ from django.conf import settings
 from django.utils.http import urlquote, base36_to_int
 from django.contrib.sites.models import Site, RequestSite
 
-
 from django.views.decorators.csrf import csrf_protect
+
+@login_required
+def profile(request):
+    user = request.user
+    return render_to_response('profile/profile.html', {'user': user})
+
 
 @csrf_protect
 def signup(request, template_name='registration/signup.html',
@@ -74,6 +79,4 @@ def signup_complete(request, template_name='registration/signup_complete.html'):
                                                               {'login_url': settings.LOGIN_URL}))
 
 
-def profile(request):
-    return render_to_response('accounts/profile.html', {'title': 'Profile'}),
 

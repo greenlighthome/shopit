@@ -96,8 +96,8 @@ MEDIA_URL = '/media/'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = "587"
-EMAIL_HOST_USER = 'vour-email-here'
-EMAIL_HOST_PASSWORD = 'your-password-here'
+EMAIL_HOST_USER = 'no.reply.shopit@gmail.com'
+EMAIL_HOST_PASSWORD = 'password333'
 EMAIL_USE_TLS = True
 
 
