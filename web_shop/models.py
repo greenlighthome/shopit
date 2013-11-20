@@ -12,7 +12,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     id = models.AutoField(primary_key=True)
-    #title = models.TextField(max_length=100)
+    title = models.TextField(max_length=100)
     name = models.CharField(max_length=50)
     description = models.TextField()
     category = models.ForeignKey(Category)
