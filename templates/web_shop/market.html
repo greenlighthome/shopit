@@ -5,9 +5,10 @@
 {% block content %}
     {% for product in product_list %}
         <hr>
-        <h2>{{ product.name }}</h2>
-        {{ product.description }}<br>
-        <a href="{{ product.image.url }}"> <img src="{{ product.image.url }}"></a>
+        <h3 class="text-info">{{ product.title }}</h3>
+        <span class="price"><b>€ {{ product.price }}</b></span>
+        <h4>{{ product.name }}</h4>
+        <img src="{{ product.image.url }}">
     {% endfor %}
 
     <hr>

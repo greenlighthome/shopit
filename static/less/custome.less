@@ -1,3 +1,5 @@
+@color-price: #AA0000;
+
 body  {
   margin-top: 70px;
   padding-left: 30px;
@@ -7,21 +9,31 @@ body  {
   height: auto;
   }
 
-form {
-    input#id_name {
-      width: 200px;
-    }
-    select#id_category {
-      height: 25px;
-      min-width: 80px;
-    }
-    div#image-holder {
-      width: 200px;
-      height: 200px;
-      border: solid 1px;
-    }
+  .price {
+    font-size: 20px;
+    color: @color-price;
+    font-family: Arial;
+  }
+  .glyphicon-euro {
+    color: @color-price;
+    font-family: Arial;
   }
 
+form {
+
+  select#id_category {
+    height: 25px;
+    min-width: 80px;
+  }
+  div#image-holder {
+    width: 200px;
+    height: 200px;
+    border: solid 1px;
+    }
+  .glyphicon-euro {
+    font-size: 1px;
+    }
+  }
 }
 
 /* Large desktop */

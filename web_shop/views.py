@@ -21,15 +21,9 @@ def add_product(request):
     if product_form.is_valid():
         product_form.save()
         return redirect(market)
-    return render_to_response('web_shop/add_product.html', {'title': 'Add a new product', 'product': product_form, 'media_url': MEDIA_URL},
+    return render_to_response('web_shop/add_product.html', {'title': 'Add a new product',
+                            'product': product_form, 'media_url': MEDIA_URL},
                             context_instance=RequestContext(request))
-
-
-def myview(requst):
-    return render_to_response('mypage.html', {'title': 'My Page'})
-
-
-
 
 
 
