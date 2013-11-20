@@ -1,15 +1,20 @@
-.navbar-fixed-top {
+body {
+  margin-top: 70px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+body .navbar-fixed-top {
   width: auto;
   height: auto;
 }
-form input#id_name {
+body form input#id_name {
   width: 200px;
 }
-form select#id_category {
+body form select#id_category {
   height: 25px;
   min-width: 80px;
 }
-form div#image-holder {
+body form div#image-holder {
   width: 200px;
   height: 200px;
   border: solid 1px;
