@@ -1,7 +1,7 @@
 {% extends 'registration/base.html' %}
 
 {% block content %}
-<div class="container center" xmlns="http://www.w3.org/1999/html">
+<div class="container box-center" xmlns="http://www.w3.org/1999/html">
     <form action="{% url 'django.contrib.auth.views.login' %}" method="post">
         {% csrf_token %}
 
@@ -14,15 +14,15 @@
             <span class="input-lg">{{ form.password }}</span>
         </div>
         <div class="form-group">
-            <tr><input type="submit" class="btn btn-primary form_button" value="Login" />
+            <tr><input type="submit" class="btn btn-primary btn-lg form_button" value="Login" />
             <input type="hidden" name="next" value="{{ next }}" />
         </div>
     </form>
-    <a class="forgot" href="password_change_form.html"><p class="text-primary">forgot your password?</p></a>
+    <a class="forgot text-center" href="password_change_form.html"><p class="text-primary">forgot your password?</p></a>
 </div>
 
 {% if form.errors %}
-    <h4 class="text-danger">Authentication error</h4>
+    <h4 class="text-danger text-center">Authentication error</h4>
 {% endif %}
 
 {% endblock %}

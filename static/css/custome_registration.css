@@ -1,11 +1,16 @@
-.text-primary {
-  text-align: center;
-  margin-top: 15%;
+body {
+  margin: 0;
 }
-.text-danger {
-  text-align: center;
+.text-center-from-top {
+  margin-top: 20%;
 }
-.center {
+.form-section {
+  background-color: #282725;
+  padding-top: 18px;
+  border-radius: 4px;
+  width: 360px;
+}
+.box-center {
   border-radius: 4px;
   width: 400px;
   height: 180px;
@@ -13,15 +18,31 @@
   margin-left: auto;
   margin-right: auto;
   border: solid 1px;
+  background-color: #282725;
 }
 form {
   margin-top: 30px;
-  margin-left: 30px;
 }
 form .form_button {
   margin-left: 90px;
 }
+form label {
+  color: #ffffff;
+}
 a.forgot {
   text-decoration: none;
-  margin-bottom: 200px;
+  position: relative;
+  top: 26px;
+}
+/* Large desktop */
+@media (min-width: 1200px) {
+  
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  
 }

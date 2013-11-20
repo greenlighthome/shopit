@@ -21,7 +21,7 @@ class UserCreationForm(forms.ModelForm):
         model = User
         fields = ('first_name', 'last_name', 'username')
         widgets = {
-            'first_name': TextInput(attrs={'required': True, 'placeholder': ' First_name'}),
+            'first_name': TextInput(attrs={'required': True, 'placeholder': ' First_name', 'autofocus': True}),
             'last_name': TextInput(attrs={'required': True, 'placeholder': ' Last_name'}),
             'username': TextInput(attrs={'required': True, 'placeholder': ' Username'}),
         }

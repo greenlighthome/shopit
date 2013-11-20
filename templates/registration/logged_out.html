@@ -1,12 +1,9 @@
 {% extends "registration/base.html" %}
 {% load i18n %}
 
-{% block breadcrumbs %}
-
-{% endblock %}
-
 {% block content %}
-
-<p>{% trans "Thanks for spending some quality time with the Web site today." %}</p>
-
+    <h5 class="text-info text-center text-center-from-top">{% trans "Thanks for spending some quality time with the Web site today." %}</h5>
+    <div class="container">
+        <a href="/"><button class="btn btn-primary btn-lg btn-block"><span class="">To Shopit!</span></button></a>
+    </div>
 {% endblock %}
