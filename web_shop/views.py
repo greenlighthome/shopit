@@ -1,4 +1,3 @@
-
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from web_shop.models import ProductForm, Product
@@ -13,7 +12,7 @@ def welcome(request):
 
 def market(request):
     product_list = Product.objects.all()
-    return render_to_response('web_shop/market.html', {'title': 'Maket place', 'product_list': product_list})
+    return render_to_response('web_shop/market.html', {'title': 'Market place', 'product_list': product_list})
 
 
 def add_product(request):
