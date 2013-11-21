@@ -11,6 +11,13 @@ body {
   /* Landscape phones and down */
 
 }
+body .search {
+  border-radius: 0;
+  width: 200px;
+}
+body .search-button {
+  border-radius: 0;
+}
 body .column {
   min-height: 500px;
 }
