@@ -1,13 +1,14 @@
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
-from web_shop.models import ProductForm, Product
+from web_shop.models import ProductForm, Product, Category
 from shopit.settings import MEDIA_URL
 
 # See: https://docs.djangoproject.com/en/dev/ref/request-response/
 
 
 def welcome(request):
-    return render_to_response('web_shop/index.html', {'title': 'Welcome to Shopit'})
+    categories = Category.objects.all()
+    return render_to_response('web_shop/index.html', {'title': 'Welcome to Shopit', 'categories': categories})
 
 
 def market(request):
