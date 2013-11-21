@@ -4,3 +4,4 @@
 [x] Fixed web_shop/market.html (products without image)
 [] Added product attributes according to our ER-Model:
     [x] condition
+    [x] quantity
