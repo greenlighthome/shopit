@@ -1,4 +1,4 @@
-#!/Users/MrBrown/Sites/WebDev/shopit/env/bin/python
+#!/Users/Matthias/Sites/dynweb/project/shopit/env/bin/python
 #
 # The Python Imaging Library
 # $Id$

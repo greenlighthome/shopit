@@ -39,7 +39,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/MrBrown/Sites/WebDev/shopit/env"
+VIRTUAL_ENV="/Users/Matthias/Sites/dynweb/project/shopit/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

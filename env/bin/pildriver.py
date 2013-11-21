@@ -1,4 +1,4 @@
-#!/Users/MrBrown/Sites/WebDev/shopit/env/bin/python
+#!/Users/Matthias/Sites/dynweb/project/shopit/env/bin/python
 """PILdriver, an image-processing calculator using PIL.
 
 An instance of class PILDriver is essentially a software stack machine
