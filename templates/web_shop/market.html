@@ -8,9 +8,8 @@
         <h3 class="text-info">{{ product.title }}</h3>
         <span class="price"><b>€ {{ product.price }}</b></span>
         <h4>{{ product.name }}</h4>
-        <a href="{{ product.image.url }}"> <img src="{{ product.image.url }}"  height="200"></a>
+        <a href="{{ product.image.url }}"> <img src="{{ product.image.url }}" width="220"></a>
     {% endfor %}
-
     <hr>
 {% endblock %}
 {% block footer %}

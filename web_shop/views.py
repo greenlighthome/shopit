@@ -26,5 +26,4 @@ def add_product(request):
                             context_instance=RequestContext(request))
 
 
-
 # See: http://www.djangobook.com/en/2.0/chapter09.html

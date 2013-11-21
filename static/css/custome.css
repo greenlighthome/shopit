@@ -3,6 +3,18 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
+body .column {
+  min-height: 500px;
+}
+body .one {
+  background-color: #ff0000;
+}
+body .two {
+  background-color: #008000;
+}
+body .three {
+  background-color: #0000ff;
+}
 body .navbar-fixed-top {
   width: auto;
   height: auto;

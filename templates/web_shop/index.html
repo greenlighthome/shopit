@@ -3,13 +3,11 @@
 {% block title %} {{ title }} {% endblock %}
 
 {% block content %}
+  <div class="column one col-xs-12 col-sm-12 col-md-4"></div>
+  <div class="column two col-xs-12 col-sm-6 col-md-4"></div>
+  <div class="column three col-xs-12 col-sm-6 col-md-4"></div>
 
-    <h1 class="text-center">Welcome</h1>
-
-   {%  for category in categories %}
-        <p>{{ category }}</p>
-   {% endfor %}
-
+  </div>
 {% endblock %}
 
 {% block footer %} {% endblock %}
