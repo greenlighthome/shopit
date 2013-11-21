@@ -1,0 +1,4 @@
+21.11.2013 - Matthias - Changes:
+
+[x] Aligned URL structure to modules: http://127.0.0.1:8000/market/add_product
+[] Added product attributes according to our ER-Model
