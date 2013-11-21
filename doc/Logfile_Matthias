@@ -2,6 +2,6 @@
 
 [x] Aligned URL structure to modules: http://127.0.0.1:8000/market/add_product
 [x] Fixed web_shop/market.html (products without image)
-[] Added product attributes according to our ER-Model:
+[] Added product attributes according to our ER-Model (Diagram):
     [x] condition
     [x] quantity
