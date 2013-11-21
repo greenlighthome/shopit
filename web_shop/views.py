@@ -26,5 +26,8 @@ def add_product(request):
                             context_instance=RequestContext(request))
 
 
+def base(request):
+    categories = Category.objects.all()
+    return render_to_response('web_shop/base.html', {'categories': categories})
 
 # See: http://www.djangobook.com/en/2.0/chapter09.html

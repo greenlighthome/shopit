@@ -6,8 +6,7 @@ from django.forms.widgets import Textarea, TextInput, Select, NumberInput
 class Category(models.Model):
     name = models.CharField(max_length=30)
 
-    def __unicode__(self):
-        return self.name
+
 
 class Condition(models.Model):
     condition = models.CharField(max_length=30)

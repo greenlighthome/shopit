@@ -2,45 +2,61 @@ body {
   margin-top: 70px;
   padding-left: 30px;
   padding-right: 30px;
+  /* Large desktop */
+
+  /* Portrait tablet to landscape and desktop */
+
+  /* Landscape phone to portrait tablet */
+
+  /* Landscape phones and down */
+
 }
-body .navbar-fixed-top {
+body .column {
+  min-height: 500px;
+}
+body .one {
+  background-color: #ff0000;
+}
+body .two {
+  background-color: #008000;
+}
+body .three {
+  background-color: #0000ff;
+}
+body .three .navbar-fixed-top {
   width: auto;
   height: auto;
 }
-body .price {
+body .three .price {
   font-size: 20px;
   color: #aa0000;
   font-family: Arial;
 }
-body .glyphicon-euro {
+body .three .glyphicon-euro {
   color: #aa0000;
   font-family: Arial;
 }
-body form select#id_category {
+body .three form select#id_category {
   height: 25px;
   min-width: 80px;
 }
-body form div#image-holder {
+body .three form div#image-holder {
   width: 200px;
   height: 200px;
   border: solid 1px;
 }
-body form .glyphicon-euro {
+body .three form .glyphicon-euro {
   font-size: 1px;
 }
-/* Large desktop */
 @media (min-width: 1200px) {
   
 }
-/* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
   
 }
-/* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   
 }
-/* Landscape phones and down */
 @media (max-width: 480px) {
   
 }
