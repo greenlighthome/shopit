@@ -2,71 +2,80 @@ body {
   margin-top: 70px;
   padding-left: 30px;
   padding-right: 30px;
-  /* Large desktop */
-
-  /* Portrait tablet to landscape and desktop */
-
-  /* Landscape phone to portrait tablet */
-
-  /* Landscape phones and down */
-
 }
-body #description {
-  max-width: 400px;
+.title {
+  text-decoration: none;
 }
-body .search {
-  border-radius: 0;
-  width: 200px;
-}
-body .search-button {
-  border-radius: 0;
-}
-body .column {
-  min-height: 500px;
-}
-body .one {
-  background-color: #ff0000;
-}
-body .two {
-  background-color: #008000;
-}
-body .three {
-  background-color: #0000ff;
-}
-body .three .navbar-fixed-top {
-  width: auto;
-  height: auto;
-}
-body .three .price {
+.price {
   font-size: 20px;
   color: #aa0000;
   font-family: Arial;
 }
-body .three .glyphicon-euro {
+#description {
+  max-width: 400px;
+}
+.search {
+  border-radius: 0;
+  width: 200px;
+}
+.search-button {
+  border-radius: 0;
+}
+.column {
+  min-height: 500px;
+}
+.one {
+  background-color: #ff0000;
+}
+.two {
+  background-color: #008000;
+}
+.three {
+  background-color: #0000ff;
+}
+.navbar-fixed-top {
+  width: auto;
+  height: auto;
+}
+.glyphicon-euro {
   color: #aa0000;
   font-family: Arial;
 }
-body .three form select#id_category {
+form select#id_category {
   height: 25px;
   min-width: 80px;
 }
-body .three form div#image-holder {
+form div#image-holder {
   width: 200px;
   height: 200px;
   border: solid 1px;
 }
-body .three form .glyphicon-euro {
+form .glyphicon-euro {
   font-size: 1px;
 }
+/* Large desktop */
 @media (min-width: 1200px) {
   
 }
+/* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
   
 }
+/* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  
+  body {
+    font-size: 1.2em;
+  }
+  nav {
+    font-size: 1.4em;
+  }
 }
+/* Landscape phones and down */
 @media (max-width: 480px) {
-  
+  body {
+    font-size: 1.2em;
+  }
+  nav {
+    font-size: 1.6em;
+  }
 }

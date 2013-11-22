@@ -4,9 +4,12 @@
 {% block content %}
      <div class="container">
         <h3 class="text-info">{{ product.name }}</h3><br>
-        <img src="{{ product.image.url }}" width="400"><br><br><br>
+        <img class="img-responsive" src="{{ product.image.url }}" width="300"><br><br><br>
         <div class="btn-group">
             <button class="btn btn-sm btn-danger" value="">buy Article</button>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-sm btn-info" value="">Mode Details</button>
         </div>
          <br><br>
         <div id="description" class="row">
