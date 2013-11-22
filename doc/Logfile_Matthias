@@ -12,4 +12,4 @@ Matthias - Changes
 23.11.2013:
 
 [x] Fixed bug: details page (templates/web_shop/details.html) without product image
-[x] Fixed bug: save logged in - User's id for saler field in product table
+[x] Fixed bug: save logged in - User's id for saler field in product table (web_shop/views.py -> link)
