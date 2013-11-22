@@ -3,19 +3,18 @@
 {% block title %} {{ title }} {% endblock %}
 
 {% block content %}
-    {% for product in product_list %}
+    {% for product in object_list %}
         <hr>
-        <h3 class="text-info">{{ product.title }}</h3>
+        <a href="{{ product.get_absolute_url }}"> <h3 class="text-info">{{ product.title }}</h3></a>
         <span class="price"><b>€ {{ product.price }}</b></span>
         <h4>{{ product.name }}</h4>
         {% if product.image %}
-            <a href="{{ product.image.url }}"> <img src="{{ product.image.url }}"  height="200"></a>
+            <a href="{{ product.get_absolute_url }}"> <img src="{{ product.image.url }}"  height="200"></a>
         {% endif %}
     {% endfor %}
-
     <hr>
 {% endblock %}
-{% block footer %}
-{% endblock %}
+
+{% block footer %} {% endblock %}
 
 

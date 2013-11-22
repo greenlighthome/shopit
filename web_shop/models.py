@@ -1,3 +1,4 @@
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.forms import ModelForm
 from django.forms.widgets import Textarea, TextInput, Select, NumberInput
@@ -6,6 +7,8 @@ from django.forms.widgets import Textarea, TextInput, Select, NumberInput
 class Category(models.Model):
     name = models.CharField(max_length=30)
 
+    def __unicode__(self):
+        return self.name
 
 
 class Condition(models.Model):
@@ -13,6 +16,7 @@ class Condition(models.Model):
 
     def __unicode__(self):
         return self.condition
+
 
 class Product(models.Model):
     id = models.AutoField(primary_key=True)
@@ -24,6 +28,12 @@ class Product(models.Model):
     description = models.TextField()
     category = models.ForeignKey(Category)
     image = models.ImageField(upload_to='images/products/%Y/%m/%d', blank=True)
+
+    def __unicode__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('detail-view', kwargs={'pk': self.id})
 
 
 class ProductForm(ModelForm):
