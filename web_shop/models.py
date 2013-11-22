@@ -4,7 +4,6 @@ from django.forms import ModelForm
 from django.forms.widgets import Textarea, TextInput, Select, NumberInput
 from django.contrib.auth.models import User
 
-
 class Category(models.Model):
     name = models.CharField(max_length=30)
 

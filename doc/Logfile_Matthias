@@ -1,8 +1,15 @@
-21.11.2013 - Matthias - Changes:
+Matthias - Changes
+
+21.11.2013:
 
 [x] Aligned URL structure to modules: http://127.0.0.1:8000/market/add_product
 [x] Fixed web_shop/market.html (products without image)
-[] Added product attributes according to our ER-Model (Diagram):
+[x] Added product attributes according to our ER-Model (Diagram):
     [x] condition
     [x] quantity
 [x] Created data.sql to dump database with initial data
+
+23.11.2013:
+
+[x] Fixed bug: details page (templates/web_shop/details.html) without product image
+[x] Fixed bug: save logged in - User's id for saler field in product table

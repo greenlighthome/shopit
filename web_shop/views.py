@@ -3,6 +3,9 @@ from django.template import RequestContext
 from django.views.generic import ListView, DetailView
 from web_shop.models import ProductForm, Product, Category
 from shopit.settings import MEDIA_URL
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+
 
 
 class ListProductView(ListView):
@@ -24,11 +27,13 @@ def welcome(request):
     categories = Category.objects.all()
     return render_to_response('web_shop/index.html', {'title': 'Welcome to Shopit', 'categories': categories})
 
-
+@login_required
 def add_product(request):
     product_form = ProductForm(request.POST, request.FILES)
     if product_form.is_valid():
-        product_form.save()
+        link = product_form.save(commit=False)
+        link.saler = request.user
+        link.save()
         return redirect('product-list')
     return render_to_response('web_shop/add_product.html', {'title': 'Add a new product',
                             'product': product_form, 'media_url': MEDIA_URL},
