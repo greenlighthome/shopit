@@ -3,16 +3,23 @@
 {% block title %} {{ title }} {% endblock %}
 
 {% block content %}
-    {% for product in object_list %}
+<div class="container">
+        {% for product in object_list %}
         <hr>
-        <a class="title" href="{{ product.get_absolute_url }}"> <h3 class="text-info modal-title">{{ product.title }}</h3></a>
-        <b><span class="price">€ {{ product.price }}</span></b>
-        <h4>{{ product.name }}</h4>
+        <div class="container">
+        <a class="no-style" href="{{ product.get_absolute_url }}"> <h3 class="text-info modal-title">{{ product.title }}</h3></a>
+        <span class="price">€ <b>{{ product.price }}</b></span>
+        <span class=""><h4>{{ product.name }}</h4></span>
         {% if product.image %}
             <a href="{{ product.get_absolute_url }}"> <img class="img-thumbnail" src="{{ product.image.url }}" width="200"></a>
         {% endif %}
+        <a class="no-style" href="{{ product.get_absolute_url }}"> <h5>Details</h5></a>
+        </div>
     {% endfor %}
+
     <hr>
+    </div>
+
 {% endblock %}
 
 {% block footer %} {% endblock %}

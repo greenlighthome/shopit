@@ -37,7 +37,5 @@ def add_product(request):
 
 
 
-#def market(request):
-#    categories = Category.objects.all()
-#    product_list = Product.objects.all()
-#    return render_to_response('web_shop/market.html', {'title': 'Market place', 'product_list': product_list, 'categories': categories})
+
+

@@ -4,13 +4,16 @@
 @color-green: green;
 
 body  {
+  .no-style {
+    text-decoration: none;
+  }
   margin-top: 70px;
   padding-left: 30px;
   padding-right: 30px;
 }
 
-  .title {
-    text-decoration: none;
+  .img-thumbnail {
+    min-width: 120px;
   }
 
   .price {
@@ -58,22 +61,20 @@ body  {
     font-family: Arial;
   }
 
-
-form {
-  select#id_category {
-    height: 25px;
-    min-width: 80px;
+  form {
+    select#id_category {
+      height: 25px;
+      min-width: 80px;
+    }
+    div#image-holder {
+      width: 200px;
+      height: 200px;
+      border: solid 1px;
+    }
+    .glyphicon-euro {
+      font-size: 1px;
+    }
   }
-  div#image-holder {
-    width: 200px;
-    height: 200px;
-    border: solid 1px;
-   }
-  .glyphicon-euro {
-    font-size: 1px;
-   }
-}
-
 
 
 /* Large desktop */
@@ -100,6 +101,6 @@ form {
     font-size: 1.2em;
   }
   nav {
-   font-size: 1.6em;
+   font-size: 1.3em;
    }
 }

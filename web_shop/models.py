@@ -2,6 +2,7 @@ from django.core.urlresolvers import reverse
 from django.db import models
 from django.forms import ModelForm
 from django.forms.widgets import Textarea, TextInput, Select, NumberInput
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -28,6 +29,7 @@ class Product(models.Model):
     description = models.TextField()
     category = models.ForeignKey(Category)
     image = models.ImageField(upload_to='images/products/%Y/%m/%d', blank=True)
+    saler = models.ForeignKey(User)
 
     def __unicode__(self):
         return self.name

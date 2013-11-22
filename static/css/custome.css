@@ -3,8 +3,11 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
-.title {
+body .no-style {
   text-decoration: none;
+}
+.img-thumbnail {
+  min-width: 120px;
 }
 .price {
   font-size: 20px;
@@ -76,6 +79,6 @@ form .glyphicon-euro {
     font-size: 1.2em;
   }
   nav {
-    font-size: 1.6em;
+    font-size: 1.3em;
   }
 }
