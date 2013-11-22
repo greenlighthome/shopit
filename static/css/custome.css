@@ -11,6 +11,9 @@ body {
   /* Landscape phones and down */
 
 }
+body #description {
+  max-width: 400px;
+}
 body .search {
   border-radius: 0;
   width: 200px;

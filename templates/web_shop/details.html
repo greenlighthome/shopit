@@ -2,7 +2,13 @@
 
 
 {% block content %}
+     <div class="container">
+        <h3 class="text-info">{{ product.name }}</h3><br>
+        <img src="{{ product.image.url }}" width="400"><br><br><br>
+        <div id="description" class="row">
+            <p class="text-muted">{{ product.description }}</p>
+        </div>
+    </div>
 
-   <img src="{{ product.image.url }}">
 
 {% endblock %}
