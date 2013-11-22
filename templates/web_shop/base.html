@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" media="screen"/>
     <link rel="stylesheet" href="{% static 'css/custome.css' %}" type="text/css" media="screen"/>
+
 
     <title>{% block title %} {{ title }} {% endblock %}</title>
 </head>
@@ -29,13 +29,14 @@
   <div class="collapse navbar-collapse" id="navbar-collapse">
 
     <ul id="navi" class="nav navbar-nav">
-      <li class=""><a href="/market/">Market Place</a></li>
+        <li class=""><a href="/market/">Market Place</a></li>
+        <li class=""><a href="/accounts/profile/">Account / Profile</a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
         <ul class="dropdown-menu">
-         {% for category in categories %}
-           <li><a href="#"> {{ category.name }} </a></li>
-        {% endfor %}
+            {% for category in categories %}
+                <li><a href="#">{{ category.name }}</a></li>
+            {% endfor %}
          </ul>
       </li>
     </ul>
@@ -53,6 +54,12 @@
 </nav>
     {% endblock %}
 
+        <script type="text/javascript">
+
+
+        </script>
+
+
     {% block content %} {% endblock %}
 
 
@@ -60,6 +67,31 @@
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}" ></script>
+
+<script type="text/javascript">
+$(function(){
+  function stripTrailingSlash(str) {
+    if(str.substr(-1) == '/') {
+      return str.substr(0, str.length - 1);
+    }
+    return str;
+  }
+
+  var url = window.location.pathname;
+  var activePage = stripTrailingSlash(url);
+
+  $('.nav li a').each(function(){
+    var currentPage = stripTrailingSlash($(this).attr('href'));
+
+    if (activePage == currentPage) {
+      $(this).parent().addClass('active');
+    }
+  });
+});
+
+</script>
+
+
 </body>
 
 </html>
