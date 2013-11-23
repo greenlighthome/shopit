@@ -29,6 +29,7 @@
   <div class="collapse navbar-collapse" id="navbar-collapse">
 
     <ul id="navi" class="nav navbar-nav">
+
         <li class=""><a href="/market/">Market Place</a></li>
         <li class=""><a href="/accounts/profile/">Account / Profile</a></li>
       <li class="dropdown">
@@ -65,34 +66,9 @@
 
     {% block footer %} {% endblock %}
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}" ></script>
-
-<script type="text/javascript">
-    //active link !
-$(function(){
-  function stripTrailingSlash(str) {
-    if(str.substr(-1) == '/') {
-      return str.substr(0, str.length - 1);
-    }
-    return str;
-  }
-
-  var url = window.location.pathname;
-  var activePage = stripTrailingSlash(url);
-
-  $('.nav li a').each(function(){
-    var currentPage = stripTrailingSlash($(this).attr('href'));
-
-    if (activePage == currentPage) {
-      $(this).parent().addClass('active');
-    }
-  });
-});
-
-</script>
-
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/active_link.js' %}"></script>
 </body>
 
 </html>
