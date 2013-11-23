@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response, redirect
+from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.template import RequestContext
 from django.views.generic import ListView, DetailView
 from web_shop.models import ProductForm, Product, Category
@@ -48,7 +48,14 @@ def add_product(request):
                             context_instance=RequestContext(request))
 
 
+class ProductByCategory(ListView):
+    template_name = 'web_shop/products_by_category.html'
 
+    def get_queryset(self):
+        self.category = get_object_or_404(Category, name=self.args[0])
+        return Product.objects.filter(category = self.category)
 
-
-
+    def get_context_data(self, **kwargs):
+        context = super(ProductByCategory, self).get_context_data(**kwargs)
+        context['category_list'] = Category.objects.all()
+        return context

@@ -12,6 +12,9 @@ class Category(models.Model):
     def __unicode__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('products-by-category', kwargs={'slug': slugify(self.name), 'pk': self.id})
+
 
 class Condition(models.Model):
     condition = models.CharField(max_length=30)

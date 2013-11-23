@@ -1,7 +1,5 @@
 {% extends 'web_shop/base.html' %}
 
-{% block title %} {{ title }} {% endblock %}
-
 {% block dropdown %}
     <ul class="dropdown-menu">
     {% for category in category_list %}
@@ -11,8 +9,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-{% for product in product_list %}
+   <div class="container">
+{% for product in object_list %}
     <hr>
     <div class="container">
         <a class="no-style" href="{{ product.get_absolute_url }}"> <h3 class="text-info modal-title">{{ product.title }}</h3></a>
@@ -27,7 +25,3 @@
     <hr>
 </div>
 {% endblock %}
-
-{% block footer %} {% endblock %}
-
-

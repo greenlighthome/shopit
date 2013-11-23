@@ -3,7 +3,7 @@
 {% block dropdown %}
     <ul class="dropdown-menu">
     {% for category in category_list %}
-        <li><a href="#">{{ category.name }}</a></li>
+        <li><a href="/category/{{ category.name }}">{{ category.name }}</a></li>
     {% endfor %}
     </ul>
 {% endblock %}
@@ -27,6 +27,4 @@
             <p class="text-muted">{{ product.description }}</p>
         </div>
     </div>
-
-
 {% endblock %}

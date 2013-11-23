@@ -1,0 +1,2 @@
+23/11/2013
+[x] Product by Category working in module web_shop
