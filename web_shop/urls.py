@@ -12,7 +12,7 @@ urlpatterns = patterns('',
 
     url(r'^market/$', views.ListProductView.as_view(), name='product-list'),
 
-    url(r'^(?P<pk>\d+)/$', views.ProductView.as_view(), name='detail-view'),
+    url(r'^market/(?P<slug>[\w|\W]+)-(?P<pk>\d+)/$', views.ProductView.as_view(), name='detail-view'),
 
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT, 'show_indexes':True}),
 )

@@ -3,6 +3,7 @@ from django.db import models
 from django.forms import ModelForm
 from django.forms.widgets import Textarea, TextInput, Select, NumberInput
 from django.contrib.auth.models import User
+from django.template.defaultfilters import slugify
 
 class Category(models.Model):
     name = models.CharField(max_length=30)
@@ -34,7 +35,7 @@ class Product(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('detail-view', kwargs={'pk': self.id})
+        return reverse('detail-view', kwargs={'slug': slugify(self.title), 'pk': self.id})
 
 
 class ProductForm(ModelForm):
