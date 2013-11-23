@@ -1,7 +1,6 @@
 from django.conf.urls import url, patterns
 from shopit.settings import MEDIA_ROOT
-from web_shop.models import Product, Category
-from django.views.generic import detail
+from web_shop.models import Category
 from web_shop import views
 
 categories = { Category.objects.all() }

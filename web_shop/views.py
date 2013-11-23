@@ -4,13 +4,16 @@ from django.views.generic import ListView, DetailView
 from web_shop.models import ProductForm, Product, Category
 from shopit.settings import MEDIA_URL
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
-
 
 
 class ListProductView(ListView):
     model = Product
     template_name = 'web_shop/market.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ListProductView, self).get_context_data(**kwargs)
+        context['category_list'] = Category.objects.all()
+        return context
 
 
 class ProductView(DetailView):
