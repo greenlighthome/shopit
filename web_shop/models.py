@@ -5,6 +5,7 @@ from django.forms.widgets import Textarea, TextInput, Select, NumberInput
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 
+
 class Category(models.Model):
     name = models.CharField(max_length=30)
 

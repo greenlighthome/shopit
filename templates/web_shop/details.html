@@ -1,5 +1,12 @@
 {% extends 'web_shop/base.html' %}
 
+{% block dropdown %}
+    <ul class="dropdown-menu">
+    {% for category in category_list %}
+        <li><a href="#">{{ category.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
 
 {% block content %}
      <div class="container">
