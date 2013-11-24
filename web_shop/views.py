@@ -26,9 +26,18 @@ class ProductView(DetailView):
         return context
 
 
-def base(request):
-    categories = Category.objects.all()
-    return render_to_response('web_shop/base.html', {'categories': categories})
+class ProductByCategory(ListView):
+    template_name = 'web_shop/products_by_category.html'
+
+    def get_queryset(self):
+        self.category = get_object_or_404(Category, name=self.args[0])
+        return Product.objects.filter(category = self.category)
+
+    def get_context_data(self, **kwargs):
+        context = super(ProductByCategory, self).get_context_data(**kwargs)
+        context['category_list'] = Category.objects.all()
+        context['title'] = self.category
+        return context
 
 
 def welcome(request):
@@ -46,16 +55,3 @@ def add_product(request):
     return render_to_response('web_shop/add_product.html', {'title': 'Add a new product',
                             'product': product_form, 'media_url': MEDIA_URL},
                             context_instance=RequestContext(request))
-
-
-class ProductByCategory(ListView):
-    template_name = 'web_shop/products_by_category.html'
-
-    def get_queryset(self):
-        self.category = get_object_or_404(Category, name=self.args[0])
-        return Product.objects.filter(category = self.category)
-
-    def get_context_data(self, **kwargs):
-        context = super(ProductByCategory, self).get_context_data(**kwargs)
-        context['category_list'] = Category.objects.all()
-        return context

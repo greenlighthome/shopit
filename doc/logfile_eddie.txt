@@ -1,2 +1,3 @@
 23/11/2013
-[x] Product by Category working in module web_shop
+[√] Product by Category working in module web_shop
+[]  Refactor web_shop.view so that just Class Views are used
