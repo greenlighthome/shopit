@@ -1,7 +1,8 @@
 from dashboard.models import ProductForm
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse_lazy, reverse
 from django.shortcuts import get_object_or_404
-from django.views.generic import CreateView, UpdateView
+from django.views.generic import CreateView, UpdateView, DeleteView
 from web_shop.models import Product
 from web_shop.views import ListProductView
 
@@ -56,3 +57,13 @@ class ProductUpdate(UpdateView):
     def form_valid(self, form):
         form.instance.saler = self.request.user
         return super(ProductUpdate, self).form_valid(form)
+
+
+class ProductDelete(DeleteView):
+    model = Product
+    template_name = 'dashboard/delete.html'
+
+    def get_success_url(self):
+        return reverse('dashboard')
+
+

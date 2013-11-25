@@ -29,7 +29,7 @@
         {% endif %}
         <a class="no-style" href="{{ product.get_absolute_url }}"> <h5>Details</h5></a>
         <a href="update/{{ product.id }}"><button class="button btn btn-sm btn-info">Edit Product</button></a>
-        <a href=""><button class="button btn btn-sm btn-danger">Remove Product</button></a>
+        <a href="delete/{{ product.id }}"><button class="button btn btn-sm btn-danger">Remove Product</button></a>
     </div>
     </div>
     {% endfor %}

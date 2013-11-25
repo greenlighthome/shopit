@@ -1,0 +1,15 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+
+<h3>Delete Contact</h3>
+
+<p>Are you sure you want to delete the product {{ product.name }}?</p>
+
+<form action="{% url 'delete' pk=product.id %}" method="post">
+  {% csrf_token %}
+  <input type="submit" class="btn btn-danger" value="Yes, delete." />
+  <a class="text-info" href="/dashboard/actions/{{ user.username }}">No, cancel.</a>
+</form>
+
+{% endblock %}
