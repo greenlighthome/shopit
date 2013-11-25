@@ -15,45 +15,35 @@
 {% endblock %}
 
 {% block content %}
-<div class="container wrapper">
-<button class="button btn btn-primary" data-toggle="modal" data-target="#add_product">Add Product</button>
-<a href="/dashboard/actions/{{ user.username }}"><button class="button btn btn-info ">Actions</button></a>
+    <div class="container">
+        <h3 class="page-header text-info">Update</h3>
 
-<!-- Modal -->
-<div class="modal fade" id="add_product" tabindex="-1" role="dialog" aria-labelledby="modal_label" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title text-info" id="modal_label">Add a new product</h4>
-      </div>
-      <div class="modal-body">
-        {% block form %}
-        <form enctype="multipart/form-data" method="post" action="">
+    {% block form %}
+        <form class="container" enctype="multipart/form-data" method="post" action="">
             {% csrf_token %}
             <div class="form-group">
                 <label for="name">Title: </label>
-                <span class="">{{ form.title }}</span>
+                <span class="form-row">{{ form.title }}</span>
             </div>
             <div class="form-group">
                 <label for="name">Product name: </label>
-                <span class="">{{ form.name }}</span>
+                <span class="form-row">{{ form.name }}</span>
             </div>
             <div class="form-group">
                 <label for="name">Condition: </label>
-                <span class="">{{ form.condition }}</span>
+                <span class="form-row">{{ form.condition }}</span>
             </div>
             <div class="form-group">
                 <label for="name">Quantity: </label>
-                <span class="">{{ form.quantity }}</span>
+                <span class="form-row">{{ form.quantity }}</span>
             </div>
             <div class="form-group">
                 <label for="name">Price: </label>
-                <span class="">{{ form.price }}</span>
+                <span class="form-row">{{ form.price }}</span>
             </div>
             <div class="form-group">
                 <label for="description">Description: </label><br>
-                <span class="">{{ form.description }}</span>
+                <span class="form-row">{{ form.description }}</span>
             </div>
             <div class="form-group">
                 <label for="category">Choose a Category: </label>
@@ -61,15 +51,10 @@
             </div>
             <div class="form-group">
                 <label for="image">Add an Image:</label>
-                <span class="">{{ form.image }}</span>
+                <span class="form-row">{{ form.image }}</span>
             </div>
-            <input type="submit" class="btn btn-primary" value="Add Product">
+            <input type="submit" class="btn btn-primary" value="Update">
         </form>
-        {% endblock %}
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-</div>
+    {% endblock %}
+    </div>
 {% endblock %}
-

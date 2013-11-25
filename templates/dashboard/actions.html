@@ -3,6 +3,7 @@
 {% block title %} {{ title }} {% endblock %}
 
 {% block username %}
+<li class="username hidden-xs">hello {{ user.username|capfirst }}</li>
     <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span></a>
     {% block dropdown %}
@@ -14,7 +15,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="wrapper">
+
+<div class="container">
+    <h3 class="page-header text-info">Actions</h3>
     {% for product in product_list %}
     <div class="container box-view col-sm-12 col-xs-12">
     <div class="items">
@@ -25,7 +28,7 @@
             <a href="{{ product.get_absolute_url }}"> <img class="img-thumbnail img-responsive" src="{{ product.image.url }}" width="200"></a>
         {% endif %}
         <a class="no-style" href="{{ product.get_absolute_url }}"> <h5>Details</h5></a>
-        <a href=""><button class="button btn btn-sm btn-info">Edit Product</button></a>
+        <a href="update/{{ product.id }}"><button class="button btn btn-sm btn-info">Edit Product</button></a>
         <a href=""><button class="button btn btn-sm btn-danger">Remove Product</button></a>
     </div>
     </div>
