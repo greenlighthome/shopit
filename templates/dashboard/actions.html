@@ -1,0 +1,34 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block username %}
+    <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span></a>
+    {% block dropdown %}
+        <ul class="dropdown-menu">
+            <li><a href="/accounts/logout/">Logout</a></li>
+        </ul>
+    </li>
+    {% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+    {% for product in product_list %}
+    <div class="container box-view col-sm-12 col-xs-12">
+    <div class="items">
+        <a class="no-style" href="{{ product.get_absolute_url }}"> <h3 class="text-info modal-title">{{ product.title }}</h3></a>
+        <span class="price">€ {{ product.price }}</span> <span class="condition price">{{ product.condition }}</span>
+        <span class=""><h4>{{ product.name }}</h4></span>
+        {% if product.image %}
+            <a href="{{ product.get_absolute_url }}"> <img class="img-thumbnail img-responsive" src="{{ product.image.url }}" width="200"></a>
+        {% endif %}
+        <a class="no-style" href="{{ product.get_absolute_url }}"> <h5>Details</h5></a>
+        <a href=""><button class="button btn btn-sm btn-info">Edit Product</button></a>
+        <a href=""><button class="button btn btn-sm btn-danger">Remove Product</button></a>
+    </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

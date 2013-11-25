@@ -1,7 +1,5 @@
 from django.core.urlresolvers import reverse
 from django.db import models
-from django.forms import ModelForm
-from django.forms.widgets import Textarea, TextInput, Select, NumberInput
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 
@@ -42,16 +40,3 @@ class Product(models.Model):
         return reverse('detail-view', kwargs={'slug': slugify(self.title), 'pk': self.id})
 
 
-class ProductForm(ModelForm):
-    class Meta:
-        model = Product
-        fields = ['name', 'description', 'category', 'image', 'title', 'price', 'condition', 'quantity']
-        widgets = {
-            'title': TextInput(attrs={'required': True, 'size': 39, 'autofocus': True}),
-            'name': TextInput(attrs={'required': True, 'size': 28}),
-            'condition': Select(attrs={'required': True}),
-            'price': NumberInput(attrs={'required': True, 'localize': True, 'size': 8, 'placeholder': '00,00'}),
-            'quantity': NumberInput(attrs={'required': True, 'localize': True, 'size': 8, 'placeholder': '0'}),
-            'category': Select(attrs={'required': True}),
-            'description': Textarea(attrs={'cols': 60, 'rows': 8, 'required': True})
-        }

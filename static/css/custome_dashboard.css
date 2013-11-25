@@ -1,0 +1,42 @@
+body {
+  margin-top: 80px;
+}
+.button {
+  margin-top: 10px;
+}
+.username {
+  margin-top: 15px;
+  color: #ffffff;
+}
+.box-view {
+  position: relative;
+  max-width: 300px;
+  height: 400px;
+  margin-left: 20px;
+  padding-bottom: 10px;
+  float: left;
+}
+.box-view .items {
+  position: absolute;
+  bottom: 10px;
+}
+.box-view h3,
+.box-view h4 {
+  font-size: 1em;
+}
+/* Large desktop */
+@media (min-width: 1200px) {
+  
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  
+}

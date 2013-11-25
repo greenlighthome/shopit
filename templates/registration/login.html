@@ -1,7 +1,7 @@
 {% extends 'registration/base.html' %}
 
 {% block content %}
-<div class="container box-center" xmlns="http://www.w3.org/1999/html">
+<div class="container box-center">
     <form action="{% url 'django.contrib.auth.views.login' %}" method="post">
         {% csrf_token %}
 
@@ -18,7 +18,9 @@
             <input type="hidden" name="next" value="{{ next }}" />
         </div>
     </form>
+
     <a class="forgot text-center" href="password_change_form.html"><p class="text-primary">forgot your password?</p></a>
+
 </div>
 
 {% if form.errors %}

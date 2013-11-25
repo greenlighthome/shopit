@@ -1,24 +1,35 @@
 @color-white: #FFFFFF;
 
-#navbar-collapse.collapse.navbar-collapse {
-  color: #282725;
+body {
+  margin-top: 80px;
+}
+  .button {
+    margin-top: 10px;
+  }
+.username {
+  margin-top: 15px;
+  color: @color-white;
 }
 
-span#username {
-  color: @color-white;
-  float: right;
-  margin-right: 20px;
-  margin-top: 13px;
-  font-size: 16px;
+.box-view {
+  position: relative;
+  max-width: 300px;
+  height: 400px;
+  margin-left: 20px;
+  padding-bottom: 10px;
+  float: left;
+
+  .items {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  h3, h4{
+    font-size: 1em;
+  }
 }
 
-.glyphicon-log-out {
-  color: @color-white;
-  float: right;
-  margin-top: 8px;
-  margin-right: 20px;
-  font-size: 30px;
-}
+
 
 /* Large desktop */
 @media (min-width: 1200px) {
@@ -30,9 +41,7 @@ span#username {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  span#username {
-     display: none
-   }
+
 }
 
 /* Landscape phones and down */

@@ -4,6 +4,10 @@
 
 {% block title %} {{ title }} {% endblock %}
 
+{% for category in category_list %}
+    <li><a href="/category/{{ category.name }}">{{ category.name }}</a></li>
+{% endfor %}
+
 {% block content %}
 
     <div class="column one col-xs-12 col-sm-12 col-md-4"></div>
@@ -14,12 +18,4 @@
 
 {% endblock %}
 
-
-
 {% block footer %} {% endblock %}
-
-<script type="text/javascript">
-$(function(){
-   $('.carousel').carousel();
-});
-</script>

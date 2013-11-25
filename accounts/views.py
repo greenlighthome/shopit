@@ -1,23 +1,17 @@
-from django.contrib.auth.decorators import login_required
-from django.shortcuts import render_to_response
-
+from django.contrib.auth import authenticate
+from django.shortcuts import render_to_response, redirect
+from django.contrib.auth.views import login
 from django.contrib.auth.models import User
-from django.shortcuts import render_to_response, get_object_or_404
-from django.http import HttpResponseRedirect, HttpResponse, Http404
+from django.shortcuts import get_object_or_404
+from django.http import HttpResponseRedirect, Http404
 from accounts.forms import UserCreationForm
 from django.contrib.auth.tokens import default_token_generator
 from django.core.urlresolvers import reverse
 from django.template import RequestContext
 from django.conf import settings
-from django.utils.http import urlquote, base36_to_int
+from django.utils.http import base36_to_int
 from django.contrib.sites.models import Site, RequestSite
-
 from django.views.decorators.csrf import csrf_protect
-
-@login_required
-def profile(request):
-    user = request.user
-    return render_to_response('profile/profile.html', {'user': user})
 
 
 @csrf_protect

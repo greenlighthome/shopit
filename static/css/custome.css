@@ -3,6 +3,13 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
+body .cog {
+  font-size: 1.3em;
+}
+body .condition {
+  font-weight: bold;
+  color: #aa0000;
+}
 body .no-style {
   text-decoration: none;
 }
