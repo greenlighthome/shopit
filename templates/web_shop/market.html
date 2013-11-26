@@ -16,7 +16,7 @@
     <hr>
     <div class="container">
         <a class="no-style" href="{{ product.get_absolute_url }}"> <h3 class="text-info modal-title">{{ product.title }}</h3></a>
-        <span class="price">€ {{ product.price }}</span> <span class="condition price">{{ product.condition }}</span>
+        <h4><span class="price">€ {{ product.price }}</span> <span class="condition price">{{ product.condition }}</span></h4>
         <span class=""><h4>{{ product.name }}</h4></span>
         {% if product.image %}
             <a href="{{ product.get_absolute_url }}"> <img class="img-thumbnail" src="{{ product.image.url }}" width="200"></a>
@@ -26,7 +26,22 @@
 {% endfor %}
     <hr>
 </div>
+
+{% block pagination %}
+    <ul class="pagination">
+        {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+        {% endif %}
+        <li><a>Page {{ page_obj.number }} of {{ paginator.num_pages }}</a></li>
+        {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+        {% endif %}
+    </ul>
 {% endblock %}
+
+{% endblock %}
+
+
 
 {% block footer %} {% endblock %}
 

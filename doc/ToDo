@@ -5,7 +5,30 @@ Weekly tasks done √√√
 -------------------------------
 New tasks starting 11/24/2013
 
-* Heavy refactoring on views (eliminate if possible function based views) Introduce new Class Based Views
+* [√] Heavy refactoring on views (eliminate if possible function based views) Introduce new Class Based Views.
 
-* Product update view for users to modify their products
+* [√] Product update view for users to modify their products.
 
+* [] Define "Sold Article" action (what happen to the article).
+
+* [] Change the structure from web_shop module;
+        New: "Categories" menu-tab should contain a fixed amount of categories (CONSTANTS),
+             "Market place" should take you to a view with the name of the categories as links,
+             this categories are sub-classed in more specific item-categories (cell phones, video games, mp3 players, et-cetera).
+
+* [] Add extra field(s) to user (address, and other related contact information).
+
+* [] IMPORTANT: Actions Update and Delete Should redirect you back to actions panel on success.
+
+* [] Create user account view to display user's profile information  --->    for next week: consequently Update and delete his own profile (another pain anther ass)
+
+* IMPORTANT: Add date field to Product model to keep track of products
+
+* [√] move "add product" to actions view for simplicity (That was a pain in the ass!)
+
+* [√] Pagination for listing of products views (actual market view, actions, individual categories, and wherever needed)
+
+* [] IMPORTANT: Own view for product details in dashboard to be redirected after adding a product
+        ( why? because redirection to details in web_shop takes you uot of the dashboard, and that's not good :) )
+
+* Add footer

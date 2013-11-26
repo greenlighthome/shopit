@@ -40,3 +40,5 @@ class Product(models.Model):
         return reverse('detail-view', kwargs={'slug': slugify(self.title), 'pk': self.id})
 
 
+
+
