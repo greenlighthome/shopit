@@ -16,7 +16,7 @@ New tasks starting 11/24/2013
              "Market place" should take you to a view with the name of the categories as links,
              this categories are sub-classed in more specific item-categories (cell phones, video games, mp3 players, et-cetera).
 
-* [] Add extra field(s) to user (address, and other related contact information).
+* [] Add extra field(s) to user (address, and other related contact information).  <--- need to check documentation on how to achieve that the best way
 
 * [] IMPORTANT: Actions Update and Delete Should redirect you back to actions panel on success.
 
@@ -31,12 +31,12 @@ New tasks starting 11/24/2013
 * [√] IMPORTANT: Own view for product details in dashboard to be redirected after adding a product
         ( why? because redirection to details in web_shop takes you uot of the dashboard, and that's not good :) )
 
-* Add footer
+* [√] Add footer
 
                         I NEED HELP !
-REALLY, REALLY IMPORTANT --------->  there's need to be fixed ---> add product
-                                                              ---> pagination
-                                                              ---> Al have to do with the web_shop.models method get_absolute_url
+REALLY, REALLY IMPORTANT --------->  there's need to be fixed ---> [√] add product
+                                                              ---> [√] pagination
+                                                              ---> [√] Al have to do with the web_shop.models method get_absolute_url
 
                                                               BUGS
-[ ] Dashboard details view is not working, template should reference to dashboard view
+[√] Dashboard details view is not working, template should reference to dashboard view

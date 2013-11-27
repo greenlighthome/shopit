@@ -10,7 +10,7 @@
 
 {% block content %}
    <div class="container">
-{% for product in object_list %}
+    {% for product in object_list %}
     <hr>
     <div class="container">
         <a class="no-style" href="{{ product.get_absolute_url_1 }}"> <h4 class="text-info modal-title">{{ product.title }}</h4></a>
@@ -21,11 +21,11 @@
         {% endif %}
         <a class="no-style" href="{{ product.get_absolute_url_1 }}"> <h5>Details</h5></a>
     </div>
-{% endfor %}
+    {% endfor %}
     <hr>
 </div>
 
-{% block pagination %}
+    {% block pagination %}
     <ul class="pagination">
         {% if page_obj.has_previous %}
             <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
@@ -35,6 +35,6 @@
             <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
         {% endif %}
     </ul>
-{% endblock %}
+    {% endblock %}
 
 {% endblock %}

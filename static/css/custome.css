@@ -1,10 +1,16 @@
 body {
-  margin-top: 70px;
-  padding-left: 30px;
-  padding-right: 30px;
+  margin: 70px 30px 50px 30px;
 }
 body .cog {
   font-size: 1.3em;
+}
+body footer {
+  width: 100%;
+  height: 40px;
+  background-color: #000000;
+}
+body .copyright {
+  margin-top: 15px;
 }
 body .condition {
   font-weight: bold;
