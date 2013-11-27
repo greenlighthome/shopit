@@ -2,8 +2,8 @@ from dashboard.models import ProductForm
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.shortcuts import get_object_or_404
-from django.views.generic import CreateView, UpdateView, DeleteView
-from web_shop.models import Product
+from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
+from web_shop.models import Product, Category
 from web_shop.views import ListProductView
 
 
@@ -49,7 +49,6 @@ class UserActions(ListProductView):
 
 
 class ProductUpdate(UpdateView):
-
     model = Product
     form_class = ProductForm
     template_name = 'dashboard/update.html'
@@ -71,3 +70,15 @@ class ProductDelete(DeleteView):
 
     def get_success_url(self):
         return reverse('dashboard')
+
+
+class DashboardDetailView(DetailView):
+    """ Detailed view of a specific article """
+    model = Product
+    template_name = 'dashboard/dashboard_details.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(DashboardDetailView, self).get_context_data(**kwargs)
+        context['category_list'] = Category.objects.all()
+        context['title'] = 'Details'
+        return context

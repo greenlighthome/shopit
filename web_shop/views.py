@@ -8,6 +8,7 @@ class ListProductView(ListView):
     """ List of all Available article """
     model = Product
     template_name = 'web_shop/market.html'
+    context_object_name = 'product_list'
 
     def get_context_data(self, **kwargs):
         context = super(ListProductView, self).get_context_data(**kwargs)
@@ -20,6 +21,7 @@ class ProductView(DetailView):
     """ Detailed view of a specific article """
     model = Product
     template_name = 'web_shop/details.html'
+    context_object_name = 'product'
 
     def get_context_data(self, **kwargs):
         context = super(ProductView, self).get_context_data(**kwargs)
@@ -30,6 +32,7 @@ class ProductView(DetailView):
 
 class ProductByCategory(ListView):
     template_name = 'web_shop/products_by_category.html'
+    context_object_name = 'product_list'
 
     def get_queryset(self):
         self.category = get_object_or_404(Category, name=self.args[0])

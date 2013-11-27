@@ -28,7 +28,15 @@ New tasks starting 11/24/2013
 
 * [√] Pagination for listing of products views (actual market view, actions, individual categories, and wherever needed)
 
-* [] IMPORTANT: Own view for product details in dashboard to be redirected after adding a product
+* [√] IMPORTANT: Own view for product details in dashboard to be redirected after adding a product
         ( why? because redirection to details in web_shop takes you uot of the dashboard, and that's not good :) )
 
 * Add footer
+
+                        I NEED HELP !
+REALLY, REALLY IMPORTANT --------->  there's need to be fixed ---> add product
+                                                              ---> pagination
+                                                              ---> Al have to do with the web_shop.models method get_absolute_url
+
+                                                              BUGS
+[ ] Dashboard details view is not working, template should reference to dashboard view

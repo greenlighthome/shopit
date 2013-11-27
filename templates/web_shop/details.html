@@ -12,12 +12,14 @@
      <div class="container">
         <h3 class="text-info"><span class="price"> {{ product.condition }}</span> {{ product.title }}</h3>
         <h4 class="text-info">{{ product.name }}</h4>
-
-         {% if product.image %}
+        {% if product.image %}
             <img class="img-responsive" src="{{ product.image.url }}" width="300"><br><br><br>
             <h4 class="price">€ {{ product.price }}</h4>
-         {% endif %}
-         <p class="text-muted">On sale by <span class="text-info">{{ product.saler }}</span></p>
+        {% endif %}
+        <p class="text-muted">On sale by <span class="text-info">{{ product.saler }}</span><br>
+            Since <span class="text-info">{{ product.date_added }}</span> </p>
+
+
         <div class="btn-group">
             <button class="btn btn-sm btn-danger" value="">buy Article</button>
         </div>

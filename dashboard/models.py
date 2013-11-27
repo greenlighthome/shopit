@@ -1,4 +1,3 @@
-from django.db import models
 from django.forms import ModelForm
 from web_shop.models import Product
 from django.forms.widgets import Textarea, TextInput, Select, NumberInput

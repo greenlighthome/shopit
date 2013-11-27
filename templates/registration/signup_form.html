@@ -3,10 +3,8 @@
 
 {% block content %}
 
-
 <form action="." method="post">
     {% csrf_token %}
-
     <div class="form-section container">
         <div class="form-group">
             <label for="first_name">First name: </label>
@@ -61,7 +59,5 @@
     <span class="help-block text-center"> {{ form.password2.help_text }}</span>
     <input type="submit" class="btn btn-primary btn-lg center-block" value="Signup" />
 </form>
-
-
 
 {% endblock %}

@@ -13,13 +13,13 @@
 {% for product in object_list %}
     <hr>
     <div class="container">
-        <a class="no-style" href="{{ product.get_absolute_url }}"> <h3 class="text-info modal-title">{{ product.title }}</h3></a>
-        <span class="price">€ {{ product.price }}</span>
+        <a class="no-style" href="{{ product.get_absolute_url_1 }}"> <h4 class="text-info modal-title">{{ product.title }}</h4></a>
+        <h4><span class="price">€ {{ product.price }}</span> <span class="condition price">{{ product.condition }}</span></h4>
         <span class=""><h4>{{ product.name }}</h4></span>
         {% if product.image %}
-            <a href="{{ product.get_absolute_url }}"> <img class="img-thumbnail" src="{{ product.image.url }}" width="200"></a>
+            <a href="{{ product.get_absolute_url_1 }}"> <img class="img-thumbnail" src="{{ product.image.url }}" width="200"></a>
         {% endif %}
-        <a class="no-style" href="{{ product.get_absolute_url }}"> <h5>Details</h5></a>
+        <a class="no-style" href="{{ product.get_absolute_url_1 }}"> <h5>Details</h5></a>
     </div>
 {% endfor %}
     <hr>

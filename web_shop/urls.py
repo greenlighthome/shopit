@@ -13,5 +13,5 @@ urlpatterns = patterns('',
 
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT, 'show_indexes':True}),
 
-    url(r'^category/([\w-]+)/$', views.ProductByCategory.as_view(model=Product, paginate_by=4))
+    url(r'^category/([\w-]+)/$', views.ProductByCategory.as_view(model=Product, paginate_by=4)),
 )
