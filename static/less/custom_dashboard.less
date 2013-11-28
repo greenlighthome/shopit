@@ -8,10 +8,10 @@ body {
   margin: 80px 30px 60px 30px;
   position: relative;
 }
-.tumbnail-fixed {
-  max-width: 250px;
-  float: left;
-  margin-right: 10px;
+.thumbnail-fixed {
+    width: 30%;
+    float: left;
+    margin-right: 10px;
 }
 .pagination {
   position: relative;
@@ -60,17 +60,37 @@ body {
 }
 
 /* Large desktop */
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
+  .thumbnail-fixed {
+    width: 30%;
+    float: left;
+    margin-right: 10px;
+  }
 }
 
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
+@media (max-width: 979px) {
+  .thumbnail-fixed {
+    width: 40%;
+    float: left;
+    margin-right: 10px;
+  }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+  .thumbnail-fixed {
+    width: 70%;
+    float: left;
+    margin-right: 10px;
+  }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  .thumbnail-fixed {
+    width: 100%;
+    float: left;
+    margin-right: 10px;
+  }
 }
