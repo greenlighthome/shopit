@@ -11,9 +11,11 @@
 {% endblock %}
 
 {% block content %}
+<div class="page-header">
+    <h2 class="text-info">Market Place</h2>
+</div>
 <div class="container">
 {% for product in product_list %}
-    <hr>
     <div class="container">
         <a class="no-style" href="{{ product.get_absolute_url_1 }}"> <h4 class="text-info modal-title"><span class="condition price">{{ product.condition }}</span> {{ product.title }}</h4></a>
         <h4><span class="price">€ {{ product.price }}</span></h4>
@@ -23,8 +25,9 @@
         {% endif %}
         <a class="no-style" href="{{ product.get_absolute_url_1 }}"> <h5>Details</h5></a>
     </div>
-{% endfor %}
     <hr>
+{% endfor %}
+
 </div>
 
 {% block pagination %}

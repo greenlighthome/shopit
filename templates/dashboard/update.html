@@ -15,9 +15,10 @@
 {% endblock %}
 
 {% block content %}
+    <div class="page-header">
+        <h2 class="text-info">Update</h2>
+    </div>
     <div class="container">
-        <h3 class="page-header text-info">Update</h3>
-
     {% block form %}
         <form class="container" enctype="multipart/form-data" method="post" action="">
             {% csrf_token %}

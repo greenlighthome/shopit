@@ -37,9 +37,6 @@ body .no-style {
 .search-button {
   border-radius: 0;
 }
-.column {
-  min-height: 500px;
-}
 .navbar-fixed-top {
   width: auto;
   height: auto;
