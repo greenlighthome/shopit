@@ -1,5 +1,5 @@
 body {
-  margin: 70px 30px 50px 30px;
+  margin: 70px 30px 60px 30px;
 }
 body .cog {
   font-size: 1.3em;
@@ -39,15 +39,6 @@ body .no-style {
 }
 .column {
   min-height: 500px;
-}
-.one {
-  background-color: #ff0000;
-}
-.two {
-  background-color: #008000;
-}
-.three {
-  background-color: #0000ff;
 }
 .navbar-fixed-top {
   width: auto;

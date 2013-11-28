@@ -1,56 +1,51 @@
-@color-white: #FFFFFF;
-@color-dark-background: #282725;
-
-@radius: 4px;
-
 body {
-  margin: 0;
+  margin: 80px 40px 60px 40px;
 }
 .text-center-from-top {
   margin-top: 20%;
 }
-
 .form-section {
-  background-color: @color-dark-background;
+  background-color: #282725;
   padding-top: 18px;
-  border-radius: @radius;
-  width: 360px;
+  border-radius: 4px;
+  width: 315px;
 }
-
 .box-center {
-  border-radius: @radius;
-  width: 400px;
+  border-radius: 4px;
+  width: 380px;
   height: 180px;
   margin-top: 14%;
   margin-left: auto;
   margin-right: auto;
   border: solid 1px;
-  background-color: @color-dark-background;
+  background-color: #282725;
 }
 form {
   margin-top: 30px;
-  .form_button {
-    margin-left: 90px;
-  }
-  label {
-    color: @color-white;
-  }
+}
+form .form_button {
+  margin-left: 90px;
+}
+form label {
+  color: #ffffff;
 }
 a.forgot {
   text-decoration: none;
   position: relative;
   top: 26px;
 }
-
 /* Large desktop */
 @media (min-width: 1200px) {
+  
 }
-
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+  
 }
-
 /* Landscape phones and down */
 @media (max-width: 480px) {
-
+  body {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }

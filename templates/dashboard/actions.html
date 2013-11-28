@@ -17,7 +17,7 @@
 {% block content %}
 <div class="container">
 <button id="add" class="button btn btn-primary" data-toggle="modal" data-target="#add_product">Add Product</button>
-    <h3 class="page-header text-info">Actions</h3>
+    <h2 class="page-header text-info">Actions</h2>
 
     {% for product in product_list %}
     <div class="container box-view col-sm-12 col-xs-12">
@@ -29,8 +29,10 @@
             <a href="{{ product.get_absolute_url }}"> <img class="img-thumbnail img-responsive" src="{{ product.image.url }}" width="200"></a>
         {% endif %}
         <a class="no-style" href="{{ category.get_absolute_url }}"> <h5>Details</h5></a>
+
         <a href="update/{{ product.id }}"><button class="button btn btn-sm btn-info">Edit Product</button></a>
         <a href="delete/{{ product.id }}"><button class="button btn btn-sm btn-danger">Remove Product</button></a>
+
     </div>
     </div>
     {% endfor %}

@@ -76,6 +76,7 @@ class DashboardDetailView(DetailView):
     """ Detailed view of a specific article """
     model = Product
     template_name = 'dashboard/dashboard_details.html'
+    context_object_name = 'product'
 
     def get_context_data(self, **kwargs):
         context = super(DashboardDetailView, self).get_context_data(**kwargs)

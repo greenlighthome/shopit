@@ -7,5 +7,5 @@ urlpatterns = patterns('',
     url(r'^admin/', admin.site.urls),
     url(r'^', include('web_shop.urls')),
     url(r'^accounts/', include('accounts.urls')),
-    url(r'^dashboard/', include('dashboard.urls'))
+    url(r'^dashboard/', include('dashboard.urls')),
 )
