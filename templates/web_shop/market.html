@@ -19,10 +19,9 @@
     <h2 class="text-info">Market Place</h2>
 </div>
 
-
     {% for category in category_list %}
         {% if  category.parent  %}
-            <a href="{{ category}}"><p>{{ category.parent }}</p></a>
+            <a href="/category/{{ category.parent }}"><p>{{ category.parent }}</p></a>
 
         {% endif %}
     {% endfor %}

@@ -29,8 +29,8 @@ class ProductView(DetailView):
         return context
 
 
-class ProductByCategory(ListView):
-    template_name = 'web_shop/products_by_category.html'
+class CategoriesList(ListView):
+    template_name = 'web_shop/categories.html'
     context_object_name = 'product_list'
 
     def get_queryset(self):
@@ -38,10 +38,25 @@ class ProductByCategory(ListView):
         return Product.objects.filter(category=self.category)
 
     def get_context_data(self, **kwargs):
-        context = super(ProductByCategory, self).get_context_data(**kwargs)
+        context = super(CategoriesList, self).get_context_data(**kwargs)
         context['category_list'] = Category.objects.all()
         context['title'] = self.category
         return context
+
+
+class ProductsList(ListView):
+    model = Product
+    template_name = 'web_shop/products.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ProductsList, self).get_context_data(**kwargs)
+        context['category_list'] = Category.objects.all()
+        context['title'] = 'Products'
+        return context
+
+    def get_queryset(self):
+        self.category = get_object_or_404(Category, name=self.args[0])
+        return Product.objects.filter(category=self.category.get_children())
 
 
 class WelcomeView(ListView):
