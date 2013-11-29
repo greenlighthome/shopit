@@ -4,7 +4,7 @@
     <ul class="dropdown-menu">
         {% for category in category_list %}
             {% if category.parent %}
-                <li><a href="/category/{{ category.parent }}">{{ category.parent }}</a></li>
+                <li><a href="/category/{{ category.parent }}">{{ category.parent|capfirst }}</a></li>
             {% endif %}
         {% endfor %}
     </ul>
@@ -15,7 +15,7 @@
 
         {% for category in category_list %}
             {% if category.parent == title %}
-                <a href="{{ category.name }}"> <p>{{ category.name }}</p></a>
+                <a href="{{ category.name }}"> <p>{{ category.name|capfirst }}</p></a>
             {% endif %}
         {% endfor %}
 {% endblock %}
