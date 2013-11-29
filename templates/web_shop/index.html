@@ -2,8 +2,6 @@
 {% load staticfiles %}
 
 
-{% block title %} {{ title }} {% endblock %}
-
 {% for category in category_list %}
     <li><a href="/category/{{ category.name }}">{{ category.name }}</a></li>
 {% endfor %}

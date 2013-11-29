@@ -48,15 +48,15 @@ class ProductsList(ListView):
     model = Product
     template_name = 'web_shop/products.html'
 
-    def get_context_data(self, **kwargs):
-        context = super(ProductsList, self).get_context_data(**kwargs)
-        context['category_list'] = Category.objects.all()
-        context['title'] = 'Products'
-        return context
-
     def get_queryset(self):
         self.category = get_object_or_404(Category, name=self.args[0])
         return Product.objects.filter(category=self.category.get_children())
+
+    def get_context_data(self, **kwargs):
+        context = super(ProductsList, self).get_context_data(**kwargs)
+        context['category_list'] = Category.objects.all()
+        context['title'] = 'Articles by Category'
+        return context
 
 
 class WelcomeView(ListView):

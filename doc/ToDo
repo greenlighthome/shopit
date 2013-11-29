@@ -9,19 +9,11 @@ New tasks starting 11/24/2013
 
 * [√] Product update view for users to modify their products.
 
-* [] Define "Sold Article" action (what happen to the article).
-
-* [] Change the structure from web_shop module;
+* [√] Change the structure from web_shop module;
         New: "Categories" menu-tab should contain a fixed amount of categories (CONSTANTS),
              "Market place" should take you to a view with the name of the categories as links,
              this categories are sub-classed in more specific item-categories (cell phones, video games, mp3 players, et-cetera).
 * [√] Add custom style to registration html's
-
-* [] Add extra field(s) to user (address, and other related contact information).  <--- need to check documentation on how to achieve that the best way
-
-* [] IMPORTANT: Actions Update and Delete Should redirect you back to actions panel on success. (if possible)
-
-* [] Create user account view to display user's profile information  --->    for next week: consequently Update and delete his own profile (another pain anther ass)
 
 * [√] IMPORTANT: Add date field to Product model to keep track of products
 
@@ -34,10 +26,24 @@ New tasks starting 11/24/2013
 
 * [√] Add footer
 
-                        I NEED HELP !
-REALLY, REALLY IMPORTANT --------->  there's need to be fixed ---> [√] add product
-                                                              ---> [√] pagination
-                                                              ---> [√] Al have to do with the web_shop.models method get_absolute_url
+* [√] need to be fixed ---> [√] add product
+                       ---> [√] pagination
+                       ---> [√] Al have to do with the web_shop.models method get_absolute_url
 
-                                                              BUGS
-[√] Dashboard details view is not working, template should reference to dashboard view
+* [√] Dashboard details view is not working, template should reference to dashboard view
+
+
+
+* [] Define "Sold Article" action (what happen to the article).
+
+* [] Add extra field(s) to user (address, and other related contact information).  <--- need to check documentation on how to achieve that the best way
+
+* [] IMPORTANT: Actions Update and Delete Should redirect you back to actions panel on success. (if possible)
+
+* [] Create user account view to display user's profile information  --->    for next week: consequently Update and delete his own profile (another pain anther ass)
+
+* [] Add more fields to Product model:  ---> in_stock: true/false
+                                        ---> shipping_method: DHL, Post, Express
+                                        ---> shipping cost
+
+* [] Add Image to Category Model list

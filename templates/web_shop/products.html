@@ -1,9 +1,6 @@
 {% extends 'web_shop/base.html' %}
-
-
 {% load category_tags %}
 
-{% block title %} {{ title }} {% endblock %}
 
 {% block dropdown %}
     <ul class="dropdown-menu">
@@ -16,13 +13,14 @@
 {% endblock %}
 
 {% block content %}
+
 <div class="page-header">
     <h2 class="text-info">{{ title }}</h2>
 </div>
 <div class="container">
 {% for product in product_list %}
     <div class="container">
-        <a class="no-style" href="{{ product.get_absolute_url_1 }}"> <h4 class="text-info modal-title"><span class="condition price">{{ product.condition }}</span> {{ product.title }}</h4></a>
+        <a class="no-style" href="{{ product.get_absolute_url_1 }}"><h4 class="text-info modal-title"><span class="condition price">{{ product.condition }}</span> {{ product.title }}</h4></a>
         <h4><span class="price">€ {{ product.price }}</span></h4>
         <span class=""><h4>{{ product.name }}</h4></span>
         {% if product.image %}
@@ -32,7 +30,6 @@
     </div>
     <hr>
 {% endfor %}
-
 </div>
 
 {% block pagination %}
@@ -45,6 +42,5 @@
             <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
         {% endif %}
     </ul>
-
 {% endblock %}
 {% endblock %}

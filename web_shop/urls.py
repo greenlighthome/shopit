@@ -1,8 +1,6 @@
 from django.conf.urls import url, patterns
 from shopit.settings import MEDIA_ROOT
 from web_shop import views
-from web_shop.models import Product
-
 
 urlpatterns = patterns('',
     url(r'^$', views.WelcomeView.as_view(), name='Welcome   '),
@@ -15,5 +13,5 @@ urlpatterns = patterns('',
 
     url(r'^category/([\w-]+)/$', views.CategoriesList.as_view()),
 
-    url(r'^category/([\w-]+)/([\w-]+)$', views.ProductsList.as_view()),
+    url(r'^category/([\w-]+)/([\w-]+)$', views.ProductsList.as_view(paginate_by=2), name='product-list'),
 )
