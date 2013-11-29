@@ -38,6 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'web_shop',
     'accounts',
+    'categories',
+    'categories.editor',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -1,16 +1,12 @@
+from categories.base import CategoryBase
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 
-class Category(models.Model):
-    name = models.CharField(max_length=30)
 
-    def __unicode__(self):
-        return self.name
-
-    def get_absolute_url(self):
-        return reverse('products-by-category', kwargs={'slug': slugify(self.nameeddie), 'pk': self.id})
+class Category(CategoryBase):
+    pass
 
 
 class Condition(models.Model):
@@ -43,7 +39,7 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     description = models.TextField()
-    category = models.ForeignKey(Category)
+    category = models.ForeignKey('categories.Category')
     image = models.ImageField(upload_to='images/products/%Y/%m/%d', blank=True)
     saler = models.ForeignKey(User)
 

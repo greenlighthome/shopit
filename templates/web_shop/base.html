@@ -36,7 +36,9 @@
         {% block dropdown %}
         <ul class="dropdown-menu">
             {% for category in category_list %}
-                <li><a href="/category/{{ category.name }}">{{ category.name }}</a></li>
+                {% if category.parent %}
+                    <li><a href="/category/{{ category.parent }}">{{ category.parent }}</a></li>
+                {% endif %}
             {% endfor %}
          </ul>
         {% endblock %}

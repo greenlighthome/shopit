@@ -1,17 +1,16 @@
-from django.core.urlresolvers import reverse
-from django.shortcuts import get_object_or_404, render_to_response
+from categories.models import Category
+from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
-from web_shop.models import Product, Category
+from web_shop.models import Product
 
 
-class ListProductView(ListView):
-    """ List of all Available article """
-    model = Product
+class CategoryListView(ListView):
+    """ List of all parent categories """
+    model = Category
     template_name = 'web_shop/market.html'
-    context_object_name = 'product_list'
 
     def get_context_data(self, **kwargs):
-        context = super(ListProductView, self).get_context_data(**kwargs)
+        context = super(CategoryListView, self).get_context_data(**kwargs)
         context['category_list'] = Category.objects.all()
         context['title'] = 'Market Place'
         return context

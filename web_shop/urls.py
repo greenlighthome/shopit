@@ -7,7 +7,7 @@ from web_shop.models import Product
 urlpatterns = patterns('',
     url(r'^$', views.WelcomeView.as_view(), name='Welcome   '),
 
-    url(r'^market/$', views.ListProductView.as_view(model=Product, paginate_by=2,), name='product-list'),
+    url(r'^market/$', views.CategoryListView.as_view(), name='category-list'),
 
     url(r'^market/(?P<slug>[\w|\W]+)-(?P<pk>\d+)/$', views.ProductView.as_view(), name='detail-view'),
 

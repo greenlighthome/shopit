@@ -1,10 +1,10 @@
+from categories.models import Category
 from dashboard.models import ProductForm
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.shortcuts import get_object_or_404
-from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
-from web_shop.models import Product, Category
-from web_shop.views import ListProductView
+from django.views.generic import CreateView, UpdateView, DeleteView, DetailView, ListView
+from web_shop.models import Product
 
 
 class DashboardView(CreateView):
@@ -27,7 +27,7 @@ class DashboardView(CreateView):
         return super(DashboardView, self).form_valid(form)
 
 
-class UserActions(ListProductView):
+class UserActions(ListView):
     """
     Compact view of products on sale by the active user where farther actions can be
     taken (add, remove, update)
@@ -41,7 +41,7 @@ class UserActions(ListProductView):
         return Product.objects.filter(saler=self.saler)
 
     def get_context_data(self, **kwargs):
-        context = super(ListProductView, self).get_context_data(**kwargs)
+        context = super(ListView, self).get_context_data(**kwargs)
         context['form'] = ProductForm()
         context['user'] = User.objects.all()
         context['title'] = 'Actions'
