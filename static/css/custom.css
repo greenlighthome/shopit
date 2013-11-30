@@ -9,6 +9,18 @@ body footer {
   height: 40px;
   background-color: #000000;
 }
+body .image {
+  padding: 30px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+body .thumbnail-fixed {
+  width: 200px;
+  float: left;
+  margin-right: 10px;
+}
 body .copyright {
   margin-top: 15px;
 }

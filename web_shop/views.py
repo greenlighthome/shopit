@@ -1,3 +1,4 @@
+import os
 from categories.models import Category
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
@@ -40,6 +41,7 @@ class CategoriesList(ListView):
     def get_context_data(self, **kwargs):
         context = super(CategoriesList, self).get_context_data(**kwargs)
         context['category_list'] = Category.objects.all()
+        context['BASE_DIR'] = os.path.dirname(os.path.dirname(__file__))
         context['title'] = self.category
         return context
 

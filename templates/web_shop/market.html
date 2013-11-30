@@ -5,26 +5,30 @@
 {% block dropdown %}
     <ul class="dropdown-menu">
     {% for category in category_list %}
-         {% if  category.parent  %}
-        <li><a href="/category/{{ category.parent }}">{{ category.parent }}</a></li>
+         {% if  category %}
+        <li><a href="/category/{{ category.name }}">{{ category.name }}</a></li>
          {% endif %}
     {% endfor %}
     </ul>
 {% endblock %}
 
 {% block content %}
-<div class="page-header">
-    <h2 class="text-info">Market Place</h2>
-</div>
+    <div class="page-header">
+        <h2 class="text-info">Market Place</h2>
+    </div>
 
-    {% for category in category_list %}
-        {% if  category.parent  %}
-            <a href="/category/{{ category.parent }}"><p>{{ category.parent }}</p></a>
-
-        {% endif %}
-    {% endfor %}
-
-
+    <div class="container">
+    <div class="container">
+        {% for category in category_list %}
+            {% if  category %}
+                <div class="image">
+                    <a href="/category/{{ category.name }}"><h5 class="text-center">{{ category.name }}</h5></a>
+                    <a href="/category/{{ category.name }}"><img class=" img-responsive" src="{{ BASE_DIR }}/media/{{ category.thumbnail }}" width="200"></a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    </div>
 {% endblock %}
 
 

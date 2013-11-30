@@ -1,11 +1,11 @@
-from categories.base import CategoryBase
+from categories.models import Category
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 
 
-class Category(CategoryBase):
+class Category(Category):
     pass
 
 
