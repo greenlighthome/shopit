@@ -15,28 +15,27 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-<button id="add" class="button btn btn-primary" data-toggle="modal" data-target="#add_product">Add Product</button>
-    <h2 class="page-header text-info">Actions</h2>
+    <div class="container">
+        <button id="add" class="button btn btn-primary" data-toggle="modal" data-target="#add_product">Add Product</button>
+        <h2 class="page-header text-info">Actions</h2>
 
-    {% for product in product_list %}
-    <div class="container box-view col-sm-12 col-xs-12">
-    <div class="items">
-        <a class="no-style" href="{{ product.get_absolute_url }}"> <h3 class="text-info modal-title">{{ product.title }}</h3></a>
-        <span class="price">€ {{ product.price }}</span> <span class="condition price">{{ product.condition }}</span>
-        <span class=""><h4>{{ product.name }}</h4></span>
-        {% if product.image %}
-            <a href="{{ product.get_absolute_url }}"> <img class="img-thumbnail img-responsive" src="{{ product.image.url }}" width="200"></a>
-        {% endif %}
-        <a class="no-style" href="{{ category.get_absolute_url }}"> <h5>Details</h5></a>
+        {% for product in product_list %}
+            <div class="container box-view col-sm-12 col-xs-12">
+                <div class="items">
+                    <a class="no-style" href="{{ product.get_absolute_url }}"> <h3 class="text-info modal-title">{{ product.title }}</h3></a>
+                    <span class="price">€ {{ product.price }}</span> <span class="condition price">{{ product.condition }}</span>
+                    <span class=""><h4>{{ product.name }}</h4></span>
+                    {% if product.image %}
+                        <a href="{{ product.get_absolute_url }}"> <img class="img-thumbnail img-responsive image" src="{{ product.image.url }}" width="200" height=""></a>
+                    {% endif %}
+                    <a class="no-style" href="{{ category.get_absolute_url }}"> <h5>Details</h5></a>
 
-        <a href="update/{{ product.id }}"><button class="button btn btn-sm btn-info">Edit Product</button></a>
-        <a href="delete/{{ product.id }}"><button class="button btn btn-sm btn-danger">Remove Product</button></a>
-
+                    <a href="update/{{ product.id }}"><button class="button btn btn-xs btn-info">Edit Product</button></a>
+                    <a href="delete/{{ product.id }}"><button class="button btn btn-xs btn-danger">Remove Product</button></a>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-    </div>
-    {% endfor %}
-</div>
 
 <div class="modal fade" id="add_product" tabindex="-1" role="dialog" aria-labelledby="modal_label" aria-hidden="true">
   <div class="modal-dialog">
@@ -76,6 +75,14 @@
             <div class="form-group">
                 <label for="category">Choose a Category: </label>
                 <span class="">{{ form.category }}</span>
+            </div>
+             <div class="form-group">
+                <label for="category">Shipping Method: </label>
+                <span class="">{{ form.shipping_method }}</span>
+            </div>
+             <div class="form-group">
+                <label for="category">Shipping Cost: </label>
+                <span class="">{{ form.shipping_cost }}</span>
             </div>
             <div class="form-group">
                 <label for="image">Add an Image:</label>

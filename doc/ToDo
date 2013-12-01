@@ -42,8 +42,6 @@ New tasks starting 11/24/2013
 
 * [] Create user account view to display user's profile information  --->    for next week: consequently Update and delete his own profile (another pain anther ass)
 
-* [] Add more fields to Product model:  ---> in_stock: true/false
+* [√] Add more fields to Product model:  ---> in_stock: true/false
                                         ---> shipping_method: DHL, Post, Express
                                         ---> shipping cost
-
-* [] Add Image to Category Model list

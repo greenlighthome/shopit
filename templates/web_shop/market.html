@@ -4,11 +4,11 @@
 
 {% block dropdown %}
     <ul class="dropdown-menu">
-    {% for category in category_list %}
-         {% if  category %}
-        <li><a href="/category/{{ category.name }}">{{ category.name }}</a></li>
-         {% endif %}
-    {% endfor %}
+        {% for category in category_list %}
+            {% if  category %}
+                <li><a href="/category/{{ category.name }}">{{ category.name|capfirst }}</a></li>
+            {% endif %}
+        {% endfor %}
     </ul>
 {% endblock %}
 
@@ -18,21 +18,18 @@
     </div>
 
     <div class="container">
-    <div class="container">
-        {% for category in category_list %}
-            {% if  category %}
-                <div class="image">
-                    <a href="/category/{{ category.name }}"><h5 class="text-center">{{ category.name }}</h5></a>
-                    <a href="/category/{{ category.name }}"><img class=" img-responsive" src="{{ BASE_DIR }}/media/{{ category.thumbnail }}" width="200"></a>
-                </div>
-            {% endif %}
-        {% endfor %}
+        <div class="container">
+            <div class="container">
+                {% for category in category_list %}
+                    {% if  category %}
+                        <div class="image">
+                            <a href="/category/{{ category.name }}"><h5 class="text-center">{{ category.name|capfirst }}</h5></a>
+                            <a href="/category/{{ category.name }}"><img class=" img-responsive" src="{{ BASE_DIR }}/media/{{ category.thumbnail }}" width="200"></a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
     </div>
-    </div>
+
 {% endblock %}
-
-
-
-
-
-

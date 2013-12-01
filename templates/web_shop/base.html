@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/custom.css' %}" type="text/css" media="screen"/>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-    <title>{% block title %} {{ title }} {% endblock %}</title>
+    <title>{% block title %} {{ title|capfirst }} {% endblock %}</title>
 </head>
 
 <body>
@@ -37,12 +37,15 @@
         <ul class="dropdown-menu">
             {% for category in category_list %}
                 {% if category %}
-                    <li><a href="/category/{{ category.name }}">{{ category.name }}</a></li>
+                    <li><a href="/category/{{ category.name }}">{{ category.name|capfirst }}</a></li>
                 {% endif %}
             {% endfor %}
          </ul>
         {% endblock %}
       </li>
+        {% if user.is_active %}
+      <li class=""><a href="/dashboard/">Dashboard</a></li>
+        {% endif %}
     </ul>
     <form class="navbar-form navbar-left" role="search">
       <div class="form-group">

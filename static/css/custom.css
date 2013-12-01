@@ -9,6 +9,14 @@ body footer {
   height: 40px;
   background-color: #000000;
 }
+body .image-height {
+  max-height: 400px;
+}
+body .on_stock {
+  position: relative;
+  color: #009900;
+  display: inline;
+}
 body .image {
   padding: 30px;
   margin: 10px;

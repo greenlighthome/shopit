@@ -33,11 +33,15 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+.image {
+  max-height: 220px;
+  max-width: 150px;
+}
 .box-view {
   position: relative;
   max-width: 300px;
   min-height: 200px;
-  height: 420px;
+  height: 400px;
   margin-left: 20px;
   padding-bottom: 10px;
   float: left;
@@ -45,6 +49,7 @@ body {
 .box-view .items {
   position: absolute;
   bottom: 10px;
+  max-width: 200px;
 }
 .box-view h3,
 .box-view h4 {

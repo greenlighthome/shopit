@@ -4,7 +4,7 @@
     <ul class="dropdown-menu">
         {% for category in category_list %}
             {% if category %}
-                <li><a href="/category/{{ category.name }}">{{ category.name }}</a></li>
+                <li><a href="/category/{{ category.name }}">{{ category.name|capfirst }}</a></li>
             {% endif %}
         {% endfor %}
     </ul>
@@ -15,15 +15,23 @@
         <h2 class="text-info">Details</h2>
     </div>
      <div class="container">
-        <h3 class="text-info"><span class="price"> {{ product.condition }}</span> {{ product.title }}</h3>
+        <h3 class="text-info"><span class="price"> {{ product.condition|capfirst }}</span> {{ product.title }}</h3>
         <h4 class="text-info">{{ product.name }}</h4>
         {% if product.image %}
             <img class="img-responsive" src="{{ product.image.url }}" width="300"><br><br><br>
-            <h4 class="price">€ {{ product.price }}</h4>
         {% endif %}
+        {% if product.on_stock %}
+            {% if product.quantity < 3 %}
+                <h5 class="on_stock">Only {{ product.quantity }} available</h5>
+                {% elif product.quantity == 1 %}
+                    <h5 class="on_stock">Last one in stock</h5>
+                    {% else %}
+                        <h5 class="on_stock">In Stock</h5>
+            {% endif %}
+        {% endif %}
+        <h4 class="price">€ {{ product.price }}</h4>
         <p class="text-muted">On sale by <span class="text-info">{{ product.saler }}</span><br>
-            Since <span class="text-info">{{ product.date_added }}</span> </p>
-
+        <span class="text-info">Since {{ product.date_added }}</span> </p>
 
         <div class="btn-group">
             <button class="btn btn-sm btn-danger" value="">buy Article</button>
@@ -37,21 +45,20 @@
         </div>
     </div>
 
-
-
-
-<div class="modal fade" id="more-details" tabindex="-1" role="dialog" aria-labelledby="modal_label" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title text-info" id="modal_label">{{ product.name }}</h4>
-      </div>
-      <div class="modal-body">
-
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-</div>
+    <div class="modal fade" id="more-details" tabindex="-1" role="dialog" aria-labelledby="modal_label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title text-info" id="modal_label">{{ product.name }}</h4>
+                </div>
+                <div class="modal-body">
+                    <h4 class="text-center text-info">Shipping Info</h4>
+                    <h5>Saled and shipped by <span class="text-info">{{ product.saler|capfirst }}</span></h5>
+                    <h5>Shipping method: {{ product.shipping_method|capfirst }}</h5>
+                    <h5>Shipping cost: {{ product.shipping_cost }}</h5>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 {% endblock %}

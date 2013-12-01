@@ -1,0 +1,4 @@
+slugify url from category to product view
+
+example:
+    http://shopit/category/DVD / Blue Ray/   <--- that's what i'm taking (that's the actual url)

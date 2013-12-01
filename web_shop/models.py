@@ -5,10 +5,6 @@ from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 
 
-class Category(Category):
-    pass
-
-
 class Condition(models.Model):
     condition = models.CharField(max_length=30)
 
@@ -30,6 +26,14 @@ class Address(models.Model):
         return self.street
 
 
+class ShippingMethod(models.Model):
+    id = models.AutoField(primary_key=True)
+    shipping_method = models.CharField(max_length=50)
+
+    def __unicode__(self):
+        return self.shipping_method
+
+
 class Product(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.TextField(max_length=100)
@@ -42,6 +46,9 @@ class Product(models.Model):
     category = models.ForeignKey('categories.Category')
     image = models.ImageField(upload_to='images/products/%Y/%m/%d', blank=True)
     saler = models.ForeignKey(User)
+    on_stock = models.BooleanField(default=True)
+    shipping_method = models.ForeignKey(ShippingMethod)
+    shipping_cost = models.DecimalField(max_digits=6, decimal_places=2)
 
     def __unicode__(self):
         return self.name
