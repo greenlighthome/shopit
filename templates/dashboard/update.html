@@ -2,17 +2,6 @@
 
 {% block title %} {{ title }} {% endblock %}
 
-{% block username %}
-    <li class="username hidden-xs">hello {{ user.username|capfirst }}</li>
-    <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span></a>
-    {% block dropdown %}
-        <ul class="dropdown-menu">
-            <li><a href="/accounts/logout/">Logout</a></li>
-        </ul>
-    </li>
-    {% endblock %}
-{% endblock %}
 
 {% block content %}
     <div class="page-header">
@@ -47,11 +36,19 @@
                 <span class="form-row">{{ form.description }}</span>
             </div>
             <div class="form-group">
-                <label for="category">Choose a Category: </label>
+                <label for="category">Choose a category: </label>
                 <span class="">{{ form.category }}</span>
             </div>
             <div class="form-group">
-                <label for="image">Add an Image:</label>
+                <label for="image">Shipping method:</label>
+                <span class="form-row">{{ form.shipping_method }}</span>
+            </div>
+             <div class="form-group">
+                <label for="image">Shipping cost:</label>
+                <span class="form-row">{{ form.shipping_cost }}</span>
+            </div>
+            <div class="form-group">
+                <label for="image">Add an image:</label>
                 <span class="form-row">{{ form.image }}</span>
             </div>
             <input type="submit" class="btn btn-primary" value="Update">

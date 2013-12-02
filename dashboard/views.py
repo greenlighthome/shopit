@@ -1,3 +1,4 @@
+from accounts.models import UserProfile
 from categories.models import Category
 from dashboard.models import ProductForm
 from django.contrib.auth.models import User
@@ -41,9 +42,9 @@ class UserActions(ListView):
         return Product.objects.filter(saler=self.saler)
 
     def get_context_data(self, **kwargs):
-        context = super(ListView, self).get_context_data(**kwargs)
+        context = super(UserActions, self).get_context_data(**kwargs)
         context['form'] = ProductForm()
-        context['user'] = User.objects.all()
+        context['user'] = UserProfile.objects.all()
         context['title'] = 'Actions'
         return context
 
@@ -83,3 +84,13 @@ class DashboardDetailView(DetailView):
         context['category_list'] = Category.objects.all()
         context['title'] = 'Details'
         return context
+
+
+class UserAccount(ListView):
+    model = UserProfile
+    template_name = 'dashboard/account.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(UserAccount, self).get_context_data(**kwargs)
+        context['user'] = UserProfile.objects.all()
+        context['title'] = 'Account'

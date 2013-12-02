@@ -1,4 +1,3 @@
-from categories.models import Category
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.contrib.auth.models import User
@@ -10,20 +9,6 @@ class Condition(models.Model):
 
     def __unicode__(self):
         return self.condition
-
-
-class Address(models.Model):
-    """ Standard German/Austria format """
-    street = models.TextField(max_length=60)
-    number = models.IntegerField()
-    door = models.TextField(max_length=50)
-    district = models.TextField(max_length=50)
-    postal_code = models.IntegerField(max_length=4)
-    province = models.TextField(max_length=50)
-    country = models.TextField(max_length=50)
-
-    def __unicode__(self):
-        return self.street
 
 
 class ShippingMethod(models.Model):

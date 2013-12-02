@@ -57,7 +57,3 @@ class ProductByCategoryList(ListView):
 
         context['title'] = self.category
         return context
-
-
-
-

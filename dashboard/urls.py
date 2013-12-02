@@ -9,5 +9,5 @@ urlpatterns = patterns('',
     url(r'update/(?P<pk>\d+)/', login_required(views.ProductUpdate.as_view()), name='update'),
     url(r'delete/(?P<pk>\d+)/', views.ProductDelete.as_view(), name='delete'),
     url(r'^details/(?P<slug>[\w|\W]+)-(?P<pk>\d+)/$', login_required(views.DashboardDetailView.as_view()), name='dashboard-detail-view'),
-
+    url(r'^account/$', views.UserAccount.as_view()),
 )
