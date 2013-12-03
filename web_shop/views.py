@@ -1,4 +1,4 @@
-from categories.base import CategoryBase
+from accounts.models import UserProfile
 from categories.models import Category
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
@@ -13,6 +13,7 @@ class WelcomeView(ListView):
     def get_context_data(self, **kwargs):
         context = super(WelcomeView, self).get_context_data(**kwargs)
         context['category_list'] = Category.objects.all()
+        context['user'] = UserProfile.objects.all()
         context['title'] = 'Welcome to Shopit'
         return context
 
@@ -25,6 +26,7 @@ class CategoryListView(ListView):
     def get_context_data(self, **kwargs):
         context = super(CategoryListView, self).get_context_data(**kwargs)
         context['category_list'] = Category.objects.all()
+        context['user'] = UserProfile.objects.all()
         context['title'] = 'Market Place'
         return context
 
@@ -38,6 +40,7 @@ class ProductDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(ProductDetailView, self).get_context_data(**kwargs)
         context['category_list'] = Category.objects.all()
+        context['user'] = UserProfile.objects.all()
         context['title'] = 'Details'
         return context
 
@@ -53,6 +56,7 @@ class ProductByCategoryList(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ProductByCategoryList, self).get_context_data(**kwargs)
+        context['user'] = UserProfile.objects.all()
         context['category_list'] = Category.objects.all()
 
         context['title'] = self.category

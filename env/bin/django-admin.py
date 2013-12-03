@@ -1,4 +1,4 @@
-#! /Users/Matthias/Sites/dynweb/project/shopit/env/bin/python
+#!/Users/MrBrown/Sites/WebDev/shopit/env/bin/python
 from django.core import management
 
 if __name__ == "__main__":

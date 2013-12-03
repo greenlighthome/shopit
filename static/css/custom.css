@@ -48,11 +48,11 @@ body .no-style {
   font-weight: bold;
 }
 #description {
-  max-width: 400px;
+  max-width: 550px;
 }
 .search {
   border-radius: 0;
-  width: 200px;
+  width: 160px;
 }
 .search-button {
   border-radius: 0;

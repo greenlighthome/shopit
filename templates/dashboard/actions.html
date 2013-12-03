@@ -2,17 +2,11 @@
 
 {% block title %} {{ title }} {% endblock %}
 
-{% block username %}
-<li class="username hidden-xs">hello {{ user.username|capfirst }}</li>
-    <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span></a>
-    {% block dropdown %}
-        <ul class="dropdown-menu">
-            <li><a href="/accounts/logout/">Logout</a></li>
-        </ul>
-    </li>
+    {% block username %}
+        <li class="username hidden-xs">hello {{ user.first_name|capfirst }}</li>
+        <li><a href="/accounts/logout/">Logout</a></li>
     {% endblock %}
-{% endblock %}
+
 
 {% block content %}
     <div class="container">

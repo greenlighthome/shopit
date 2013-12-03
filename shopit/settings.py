@@ -105,3 +105,5 @@ EMAIL_HOST_PASSWORD = 'password333'
 EMAIL_USE_TLS = True
 
 AUTH_PROFILE_MODULE = 'accounts.UserProfile'
+
+LOGIN_REDIRECT_URL = '/dashboard'
