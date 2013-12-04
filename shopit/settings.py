@@ -63,8 +63,8 @@ DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.postgresql_psycopg2',
         'NAME': 'shopit',
-        'USER': 'postgres',
-        'PASSWORD': 'neubaugasse99',
+        'USER': 'Matthias',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',
     }
