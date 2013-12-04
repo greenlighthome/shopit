@@ -70,10 +70,7 @@ class ConfirmationView(DetailView):
     model = Product
     template_name = 'web_shop/confirmation.html'
     context_object_name = 'product'
-    email = User.objects.values('email')[0]
-    address = email.values()[0]
 
-    send_mail('subject', 'message', EMAIL_HOST_USER, [address], fail_silently=False)
 
     def get_context_data(self, **kwargs):
         context = super(ConfirmationView, self).get_context_data(**kwargs)
