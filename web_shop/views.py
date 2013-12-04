@@ -71,8 +71,8 @@ class ConfirmationView(DetailView):
     template_name = 'web_shop/confirmation.html'
     context_object_name = 'product'
 
-
     def get_context_data(self, **kwargs):
         context = super(ConfirmationView, self).get_context_data(**kwargs)
         context['title'] = 'Congratilations'
         return context
+
