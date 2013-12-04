@@ -1,8 +1,16 @@
 body {
   margin: 70px 30px 60px 30px;
 }
+body h1,
+body h2,
+body h3 {
+  color: #444444;
+}
 body .cog {
   font-size: 1.3em;
+}
+body .page-header {
+  margin-top: 10px;
 }
 body footer {
   width: 100%;

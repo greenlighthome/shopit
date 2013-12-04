@@ -35,7 +35,7 @@
 
         {% if user.is_active %}
             <div class="btn-group">
-                <button class="btn btn-sm btn-danger" value="">buy Article</button>
+                <a href="/confirmation/{{ product.name }}/{{ product.id }}"><button class="btn btn-sm btn-danger" value="">buy Article</button></a>
             </div>
             {% else %}
                 <div class="btn-group">

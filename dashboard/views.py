@@ -78,7 +78,6 @@ class ProductDelete(DeleteView):
         return context
 
 
-
 class DashboardDetailView(DetailView):
     """ Detailed view of a specific article """
     model = Product

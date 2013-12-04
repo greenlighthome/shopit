@@ -9,33 +9,30 @@
 {% endfor %}
 
 {% block content %}
-
-<div class="one col-xs-12 col-sm-12 col-md-4">
-
-<div class="page-header"></div>
-    <a href="/category/audio"> <img src="{% static 'img/audio_2.jpg'%}" class="img-responsive"></a>
-    <h5 class="text-center">The latest audio accessories</h5>
-</div>
-
-
-
-<div class="two col-xs-12 col-sm-6 col-md-4">
-<div class="page-header"></div>
-    <div class="jumbotron">
-        <h2>Welcome to Shop it!</h2>
-        <p>The right place to buy stuff you don't need and sale the shit you don't want</p>
-        <a href="/market/"><button class="btn btn-primary">Take me there</button></a>
+    <h1 class="text-center">Buy it, Sale it...  Shop it!</h1>
+    <div class="one col-xs-12 col-sm-12 col-md-4">
+        <div class="page-header"></div>
+            <a href="/category/audio"> <img src="{% static 'img/audio_2.jpg'%}" class="img-responsive"></a>
+            <h5 class="text-center">The latest audio accessories</h5>
     </div>
-</div>
 
-
-<div class="three col-xs-12 col-sm-6 col-md-4">
-<div class="page-header"></div>
-    <div class="jumbotron">
-        <h2>Willhaben, eBay</h2>
-        <p>They can all suck it!</p>
-        <button class="btn btn-primary">Suck it</button>
+    <div class="two col-xs-12 col-sm-6 col-md-4">
+        <div class="page-header"></div>
+            <div class="jumbotron">
+                <h2>Welcome to Shop it!</h2>
+                <p>The right place to buy stuff you don't need and sale the shit you don't want</p>
+                <a href="/market/"><button class="btn btn-primary">Take me there</button></a>
+        </div>
     </div>
-</div>
+
+
+    <div class="three col-xs-12 col-sm-6 col-md-4">
+        <div class="page-header"></div>
+        <div class="jumbotron">
+            <h2>Willhaben, eBay</h2>
+            <p>They can all suck it!</p>
+            <button class="btn btn-primary">Suck it</button>
+        </div>
+    </div>
 
 {% endblock %}

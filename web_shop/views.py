@@ -1,5 +1,6 @@
 from accounts.models import UserProfile
 from categories.models import Category
+from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
 from web_shop.models import Product
@@ -60,4 +61,15 @@ class ProductByCategoryList(ListView):
         context['category_list'] = Category.objects.all()
 
         context['title'] = self.category
+        return context
+
+
+class ConfirmationView(DetailView):
+    model = Product
+    template_name = 'web_shop/confirmation.html'
+    context_object_name = 'product'
+
+    def get_context_data(self, **kwargs):
+        context = super(ConfirmationView, self).get_context_data(**kwargs)
+        context['title'] = 'Congratilations'
         return context

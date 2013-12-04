@@ -12,4 +12,6 @@ urlpatterns = patterns('',
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT, 'show_indexes':True}),
 
     url(r'^category/([\w|\W]+)/$', views.ProductByCategoryList.as_view(paginate_by=4)),
+
+    url(r'^confirmation/(?P<slug>[\w|\W]+)/(?P<pk>\d+)/$', views.ConfirmationView.as_view(), name='confirmation'),
 )
