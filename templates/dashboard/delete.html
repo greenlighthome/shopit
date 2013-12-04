@@ -6,12 +6,12 @@
     <h3 class="text-info">Delete Article</h3>
 </div>
 
-<p>Are you sure you want to delete the product {{ product.name }}?</p>
+<h5>Are you sure you want to delete the product {{ product.name }}?</h5>
 
 <form action="{% url 'delete' pk=product.id %}" method="post">
   {% csrf_token %}
-  <input type="submit" class="btn btn-danger" value="Yes, delete." />
-  <a class="text-info" href="/dashboard/actions/{{ user.username }}">No, cancel.</a>
+  <input type="submit" class="btn btn-danger btn-group-sm" value="Yes, delete." />
+  <a class="btn btn-default btn-sm" href="/dashboard/actions/{{ user.username }}">No, cancel.</a>
 </form>
 
 {% endblock %}

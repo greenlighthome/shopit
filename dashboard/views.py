@@ -56,7 +56,7 @@ class ProductUpdate(UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super(ProductUpdate, self).get_context_data(**kwargs)
-        context['title'] = 'Update'
+        context['title'] = 'Update Article'
         context['user'] = User.objects.all()
         return context
 
@@ -71,6 +71,12 @@ class ProductDelete(DeleteView):
 
     def get_success_url(self):
         return reverse('dashboard')
+
+    def get_context_data(self, **kwargs):
+        context = super(ProductDelete, self).get_context_data(**kwargs)
+        context['title'] = 'Delete Article'
+        return context
+
 
 
 class DashboardDetailView(DetailView):
