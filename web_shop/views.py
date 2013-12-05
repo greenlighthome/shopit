@@ -86,7 +86,7 @@ def confirmation_view(request, product_id, saler_id):
     if id:
         a = Product.objects.get(id=product_id)
         count = a.quantity
-        count += 1     # <--------- on production this should be changed to 'count -= 1'
+        count -= 1
         a.quantity = count
         a.save()
     return render_to_response('web_shop/confirmation.html',
