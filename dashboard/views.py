@@ -99,3 +99,4 @@ class UserAccount(ListView):
         context = super(UserAccount, self).get_context_data(**kwargs)
         context['user'] = UserProfile.objects.all()
         context['title'] = 'Account'
+

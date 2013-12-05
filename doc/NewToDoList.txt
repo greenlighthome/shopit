@@ -2,12 +2,12 @@ ab 12.04.2013
 
 ok, to finish up the project we need a bunch of steps to achieve in a nice and clean way the objective.
 
-[] Modify database;
+[√] Modify database;
 	Remove on_stock field from Product model can be achieve with SOUTH without to have to
 		delete the database (sudo pip install south) also install in pycharm
 
 [√] Create View for dispatched products once someone bough them,
-	[] in that view should be build the logic for reducing the amount of products in stock
+	[√] in that view should be build the logic for reducing the amount of products in stock
 	   	by one, when amount == 0 product should be removed from database.
 	[] an email should be send to the user who is buying the product with the saler's info
 		as well as details of the product

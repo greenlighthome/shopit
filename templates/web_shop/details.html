@@ -20,30 +20,33 @@
         {% if product.image %}
             <img class="img-responsive" src="{{ product.image.url }}" width="300"><br><br><br>
         {% endif %}
-        {% if product.on_stock %}
-            {% if product.quantity < 3 %}
-                <h5 class="on_stock">Only {{ product.quantity }} available</h5>
-                {% elif product.quantity == 1 %}
-                    <h5 class="on_stock">Last one in stock</h5>
-                    {% else %}
-                        <h5 class="on_stock">In Stock</h5>
-            {% endif %}
-        {% endif %}
-        <h4 class="price">€ {{ product.price }}</h4>
-        <p class="text-muted">On sale by <span class="text-info">{{ product.saler }}</span><br>
-        <span class="text-info">Since {{ product.date_added }}</span> </p>
 
-        {% if user.is_active %}
-            <div class="btn-group">
-                <a href="/confirmation/{{ product.name }}/{{ product.id }}"><button class="btn btn-sm btn-danger" value="">buy Article</button></a>
-            </div>
+
+        {% if product.quantity > 0 %}
+            <h5 class="on_stock">Only {{ product.quantity }} available</h5>
+            <h4 class="price">€ {{ product.price }}</h4>
+            <p class="text-muted">On sale by <span class="text-info">{{ product.saler }}</span><br>
+            <span class="text-info">Since {{ product.date_added }}</span> </p>
+
+            {% if user.is_active %}
+                <div class="btn-group">
+                    <a href="/confirmation/{{ product.id }}"><button class="btn btn-sm btn-danger" value="">buy Article</button></a>
+                </div>
             {% else %}
                 <div class="btn-group">
                     <a href="/accounts/signup/"><button class="btn btn-sm btn-danger" value="">Register to buy Article</button></a>
                 </div>
-        {% endif %}
+            {% endif %}
+
             <button class="btn btn-sm btn-info" value="" data-toggle="modal" data-target="#more-details">Mode Details</button>
-        </div>
+
+            {% endif %}
+            {% if product.quantity == 0 %}
+                <h1 class="price">Article Sold Out</h1>
+            {% endif %}
+
+
+
          <br><br>
         <div id="description" class="row">
             <p class="text-muted">{{ product.description|linebreaksbr }}</p>

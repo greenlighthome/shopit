@@ -1,6 +1,7 @@
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.contrib.auth.models import User
+from django.forms import ModelForm
 from django.template.defaultfilters import slugify
 
 
@@ -43,3 +44,4 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         return reverse('dashboard-detail-view', kwargs={'slug': slugify(self.name), 'pk': self.id})
+

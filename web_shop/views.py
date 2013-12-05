@@ -1,8 +1,7 @@
+from django.core.mail import send_mail
 from accounts.models import UserProfile
 from categories.models import Category
-from django.contrib.auth.models import User
-from django.core.mail import send_mail
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render_to_response
 from django.views.generic import ListView, DetailView
 from shopit.settings import EMAIL_HOST_USER
 from web_shop.models import Product
@@ -66,13 +65,14 @@ class ProductByCategoryList(ListView):
         return context
 
 
-class ConfirmationView(DetailView):
-    model = Product
-    template_name = 'web_shop/confirmation.html'
-    context_object_name = 'product'
-
-    def get_context_data(self, **kwargs):
-        context = super(ConfirmationView, self).get_context_data(**kwargs)
-        context['title'] = 'Congratilations'
-        return context
-
+def confirmation_view(request, product_id):
+    product = Product.objects.get(id=product_id)
+    email = request.user.email
+    send_mail('subject', 'message', EMAIL_HOST_USER, [email], fail_silently=False)
+    if id:
+        a = Product.objects.get(id=product_id)
+        count = a.quantity
+        count += 1     # <--------- on production this should be changed to 'count -= 1'
+        a.quantity = count
+        a.save()
+    return render_to_response('web_shop/confirmation.html', {'title': 'Congratulations', 'product': product})

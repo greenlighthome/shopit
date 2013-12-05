@@ -13,5 +13,5 @@ urlpatterns = patterns('',
 
     url(r'^category/([\w|\W]+)/$', views.ProductByCategoryList.as_view(paginate_by=4)),
 
-    url(r'^confirmation/(?P<slug>[\w|\W]+)/(?P<pk>\d+)/$', views.ConfirmationView.as_view(), name='confirmation'),
+    url(r'^confirmation/(\d+)/$', 'web_shop.views.confirmation_view'),
 )
