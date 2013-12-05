@@ -1,0 +1,45 @@
+{% extends 'email/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="container">
+            <h2 class="page-header text-info">Product information</h2>
+            <h4>Hi {{ user.first_name }}, here are the details of your <b>{{ product.name }}</b> bought at <b>shopit.now</b></h4>
+
+            <table>
+                <th>Shipping info</th>
+                <tr><td>Shipping Method:</td> <td>{{ product.shipping_method|capfirst }}</td></tr>
+                <tr><td>Product price:</td> <td>€{{ product.price }}</td></tr>
+                <tr><td>Shipping cost:</td> <td>€{{ product.shipping_cost }}</td></tr>
+                <tr><td>Total:</td><td>€{{ total }}</td></tr>
+            </table>
+            <br>
+
+
+            Please contact <b>{{ product.saler }}</b>
+            at {{ saler.email }} for more dateails on payment information
+            <br><br><br>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{ name }} <!-- name from the user who bought the product -->
+
+
+<h2>{{ product.saler }}</h2> <!-- username from saler -->
+
+<h2>{{ saler.email }}</h2> <!-- contact email of saler -->

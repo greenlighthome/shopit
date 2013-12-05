@@ -18,7 +18,7 @@
         <h3 class="text-info"><span class="price"> {{ product.condition|capfirst }}</span> {{ product.title }}</h3>
         <h4 class="text-info">{{ product.name }}</h4>
         {% if product.image %}
-            <img class="img-responsive" src="{{ product.image.url }}" width="300"><br><br><br>
+            <img class="img-responsive" src="{{ product.image.url }}" width="300"><br><br>
         {% endif %}
 
 
@@ -30,7 +30,7 @@
 
             {% if user.is_active %}
                 <div class="btn-group">
-                    <a href="/confirmation/{{ product.id }}"><button class="btn btn-sm btn-danger" value="">buy Article</button></a>
+                    <a href="/confirmation/{{ product.id }}/{{ product.saler_id }}"><button class="btn btn-sm btn-danger" value="">buy Article</button></a>
                 </div>
             {% else %}
                 <div class="btn-group">
