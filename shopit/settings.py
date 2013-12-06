@@ -52,8 +52,13 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'shopit.urls'
+TEMPLATE_CONTEXT_PROCESSORS = {
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
+}
 
+ROOT_URLCONF = 'shopit.urls'
 WSGI_APPLICATION = 'shopit.wsgi.application'
 
 
@@ -107,4 +112,4 @@ EMAIL_USE_TLS = True
 
 AUTH_PROFILE_MODULE = 'accounts.UserProfile'
 
-LOGIN_REDIRECT_URL = '/dashboard'
+LOGIN_REDIRECT_URL = '/'

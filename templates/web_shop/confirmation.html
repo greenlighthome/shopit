@@ -1,5 +1,10 @@
 {% extends 'web_shop/base.html' %}
 
+{% for category in category_list %}
+    {% if category %}
+        <li><a href="/category/{{ category.name }}">{{ category.name|capfirst }}</a></li>
+    {% endif %}
+{% endfor %}
 
 {% block content %}
     <div class="page-header">

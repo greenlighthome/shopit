@@ -8,9 +8,28 @@ h3 {
   color: #444444;
 }
 .thumbnail-fixed {
-  width: 30%;
+  padding: 20px;
+  max-width: 200px;
   float: left;
   margin-right: 10px;
+}
+.success {
+  text-align: center;
+  max-width: 230px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #5cb85c;
+  padding: 5px 10px 5px 10px;
+  color: #ffffff;
+  border-radius: 4px;
+}
+.thumbnail {
+  float: left;
+  width: auto;
+}
+.message-li {
+  list-style: none;
+  font-size: 0.8em;
 }
 .pagination {
   position: relative;

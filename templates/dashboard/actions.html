@@ -12,7 +12,9 @@
     <div class="container">
         <button id="add" class="button btn btn-primary" data-toggle="modal" data-target="#add_product">Add Product</button>
         <h2 class="page-header text-info">Actions</h2>
-
+        {% for message in messages %}
+            <p class="{{ message.tags }}">{{ message }}</p>
+        {% endfor %}
         {% for product in product_list %}
             <div class="container box-view col-sm-12 col-xs-12">
                 <div class="items">
@@ -40,7 +42,7 @@
       </div>
       <div class="modal-body">
         {% block form %}
-        <form enctype="multipart/form-data" method="post" action="{% url 'dashboard' %}">
+        <form enctype="multipart/form-data" method="post" action="">
             {% csrf_token %}
             <div class="form-group">
                 <label for="name">Title: </label>

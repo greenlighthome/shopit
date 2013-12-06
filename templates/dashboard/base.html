@@ -43,7 +43,7 @@
      <ul class="nav navbar-nav navbar-right">
 
         {% block username %}
-            <li class="text-warning"><a>hello {{ user.first_name|capfirst }}</a></li>
+            <li class="text-warning"><a>Hello {{ user.first_name|capfirst }}</a></li>
             <li><a href="/accounts/logout/">Logout</a></li>
             <li class="dropdown">
         {% endblock %}
