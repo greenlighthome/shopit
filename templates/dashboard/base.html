@@ -44,7 +44,7 @@
 
         {% block username %}
             <!-- <li class="text-warning"><a>hello {{ user.username|capfirst }}</a></li> -->
-            <li><a href="#" class="glyphicon glyphicon-user" data-toggle="tooltip" id="basic-tooltip" title="{{ user.username|capfirst }}" data-placement="right" data-animation="true"></a></li>
+            <li><a href="#" class="glyphicon glyphicon-user" data-toggle="tooltip" id="basic-tooltip" title="Hello {{ user.username|capfirst }}" data-placement="right" data-animation="true"></a></li>
             <li><a href="/accounts/logout/">Logout</a></li>
             <li class="dropdown">
         {% endblock %}
@@ -69,10 +69,6 @@
 </body>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}" ></script>
-    <script type="text/javascript" src="{% static 'js/active_link.js' %}"></script>
-    <script type="text/javascript">
-        $("#basic-tooltip").tooltip({
-            "placement" : "bottom"
-        });
-    </script>
+    <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+
 </html>
