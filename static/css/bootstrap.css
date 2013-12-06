@@ -1875,6 +1875,7 @@ input[type="search"] {
           box-sizing: border-box;
 }
 
+
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 0 0;
@@ -7037,7 +7038,7 @@ td.hidden-lg {
 
 @media (max-width: 767px) {
   .hidden-lg.hidden-xs,
-  tr.hidden-lg.hidden-xs,
+  tr.hidden-lg.hidden-xs,navbar-lef
   th.hidden-lg.hidden-xs,
   td.hidden-lg.hidden-xs {
     display: none !important;
@@ -7096,3 +7097,4 @@ td.visible-print {
     display: none !important;
   }
 }
+

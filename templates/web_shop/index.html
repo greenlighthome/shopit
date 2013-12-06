@@ -21,7 +21,7 @@
             <div class="jumbotron">
                 <h2>Welcome to Shop it!</h2>
                 <p>The right place to buy stuff you don't need and sale the shit you don't want</p>
-                <a href="/market/"><button class="btn btn-primary">Take me there</button></a>
+                <a href="/market/"><button class="btn btn-primary"  data-toggle="tooltip" id="basic-tooltip" title="Simple tooltip" data-placement="right" data-animation="true">Take me there</button></a>
         </div>
     </div>
 
@@ -36,3 +36,6 @@
     </div>
 
 {% endblock %}
+<script type="text/javascript">
+    $("#basic-tooltip").tooltip();
+</script>
