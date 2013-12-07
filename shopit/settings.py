@@ -40,7 +40,6 @@ INSTALLED_APPS = (
     'accounts',
     'categories',
     'categories.editor',
-    'south'
 )
 
 MIDDLEWARE_CLASSES = (

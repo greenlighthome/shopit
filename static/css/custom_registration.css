@@ -29,10 +29,10 @@ form .form_button {
 form label {
   color: #ffffff;
 }
-a.forgot {
+a.register {
   text-decoration: none;
   position: relative;
-  top: 26px;
+  top: 40px;
 }
 /* Large desktop */
 @media (min-width: 1200px) {
