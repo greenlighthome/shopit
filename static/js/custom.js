@@ -1,8 +1,10 @@
 ﻿
 $( document ).ready(function() {
 
-    $("#basic-tooltip").tooltip({
-            "placement" : "bottom"
+    $("#basic-tooltip").popover({
+            "placement" : "bottom",
+            "trigger": "hover",
+               "delay": 200
       });
 
        
