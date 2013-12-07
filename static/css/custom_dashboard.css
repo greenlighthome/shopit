@@ -29,6 +29,12 @@ h3 {
 #basic-tooltip {
   width: 40px;
 }
+.popover {
+  background-color: #3276B1;
+  color: #FFFFFF;
+  width: 140px;
+  text-align: center;
+}
 .thumbnail {
   float: left;
   width: auto;

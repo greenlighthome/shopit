@@ -41,7 +41,7 @@
      <ul class="nav navbar-nav navbar-right" id="rrr">
 
         {% block username %}
-            <li><a href="#" class="glyphicon glyphicon-user" data-toggle="tooltip" id="basic-tooltip" title="Hello {{ user.first_name|capfirst }}" data-placement="right" data-animation="true"></a></li>
+            <li><a href="" id="basic-tooltip" class="glyphicon glyphicon-user" data-toggle="tooltip" data-content="Hello {{ user.first_name|capfirst }}" data-style="primary" data-placement="" data-animation="true"></a></li>
             <li><a href="/accounts/logout/">Logout</a></li>
             <li class="dropdown">
         {% endblock %}

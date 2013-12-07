@@ -2,7 +2,7 @@
 $( document ).ready(function() {
 
     $("#basic-tooltip").popover({
-            "placement" : "bottom",
+            "placement" : "left",
             "trigger": "hover",
                "delay": 200
       });
