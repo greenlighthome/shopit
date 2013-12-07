@@ -64,9 +64,7 @@ class ProductDelete(SuccessMessageMixin, DeleteView):
     model = Product
     success_message = 'Item successfully removed'
     template_name = 'dashboard/delete.html'
-
-    def get_success_url(self):
-        return reverse('dashboard')
+    success_url = '/dashboard/'
 
     def get_context_data(self, **kwargs):
         context = super(ProductDelete, self).get_context_data(**kwargs)

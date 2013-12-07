@@ -23,6 +23,12 @@ h3 {
   color: #ffffff;
   border-radius: 4px;
 }
+.search {
+  width: 160px;
+}
+#basic-tooltip {
+  width: 40px;
+}
 .thumbnail {
   float: left;
   width: auto;
@@ -101,6 +107,12 @@ h3 {
     width: 70%;
     float: left;
     margin-right: 10px;
+  }
+  .search {
+    display: inline;
+  }
+  .search-button {
+    display: inline;
   }
 }
 /* Landscape phones and down */

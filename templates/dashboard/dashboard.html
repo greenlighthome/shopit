@@ -8,6 +8,10 @@
     <div class="page-header">
         <h2 class="text-info">{{ title }}</h2>
     </div>
+    {% for message in messages %}
+        <p class="{{ message.tags }}">{{ message }}</p>
+    {% endfor %}
+
     <!-- Need to make this part of code interactive -->
     <div class="jumbotron">
         <h2>Welcome {{ user.username }},</h2>
