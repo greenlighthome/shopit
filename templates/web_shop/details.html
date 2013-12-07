@@ -45,12 +45,17 @@
                 <h1 class="price">Article Sold Out</h1>
             {% endif %}
 
-
-
-         <br><br>
-        <div id="description" class="row">
-            <p class="text-muted">{{ product.description|linebreaksbr }}</p>
+        <br><br>
+        <div class="modal-header">
+            <h4 class="modal-title text-info">Description</h4>
         </div>
+     <div class="modal-body">
+         <p class="">{{ product.description|linebreaksbr }}</p>
+     </div>
+
+
+
+
     </div>
 
     <div class="modal fade" id="more-details" tabindex="-1" role="dialog" aria-labelledby="modal_label" aria-hidden="true">
