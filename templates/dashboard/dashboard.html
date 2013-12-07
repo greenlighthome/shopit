@@ -2,12 +2,12 @@
 {% load staticfiles %}
 {% block title %} {{ title }} {% endblock %}
 
-
-
 {% block content %}
+
     <div class="page-header">
         <h2 class="text-info">{{ title }}</h2>
     </div>
+
     {% for message in messages %}
         <p class="{{ message.tags }}">{{ message }}</p>
     {% endfor %}
@@ -15,20 +15,18 @@
     <!-- Need to make this part of code interactive -->
     <div class="jumbotron">
         <h2>Welcome {{ user.username }},</h2>
-        <p>This is your control panel, from here you can take actions on your items</p>
+        <p>This is your control panel, from here you can take actions on your items.</p>
         <a href="/dashboard/actions/{{ user.username }}"><button class="btn btn-primary">Take me to actions</button></a>
     </div>
 
-
-    <h2>Recent sold items</h2>
+    <h2>Recently sold items</h2>
     <div class="jumbotron">
         <div class="row">
             <div class="thumbnail-fixed thumbnail">
-                <h4 cl>No resent activity</h4>
+                <h4 cl>No recent activity.</h4>
             </div>
         </div>
     </div>
-
 
 {% endblock %}
 

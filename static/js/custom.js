@@ -7,6 +7,13 @@ $( document ).ready(function() {
                "delay": 200
       });
 
+    $("#warning-tooltip").popover({
+            "placement" : "bottom",
+            "trigger": "hover",
+               "delay": 200
+      });
+
+
        
 $(function(){
   function stripTrailingSlash(str) {

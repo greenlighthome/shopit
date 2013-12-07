@@ -1,13 +1,17 @@
 {% extends 'dashboard/base.html' %}
 
 {% block content %}
+
     <div class="page-header">
         <h2 class="text-info">Details</h2>
     </div>
+
     {% for message in messages %}
         <p class="{{ message.tags }}">{{ message }}</p>
     {% endfor %}
+
     <a href="/dashboard/actions/{{ user.username }}"><button class="btn btn-primary btn-center">Back to actions</button></a>
+
     <div class="container">
         <h3 class="text-info"><span class="price"> {{ product.condition }}</span> {{ product.title }}</h3>
         <h4 class="text-info">{{ product.name }}</h4>
@@ -17,17 +21,16 @@
             <h5 class="on_stock">Amount: {{ product.quantity }}</h5>
             <h4 class="price">Price: € {{ product.price }}</h4>
         {% endif %}
+
         <p class="text-muted">On sale by <span class="text-info">{{ product.saler }}</span><br>
-            Since <span class="text-info">{{ product.date_added }}</span> </p>
+            Since <span class="text-info">{{ product.date_added }}</span>
+        </p>
         <h5 class="">Shipping cost: {{ product.shipping_cost }}</h5>
         <h5 class="">Shipping method: {{ product.shipping_method }}</h5>
         <div class="modal-header">
             <h5 class="modal-title text-info">Description:</h5>
         </div>
         <p class="">{{ product.description }}</p>
-
-
-
     </div>
 
 {% endblock %}
