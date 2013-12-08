@@ -17,10 +17,10 @@
     <div class="container">
         <h3 class="text-info"><span class="price"> {{ product.condition|capfirst }}</span> {{ product.title }}</h3>
         <h4 class="text-info">{{ product.name }}</h4>
-
         {% if product.image %}
             <img class="img-responsive" src="{{ product.image.url }}" width="300"><br><br>
         {% endif %}
+
 
         {% if product.quantity > 0 %}
             <h5 class="on_stock">Only {{ product.quantity }} available</h5>
@@ -47,7 +47,7 @@
                 </div>
                 {% elif user == product.saler %}
                     <div class="btn-group">
-                        <button class="btn btn-sm btn-danger" value="" id="warning-tooltip" data-toggle="tooltip" data-content="You can not buy your own article!" data-style="primary" data-placement="" data-animation="true">buy Article</button>
+                        <button class="btn btn-sm btn-danger" value="" id="warning-tooltip" data-toggle="tooltip" data-content="Sorry, {{ user.first_name|capfirst }}this is sold by you!" data-style="primary" data-placement="" data-animation="true">buy Article</button>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-sm btn-info" value="" data-toggle="modal" data-target="#more-details">Mode Details</button>
@@ -55,10 +55,9 @@
                 {% endif %}
             {% endif %}
         {% endif %}
-
-        {% if product.quantity == 0 %}
-            <h1 class="price">Article Sold Out</h1>
-        {% endif %}
+            {% if product.quantity == 0 %}
+                <h1 class="price">Article Sold Out</h1>
+            {% endif %}
 
         <br><br>
         <div class="modal-header">
