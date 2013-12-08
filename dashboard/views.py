@@ -1,10 +1,10 @@
 from accounts.models import UserProfile
 from categories.models import Category
-from dashboard.models import ProductForm
+from dashboard.forms import ProductForm, UserForm
 from django.contrib.auth.models import User
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import get_object_or_404
-from django.views.generic import CreateView, UpdateView, DeleteView, DetailView, ListView
+from django.views.generic import CreateView, UpdateView, DeleteView, DetailView, ListView, TemplateView
 from web_shop.models import Product
 
 
@@ -46,7 +46,7 @@ class ProductUpdate(SuccessMessageMixin, UpdateView):
     model = Product
     form_class = ProductForm
     success_message = 'Item successfully updated'
-    template_name = 'dashboard/update.html'
+    template_name = 'dashboard/product_update.html'
 
     def get_context_data(self, **kwargs):
         context = super(ProductUpdate, self).get_context_data(**kwargs)
@@ -55,14 +55,13 @@ class ProductUpdate(SuccessMessageMixin, UpdateView):
         return context
 
     def form_valid(self, form):
-        form.instance.saler = self.request.user
         return super(ProductUpdate, self).form_valid(form)
 
 
 class ProductDelete(SuccessMessageMixin, DeleteView):
     model = Product
     success_message = 'Item successfully removed'
-    template_name = 'dashboard/delete.html'
+    template_name = 'dashboard/product_delete.html'
     success_url = '/dashboard/'
 
     def get_context_data(self, **kwargs):
@@ -84,11 +83,27 @@ class DashboardDetailView(DetailView):
         return context
 
 
-class UserAccount(ListView):
+class UserAccount(TemplateView):
     model = UserProfile
     template_name = 'dashboard/account.html'
 
     def get_context_data(self, **kwargs):
         context = super(UserAccount, self).get_context_data(**kwargs)
-        context['user'] = UserProfile.objects.all()
         context['title'] = 'Account'
+        return context
+
+
+class UpdateUserAccountView(SuccessMessageMixin, UpdateView):
+    model = User
+    template_name = 'dashboard/update_user_account.html'
+    success_message = 'Profile successfully updated'
+    form_class = UserForm
+    success_url = '/dashboard/account'
+
+    def get_context_data(self, **kwargs):
+        context = super(UpdateUserAccountView, self).get_context_data(**kwargs)
+        context['title'] = 'Update Profile'
+        return context
+
+    def form_valid(self, form):
+        return super(UpdateUserAccountView, self).form_valid(form)

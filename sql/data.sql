@@ -23,8 +23,12 @@ INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, t
 INSERT INTO auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES
 (1, 'pbkdf2_sha256$12000$UvU6oGn0A2o2$TbzlxQTVi3wQkC86Vmbm3eSLJNRBpMsk/1/vQkrQcgs=', '2013-11-21 21:32:44.384627+01', 't', 'admin', 'admin', 'admin', 'admin@shopit.at', 't', 't', '2013-11-21 21:32:44.384627+01');
 
+INSERT INTO auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES
+(3, 'pbkdf2_sha256$12000$NjD5m0yt28pS$U9+yfJ7G+rp77QDoqbt0jbhU18l8JnYWxsyoPgQbgD8=', '2013-12-08 04:55:41+01', 't', 'eddie', 'Eduardo', 'Da Silva', 'mr.brown.is.in.town@gmail.com', 't', 't', '2013-12-08 04:55:41+01');
+
 -- accounts_userprofile
 INSERT INTO accounts_userprofile (id, user_id) VALUES (1, 1);
+INSERT INTO accounts_userprofile (id, user_id) VALUES (3, 3);
 
 -- Condition
 INSERT INTO web_shop_condition (id, condition) VALUES (1, 'new');
@@ -32,6 +36,7 @@ INSERT INTO web_shop_condition (id, condition) VALUES (2, 'used');
 
 -- Shipping method
 INSERT INTO web_shop_shippingmethod (id, shipping_method) VALUES (1, 'normal post');
+INSERT INTO web_shop_shippingmethod (id, shipping_method) VALUES (2, 'express');
 
 -- Products
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)

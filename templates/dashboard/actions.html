@@ -2,19 +2,15 @@
 
 {% block title %} {{ title }} {% endblock %}
 
-    {% block username %}
-        <li class="username hidden-xs">hello {{ user.first_name|capfirst }}</li>
-        <li><a href="/accounts/logout/">Logout</a></li>
-    {% endblock %}
-
-
 {% block content %}
     <div class="container">
         <button id="add" class="button btn btn-primary" data-toggle="modal" data-target="#add_product">Add Product</button>
         <h2 class="page-header text-info">Actions</h2>
+
         {% for message in messages %}
             <p class="{{ message.tags }}">{{ message }}</p>
         {% endfor %}
+
         {% for product in product_list %}
             <div class="container box-view col-sm-12 col-xs-12">
                 <div class="items">
@@ -26,8 +22,8 @@
                     {% endif %}
                     <a class="no-style" href="{{ category.get_absolute_url }}"> <h5>Details</h5></a>
 
-                    <a href="update/{{ product.id }}"><button class="button btn btn-xs btn-info">Edit Product</button></a>
-                    <a href="delete/{{ product.id }}"><button class="button btn btn-xs btn-danger">Remove Product</button></a>
+                    <a href="/dashboard/product/update/{{ product.id }}"><button class="button btn btn-xs btn-info">Edit Product</button></a>
+                    <a href="/dashboard/product/delete/{{ product.id }}"><button class="button btn btn-xs btn-danger">Remove Product</button></a>
                 </div>
             </div>
         {% endfor %}
@@ -91,7 +87,6 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-</div>
 
 <ul class="pagination">
     {% if page_obj.has_previous %}

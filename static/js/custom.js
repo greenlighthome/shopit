@@ -1,20 +1,18 @@
-﻿
-$( document ).ready(function() {
+﻿$( document ).ready(function() {
 
     $("#basic-tooltip").popover({
             "placement" : "bottom",
             "trigger": "hover",
-               "delay": 200
+               "delay": 300
       });
 
     $("#warning-tooltip").popover({
             "placement" : "bottom",
-            "trigger": "hover",
-               "delay": 200
+            "trigger": "click",
+               "delay": 100
       });
 
 
-       
 $(function(){
   function stripTrailingSlash(str) {
     if(str.substr(-1) == '/') {
@@ -34,6 +32,5 @@ $(function(){
     }
   });
 });
-
 
 });

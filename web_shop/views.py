@@ -8,7 +8,6 @@ from django.template.loader import get_template
 from django.views.generic import ListView, DetailView
 from shopit.settings import EMAIL_HOST_USER, BASE_DIR
 from web_shop.models import Product
-
 from django.template import RequestContext
 from django.contrib import  messages
 
@@ -27,7 +26,7 @@ class WelcomeView(ListView):
 
 
 class CategoryListView(ListView):
-    """ List of all parent categories """
+    """ List of categories """
     model = Category
     template_name = 'web_shop/market.html'
 
@@ -73,27 +72,30 @@ class ProductByCategoryList(ListView):
 def confirmation_view(request, product_id, saler_id):
     product = Product.objects.get(id=product_id)
     category_list = Category.objects.all()
+
+    """ Information necesary for email processing """
     user = request.user
     saler = User.objects.get(id=saler_id)
     total = product.shipping_cost + product.price
-    #d = Context({'user': user, 'product': product, 'saler': saler, 'total': total})
-    #
-    #email = request.user.email
-    #html = get_template('email/confirmation.html')
-    #html_content = html.render(d)
-    #
-    #msg = EmailMultiAlternatives('subject', html_content, EMAIL_HOST_USER, [email])
-    #msg.attach_alternative(html_content, 'text/html')
-    #msg.attach_file(BASE_DIR + product.image.url)
-    #msg.send()
+    d = Context({'user': user, 'product': product, 'saler': saler, 'total': total})
 
+    email = request.user.email
+    html = get_template('email/confirmation.html')
+    html_content = html.render(d)
+
+    msg = EmailMultiAlternatives('subject', html_content, EMAIL_HOST_USER, [email])
+    msg.attach_alternative(html_content, 'text/html')
+    msg.attach_file(BASE_DIR + product.image.url)
+    msg.send()
+
+    """ Reduce by one the quantity of items in database"""
     if id:
         a = Product.objects.get(id=product_id)
         count = a.quantity
-        count += 1
+        count -= 1
         a.quantity = count
         a.save()
-
+        """ Delete any item from database is quantity equals zero """
         if count == 0:
             a.delete()
     return render_to_response('web_shop/confirmation.html',

@@ -1,0 +1,33 @@
+{% extends 'dashboard/base.html' %}
+
+
+{% block content %}
+    <div class="page-header">
+        <h2 class="text-info">{{ title }}</h2>
+    </div>
+    <div class="container">
+        <h4>Basic information</h4>
+    </div>
+
+    <div class="container">
+    <form class="" roll="form" method="post" action="">
+        {% csrf_token %}
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="first_name:">Username: </label><h5 class="text-muted form-control">{{ user.username }}</h5>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="first_name:">First name: </label><span class="form-control">{{ form.first_name }}</span>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="last_name:">Last name: </label><span class="form-control">{{ form.last_name }}</span>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="email">Email: </label><span class="form-control">{{ form.email }}</span>
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Update">
+        </div>
+    </form>
+            </div>
+
+{% endblock %}
