@@ -9,6 +9,11 @@ body h3 {
 body .cog {
   font-size: 1.3em;
 }
+body .logo {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 body .popover {
   width: 150px;
 }
