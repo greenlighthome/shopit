@@ -23,12 +23,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Shopit</a>
+            <a class="logo" href="/"><img src="{% static 'img/shopit.png' %}" width="50"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
-
             <ul id="navi" class="nav navbar-nav">
                 <li class=""><a href="/market/">Market</a></li>
                 <li class=""><a href="/dashboard/">Dashboard</a></li>
@@ -38,7 +37,7 @@
 
             <form class="navbar-form navbar-left" role="search">
                 <input type="text" class="form-control search" placeholder="Search" >
-                <button type="submit" class="btn btn-default search-button"><span class="glyphicon glyphicon-search"></span></button>
+                <button type="submit" class="btn btn-default search-button "><span class="glyphicon glyphicon-search"></span></button>
             </form>
 
             <!-- upper right corner in navbar, contains user-icon and logout -->
@@ -46,7 +45,7 @@
 
                 {% block username %}
 
-                    <li><a href="" id="basic-tooltip" class="glyphicon glyphicon-user" data-toggle="tooltip" data-content="Hello {{ user.username|capfirst }}" data-style="primary" data-placement="" data-animation="true"></a></li>
+                    <li><a href="" id="basic-tooltip" class="glyphicon glyphicon-user hidden-xs" data-toggle="tooltip" data-content="Hello {{ user.username|capfirst }}" data-style="primary" data-placement="" data-animation="true"></a></li>
                     <li><a href="/accounts/logout/">Logout</a></li>
                     <li class="dropdown">
 
