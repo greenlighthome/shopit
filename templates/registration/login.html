@@ -1,32 +1,40 @@
-{% extends 'web_shop/base.html' %}
+{% extends 'registration/base.html' %}
 
 {% block content %}
 
 <h2 class="page-header text-info">Login to access your account</h2>
-<div class="container box-center">
+<div class="container">
+<div class="container">
+    <div class="container">
+        <div class="container">
     <form action="{% url 'django.contrib.auth.views.login' %}" method="post">
         {% csrf_token %}
-
-        <div class="form-group">
-            <label for="username">Username: </label>
-            <span class="input-lg">{{ form.username }}</span>
-        </div>
-        <div class="form-group">
-            <label for="category">Password: </label>
-            <span class="input-lg">{{ form.password }}</span>
-        </div>
-        <div class="form-group">
-            <tr><input type="submit" class="btn btn-primary form_button" value="Login" />
-            <input type="hidden" name="next" value="{{ next }}" />
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="username">Username: </label>
+                <span class="form-control">{{ form.username }}</span>
+            </div>
+            <div class="form-group">
+                <label class=" col-sm-3 control-label" for="category">Password: </label>
+                <span class="form-control">{{ form.password }}</span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary login-button" value="Login" />
+                <input type="hidden" name="next" value="{{ next }}" />
+            </div>
         </div>
     </form>
 
-    <a class="text-center register" href="/accounts/signup"><h5 class="text-primary">Register for free</h5></a>
+    <a class="col-md-offset-3 register" href="/accounts/signup"><h5 class="text-primary">Register for free</h5></a>
 
+</div>
+    </div>
+
+</div>
 </div>
 
 {% if form.errors %}
-    <h4 class="text-danger text-center">Authentication error</h4>
+    <h4 class="text-danger error">Authentication error</h4>
 {% endif %}
 
 {% endblock %}

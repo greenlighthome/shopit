@@ -1,57 +1,115 @@
 body {
-    margin: 80px 40px 60px 40px;
+  margin: 70px 30px 60px 30px;
 }
-.text-center-from-top {
-    margin-top: 20%;
+body form .form-control {
+  border: none;
+  box-shadow: none;
 }
-.form-section {
-    background-color: #444548;
-    padding-top: 8px;
-    border-radius: 4px;
-    width: 315px;
-    opacity:0.9;
-    box-shadow: 2px 2px 5px #888888;
+body form .help-text {
+  font-size: 0.8em;
+  text-align: center;
 }
-.box-center {
-    border-radius: 4px;
-    width: 380px;
-    height: 180px;
-    margin-top: 14%;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid 1px;
-    background-color: #282725;
-}
-form {
-    margin-top: 30px;
-}
-form .form_button {
-    margin-left: 90px;
-}
-form label {
-    color: #ffffff;
-}
-a.register {
-    text-decoration: none;
-    position: relative;
-    top: 40px;
-}
-/* Large desktop */
 @media (min-width: 1200px) {
-
+  .warning li {
+    list-style: none;
+    text-decoration: none;
+    margin-left: 250px;
+  }
+  .register {
+    position: relative;
+    left: 26%;
+    top: -30px;
+  }
+  .login-button {
+    position: relative;
+    left: 25%;
+  }
+  .error {
+    position: relative;
+    left: 30.2%;
+    top: -40px;
+  }
 }
-/* Landscape phone to portrait tablet */
+@media (max-width: 1200px) {
+  .warning li {
+    list-style: none;
+    text-decoration: none;
+    margin-left: 200px;
+  }
+  .register {
+    position: relative;
+    left: 26%;
+    top: -30px;
+  }
+  .login-button {
+    position: relative;
+    left: 25%;
+  }
+  .error {
+    position: relative;
+    left: 31%;
+    top: -40px;
+  }
+}
+@media (max-width: 991px) {
+  .warning li {
+    list-style: none;
+    text-decoration: none;
+    margin-left: 150px;
+  }
+  .register {
+    position: relative;
+    left: 27%;
+    top: 0;
+  }
+  .login-button {
+    position: relative;
+    left: 25%;
+  }
+  .error {
+    position: relative;
+    left: 30%;
+    top: -15px;
+  }
+}
 @media (max-width: 767px) {
-
+  .warning li {
+    list-style: none;
+    text-decoration: none;
+    margin-left: -20px;
+  }
+  .register {
+    position: relative;
+    left: 20px;
+    top: 0;
+  }
+  .login-button {
+    position: relative;
+    left: 13px;
+  }
+  .error {
+    position: relative;
+    left: 50px;
+  }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-    body {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .form-section{
-        width: 215px;
-    }
+  .warning li {
+    list-style: none;
+    text-decoration: none;
+    margin-left: -20px;
+  }
+  .register {
+    position: relative;
+    left: 20px;
+    top: 0;
+  }
+  .login-button {
+    position: relative;
+    left: 13px;
+  }
+  .error {
+    position: relative;
+    left: 50px;
+  }
 }

@@ -23,11 +23,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="logo" href="/"><img src="{% static 'img/shopit.png' %}" width="50"></a>
+            <a class="navbar-brand" href="/">Shopit</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
+
             <ul id="navi" class="nav navbar-nav">
                 <li class=""><a href="/market/">Market</a></li>
                 <li class=""><a href="/dashboard/">Dashboard</a></li>
@@ -36,8 +37,9 @@
             </ul>
 
             <form class="navbar-form navbar-left" role="search">
-                <input type="text" class="form-control search" placeholder="Search" >
-                <button type="submit" class="btn btn-default search-button "><span class="glyphicon glyphicon-search"></span></button>
+                <input type="text" class="form-control search" placeholder="Search">
+                <button type="submit" class="btn btn-default search-button"><span
+                        class="glyphicon glyphicon-search"></span></button>
             </form>
 
             <!-- upper right corner in navbar, contains user-icon and logout -->
@@ -45,14 +47,17 @@
 
                 {% block username %}
 
-                    <li><a href="" id="basic-tooltip" class="glyphicon glyphicon-user hidden-xs" data-toggle="tooltip" data-content="Hello {{ user.username|capfirst }}" data-style="primary" data-placement="" data-animation="true"></a></li>
+                    <li><a href="" id="basic-tooltip" class="glyphicon glyphicon-user hidden-xs" data-toggle="tooltip"
+                           data-content="Hello {{ user.username|capfirst }}" data-style="primary" data-placement=""
+                           data-animation="true"></a></li>
                     <li><a href="/accounts/logout/">Logout</a></li>
                     <li class="dropdown">
 
                 {% endblock %}
 
             </ul>
-        </div><!-- /.navbar-collapse -->
+        </div>
+        <!-- /.navbar-collapse -->
     </nav>
 
 {% endblock %} <!-- End of navigation block (main horizontal navigation menu) -->
@@ -73,9 +78,9 @@
 
 </body>
 
-    <!-- here loading jQuery and javascript files -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}" ></script>
-    <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+<!-- here loading jQuery and javascript files -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
 
 </html>

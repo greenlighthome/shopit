@@ -1,12 +1,13 @@
 @color-price: #AA0000;
 @color-black: #000000;
-@color-font: #444;;
+@color-font: #444;
+;
 @color-green: #009900;
 
-body  {
+body {
   margin: 70px 30px 60px 30px;
 
-  h1,h2,h3 {
+  h1, h2, h3 {
     color: @color-font;
   }
   .cog {
@@ -38,7 +39,7 @@ body  {
     color: @color-green;
     display: inline;
   }
-  .image{
+  .image {
     padding: 30px;
     margin: 10px;
     width: 200px;
@@ -49,11 +50,11 @@ body  {
     width: 200px;
     float: left;
     margin-right: 10px;
-}
+  }
 
-.copyright {
-      margin-top: 15px;
-    }
+  .copyright {
+    margin-top: 15px;
+  }
   .condition {
     font-weight: bold;
     color: @color-price;
@@ -63,54 +64,53 @@ body  {
   }
 }
 
-  .img-thumbnail {
-    min-width: 120px;
-  }
+.img-thumbnail {
+  min-width: 120px;
+}
 
-  .price {
-    color: @color-price;
-    font-family: Arial;
-    font-weight: bold;
-  }
+.price {
+  color: @color-price;
+  font-family: Arial;
+  font-weight: bold;
+}
 
-  #description {
-    max-width: 550px;
-  }
+#description {
+  max-width: 550px;
+}
 
-  .search {
-    border-radius: 0;
-    width: 160px;
-  }
+.search {
+  border-radius: 0;
+  width: 160px;
+}
 
-  .search-button {
-    border-radius: 0;
-  }
+.search-button {
+  border-radius: 0;
+}
 
-  .navbar-fixed-top {
-    width: auto;
-    height: auto;
-  }
+.navbar-fixed-top {
+  width: auto;
+  height: auto;
+}
 
+.glyphicon-euro {
+  color: @color-price;
+  font-family: Arial;
+}
+
+form {
+  select#id_category {
+    height: 25px;
+    min-width: 80px;
+  }
+  div#image-holder {
+    width: 200px;
+    height: 200px;
+    border: solid 1px;
+  }
   .glyphicon-euro {
-    color: @color-price;
-    font-family: Arial;
+    font-size: 1px;
   }
-
-  form {
-    select#id_category {
-      height: 25px;
-      min-width: 80px;
-    }
-    div#image-holder {
-      width: 200px;
-      height: 200px;
-      border: solid 1px;
-    }
-    .glyphicon-euro {
-      font-size: 1px;
-    }
-  }
-
+}
 
 /* Large desktop */
 @media (min-width: 1200px) {
@@ -125,8 +125,17 @@ body  {
   body {
     font-size: 1.2em;
   }
+
   nav {
     font-size: 1.4em;
+  }
+
+  .search {
+    display: inline;
+  }
+
+  .search-button {
+    display: inline;
   }
 }
 
@@ -135,7 +144,8 @@ body  {
   body {
     font-size: 1.2em;
   }
+
   nav {
-   font-size: 1.3em;
-   }
+    font-size: 1.3em;
+  }
 }

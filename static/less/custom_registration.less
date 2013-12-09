@@ -1,59 +1,123 @@
-@color-white: #FFFFFF;
-@color-dark-background: #282725;
-
-@radius: 4px;
-
 body {
-  margin: 80px 40px 60px 40px;
-}
-.text-center-from-top {
-  margin-top: 20%;
-}
-
-.form-section {
-  background-color: @color-dark-background;
-  padding-top: 18px;
-  border-radius: @radius;
-  width: 315px;
-}
-
-.box-center {
-  border-radius: @radius;
-  width: 380px;
-  height: 180px;
-  margin-top: 14%;
-  margin-left: auto;
-  margin-right: auto;
-  border: solid 1px;
-  background-color: @color-dark-background;
-}
-form {
-  margin-top: 30px;
-  .form_button {
-    margin-left: 90px;
+  margin: 70px 30px 60px 30px;
+  form {
+    .form-control {
+      border: none;
+      box-shadow: none;
+    }
+    .help-text {
+      font-size: 0.8em;
+      text-align: center;
+    }
   }
-  label {
-    color: @color-white;
-  }
-}
-a.register {
-  text-decoration: none;
-  position: relative;
-  top: 40px;
+
 }
 
-/* Large desktop */
 @media (min-width: 1200px) {
+  .warning li {
+    list-style: none;
+    text-decoration: none;
+    margin-left: 250px;
+  }
+  .register {
+    position: relative;
+    left: 26%;
+    top: -30px;
+  }
+  .login-button {
+    position: relative;
+    left: 25%;
+  }
+  .error {
+    position: relative;
+    left: 30.2%;
+    top: -40px;
+  }
 }
 
-/* Landscape phone to portrait tablet */
+@media (max-width: 1200px) {
+  .warning li {
+    list-style: none;
+    text-decoration: none;
+    margin-left: 200px;
+  }
+  .register {
+    position: relative;
+    left: 26%;
+    top: -30px;
+  }
+  .login-button {
+    position: relative;
+    left: 25%;
+  }
+  .error {
+    position: relative;
+    left: 31%;
+    top: -40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .warning li {
+    list-style: none;
+    text-decoration: none;
+    margin-left: 150px;
+  }
+  .register {
+    position: relative;
+    left: 27%;
+    top: 0;
+  }
+  .login-button {
+    position: relative;
+    left: 25%;
+  }
+  .error {
+    position: relative;
+    left: 30%;
+    top: -15px;
+  }
+}
+
 @media (max-width: 767px) {
+  .warning li {
+    list-style: none;
+    text-decoration: none;
+    margin-left: -20px;
+  }
+  .register {
+    position: relative;
+    left: 20px;
+    top: 0;
+  }
+    .login-button {
+      position: relative;
+      left: 13px;
+  }
+    .error {
+    position: relative;
+    left: 50px;
+  }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  body {
-    margin-left: 10px;
-    margin-right: 10px;
+  .warning li {
+    list-style: none;
+    text-decoration: none;
+    margin-left: -20px;
+  }
+  .register {
+    position: relative;
+    left: 20px;
+    top: 0;
+  }
+  .login-button {
+    position: relative;
+    left: 13px;
+  }
+  .error {
+    position: relative;
+    left: 50px;
   }
 }

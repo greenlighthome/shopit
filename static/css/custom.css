@@ -109,6 +109,12 @@ form .glyphicon-euro {
   nav {
     font-size: 1.4em;
   }
+  .search {
+    display: inline;
+  }
+  .search-button {
+    display: inline;
+  }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
