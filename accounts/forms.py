@@ -1,6 +1,6 @@
 from django.contrib.sites.models import Site
 from django.contrib.auth.tokens import default_token_generator
-from django.forms import TextInput, PasswordInput, EmailInput
+from django.forms import TextInput, PasswordInput, EmailInput, DateInput
 from django.utils.http import int_to_base36
 from django.template import Context, loader
 from django import forms
@@ -24,6 +24,7 @@ class UserCreationForm(forms.ModelForm):
             'first_name': TextInput(attrs={'required': True, 'placeholder': ' First_name', 'autofocus': True}),
             'last_name': TextInput(attrs={'required': True, 'placeholder': ' Last_name'}),
             'username': TextInput(attrs={'required': True, 'placeholder': ' Username'}),
+            'date_of_birth': DateInput(attrs={'required': True, 'placeholder': ' yyyy-mm-dd'})
         }
 
     def clean_password2(self):

@@ -3,13 +3,33 @@
 
 {% block content %}
     <h2 class="page-header text-info">{{ title }}</h2>
+    {% for message in messages %}
+        <p class="success">{{ message }}</p>
+    {% endfor %}
     <div class="container">
-        <p class="text-muted">Username: {{ user.username }}</p>
-        <p class="text-muted">First name: {{ user.first_name }}</p>
-        <p class="text-muted">Last name: {{ user.last_name }}</p>
-        <p class="text-muted">Date of birth: {{ user.date_of_birth }}</p>
-        <p class="text-muted"></p>
+        <h4 class="text-info">Basic info</h4>
+        <div class="container">
+            <h5 class="">Username: <span class="text-muted">{{ user.username }}</span></h5>
+            <h5 class="">Full name: <span class="text-muted">{{ user.username|capfirst }} {{ user.last_name|capfirst }}</span></h5>
+            <h5 class="">Date of birth: <span class="text-muted">{{ user.date_of_birth }}</span></h5>
+            <h5 class="">Email address: <span class="text-muted">{{ user.email }}</span></h5>
 
+        </div>
+        <br>
+        <h4 class="text-info">Address</h4>
+        <div class="container">
+            <address>
+                {% if user.street %}
+                    <h5 class="address">{{ user.street }} {{ user.number }}/{{ user.door }}</h5>
+                    <h5 class="address">{{ user.district }} {{ user.postal_code }}</h5>
+                    <h5 class="address">{{ user.province }}, {{ user.country }}</h5>
+
+                {% elif not user.street %}
+                    <h5 class="text-info">Not known address, please add an address</h5>
+                {% endif %}
+            </address>
+            <a href="/dashboard/account/update/{{ user.id }}" class="btn btn-primary">Update account</a>
+        </div>
     </div>
 
 

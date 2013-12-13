@@ -41,13 +41,13 @@ class MyUser(AbstractBaseUser):
     first_name = models.CharField(('first name'), max_length=30, blank=True)
     last_name = models.CharField(('last name'), max_length=30, blank=True)
     street = models.TextField(max_length=100, null=True)
-    number = models.IntegerField(null=True)
-    door = models.CharField(max_length=10, null=True)
+    number = models.IntegerField(null=True, max_length=3)
+    door = models.IntegerField(null=True, max_length=3)
     district = models.CharField(max_length=50, null=True)
-    postal_code = models.IntegerField(null=True)
+    postal_code = models.IntegerField(null=True, max_length=4)
     province = models.CharField(max_length=50, null=True)
     country = models.CharField(max_length=50, null=True)
-    phone_number = models.IntegerField(null=True)
+    phone_number = models.IntegerField(null=True, max_length=13)
 
     objects = MyUserManager()
 

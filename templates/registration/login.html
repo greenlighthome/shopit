@@ -5,8 +5,7 @@
 <h2 class="page-header text-info">Login to access your account</h2>
     <div class="container">
         <div id="login-box">
-            <h4 class="text-info text-center">Login</h4>
-            <hr>
+            <h3 id="login-header" class="text-info text-center">Login</h3>
             <form action="{% url 'django.contrib.auth.views.login' %}" method="post">
             {% csrf_token %}
                 <div class="form-horizontal">

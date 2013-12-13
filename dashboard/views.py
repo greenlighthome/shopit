@@ -1,5 +1,5 @@
 from categories.models import Category
-from dashboard.forms import ProductForm
+from dashboard.forms import ProductForm, AccountUpdateForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import get_object_or_404
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView, ListView, TemplateView
@@ -90,3 +90,20 @@ class UserAccountView(TemplateView):
         context['title'] = 'User account'
         context['user'] = MyUser.objects.all()
         return context
+
+
+class AccountUpdateView(SuccessMessageMixin, UpdateView):
+    model = MyUser
+    form_class = AccountUpdateForm
+    template_name = 'dashboard/account_update.html'
+    success_message = 'Account successfully updated'
+    success_url = '/dashboard/account/'
+
+    def get_context_data(self, **kwargs):
+        context = super(AccountUpdateView, self).get_context_data(**kwargs)
+        context['title'] = 'Account Update'
+        context['user'] = MyUser.objects.all()
+        return context
+
+    def form_valid(self, form):
+        return super(AccountUpdateView, self).form_valid(form)

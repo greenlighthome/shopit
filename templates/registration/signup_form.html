@@ -13,9 +13,7 @@
                 <h4 class="text-info text-center">Signup</h4>
             <form id="signup" action="" method="post">
                 {% csrf_token %}
-                <div class="form-horizontal">
-
-                    <hr>
+                <div class="form-horizontal form">
                     <div class="form-group">
                         <label class="control-label" for="first_name">First name: </label>
                         <span class="form-control">{{ form.first_name }}</span>
@@ -32,8 +30,7 @@
                         <span class="text-danger warning">{{ form.username.errors }}</span>
                         <p class="help-text text-muted">{{ form.username.help_text }}</p>
                     </div>
-
-
+                    <hr>
                     <div class="form-group">
                         <label class="control-label" for="date_of_birth">Date of birth: </label>
                         <span class="form-control">{{ form.date_of_birth }}</span>
