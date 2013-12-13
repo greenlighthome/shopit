@@ -1,5 +1,7 @@
 body {
-  margin: 80px 30px 60px 30px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 80px 30px 80px 30px;
   position: relative;
 }
 h1,
@@ -40,8 +42,6 @@ h3 {
   display: inline;
 }
 .popover {
-  background-color: #3276B1;
-  color: #FFFFFF;
   width: 140px;
   text-align: center;
 }
@@ -103,6 +103,40 @@ h3 {
 .box-view h3,
 .box-view h4 {
   font-size: 1em;
+}
+form#update .form-group .form-control {
+  background: none;
+  box-shadow: none;
+}
+form#update .form-group .control-label {
+  margin-left: 11px;
+}
+form#update .form-group #id_condition {
+  height: 25px;
+}
+form#update .form-group #choose-image {
+  width: 350px;
+}
+form#update .form-group input#id_image {
+  margin-top: 5px;
+  display: inline;
+}
+form#update .form-group textarea#id_description {
+  padding: 10px;
+}
+form#update .form-group #update-button {
+  margin-left: 10px;
+}
+#product-update-box {
+  margin-top: 30px;
+  padding: 4px 25px 20px 25px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15), 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 94.8%, transparent 75%);
+  background-size: 5px 100%;
 }
 /* Large desktop */
 @media (max-width: 1200px) {

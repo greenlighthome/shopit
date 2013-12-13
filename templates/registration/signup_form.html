@@ -8,50 +8,54 @@
 
     <div class="container">
         <div class="container">
+            <h4 class="text-center">you are ust one step closer to become a member of one of the biggest online markets in south east kapfenberg</h4>
+            <div id="box">
+                <h4 class="text-info text-center">Signup</h4>
             <form id="signup" action="." method="post">
                 {% csrf_token %}
                 <div class="form-horizontal">
+
+                    <hr>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label" for="first_name">First name: </label>
+                        <label class="control-label" for="first_name">First name: </label>
                         <span class="form-control">{{ form.first_name }}</span>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-3 control-label" for="username">Last name: </label>
+                        <label class="control-label" for="username">Last name: </label>
                         <span class="form-control">{{ form.last_name }}</span>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-3 control-label" for="username">Username: </label>
+                        <label class="control-label" for="username">Username: </label>
                         <span class="form-control">{{ form.username }}</span>
-                        <span class="text-warning">{{ form.username.errors }}</span>
-                        <span class="col-sm-offset-2 col-lg-offset-2 text-center help-text text-muted">{{ form.username.help_text }}</span>
+                        <span class="text-danger warning">{{ form.username.errors }}</span>
+                        <p class="help-text text-muted">{{ form.username.help_text }}</p>
                     </div>
-
+                    <hr>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label" for="email1">Email: </label>
+                        <label class="control-label" for="email1">Email: </label>
                         <span class="form-control">{{ form.email1 }}</span>
-                        <span class="text-warning warning">{{ form.email1.errors }}</span>
-
-                        <label class="col-sm-3 control-label" for="email2">Confirm Email: </label>
+                        <span class="text-danger warning">{{ form.email1.errors }}</span>
                         <span class="form-control">{{ form.email2 }}</span>
-                        <span class="text-warning warning">{{ form.email2.errors }}</span>
-                        <span class="col-sm-offset-2 col-lg-offset-2 help-text text-center text-muted">{{ form.username.help_text }}</span>
+                        <span class="text-danger warning">{{ form.email2.errors }}</span>
+                        <p class="help-text text-center text-muted">{{ form.username.help_text }}</p>
                     </div>
-
+                    <hr>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label" for="email1">Password: </label>
+                        <label class="control-label" for="email1">Password: </label>
                         <span class="form-control">{{ form.password1 }}</span>
-
-                        <label class="col-sm-3 control-label" for="password2">Confirm password: </label>
                         <span class="form-control">{{ form.password2 }}</span>
-                        <span class="text-warning warning">{{ form.password2.errors }}</span>
-                        <span class="col-sm-offset-2 col-lg-offset-2 help-text text-center text-muted"> {{ form.password2.help_text }}</span>
+                        <span class="text-danger warning">{{ form.password2.errors }}</span>
+                        <p class="help-text text-center text-muted"> {{ form.password2.help_text }}</p>
                     </div>
-
-                    <input type="submit" class="col-sm-offset-3 btn btn-primary" value="Signup"/>
+                    <hr>
+                    <div class="form-group">
+                        <input id="signup-button" type="submit" class="btn btn-primary" value="Signup"/>
+                    </div>
                 </div>
             </form>
+            </div>
         </div>
     </div>
 {% endblock %}

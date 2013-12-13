@@ -31,12 +31,12 @@
 
 <div class="modal fade" id="add_product" tabindex="-1" role="dialog" aria-labelledby="modal_label" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div id="modal-content" class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title text-info" id="modal_label">Add a new product</h4>
       </div>
-      <div class="modal-body">
+      <div id="modal-body" class="modal-body">
         {% block form %}
         <form enctype="multipart/form-data" method="post" action="">
             {% csrf_token %}
@@ -81,6 +81,7 @@
                 <span class="">{{ form.image }}</span>
             </div>
             <input type="submit" class="btn btn-primary" value="Add Product">
+            <a class="btn btn-default" href="">Cancel</a>
         </form>
         {% endblock %}
       </div>

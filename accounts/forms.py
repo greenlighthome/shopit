@@ -10,11 +10,11 @@ from django.core.mail import send_mail
 
 class UserCreationForm(forms.ModelForm):
 
-    password1 = forms.CharField(widget=forms.PasswordInput)
-    password2 = forms.CharField(widget=forms.PasswordInput,
+    password1 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': ' Password', 'required': True}))
+    password2 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': ' Verify password', 'required': True}),
                                 help_text="Enter the same password as above, for verification.")
-    email1 = forms.EmailField(max_length=75)
-    email2 = forms.EmailField(max_length=75,
+    email1 = forms.EmailField(max_length=75, widget=forms.EmailInput(attrs={'placeholder': ' Email', 'required': True}))
+    email2 = forms.EmailField(max_length=75, widget=forms.EmailInput(attrs={'placeholder': ' Verify email', 'required': True}),
                               help_text='Enter your email address again. A confirmation email will be sent to this address.')
 
     class Meta:
