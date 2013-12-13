@@ -11,7 +11,7 @@
             <h4 class="text-center">you are ust one step closer to become a member of one of the biggest online markets in south east kapfenberg</h4>
             <div id="box">
                 <h4 class="text-info text-center">Signup</h4>
-            <form id="signup" action="." method="post">
+            <form id="signup" action="" method="post">
                 {% csrf_token %}
                 <div class="form-horizontal">
 
@@ -32,6 +32,14 @@
                         <span class="text-danger warning">{{ form.username.errors }}</span>
                         <p class="help-text text-muted">{{ form.username.help_text }}</p>
                     </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label" for="date_of_birth">Date of birth: </label>
+                        <span class="form-control">{{ form.date_of_birth }}</span>
+                    </div>
+
+
                     <hr>
                     <div class="form-group">
                         <label class="control-label" for="email1">Email: </label>

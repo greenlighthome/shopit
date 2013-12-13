@@ -2,18 +2,15 @@
 
 
 {% block content %}
-
-    <div class="page-header">
-        <h2 class="text-info">{{ title }}</h2>
-    </div>
+    <h2 class="page-header text-info">{{ title }}</h2>
     <div class="container">
-        {% for message in messages %}
-            <p class="{{ message.tags }}">{{ message }}</p>
-        {% endfor %}
-        <p><span class="text-muted">Username: {{ user.username }}</span></p>
-        <p><span class="text-muted">First name: {{ user.first_name }}</span></p>
-        <p><span class="text-muted">Last name: {{ user.last_name }}</span></p>
-        <p><span class="text-muted">Email address: {{ user.email }}</span></p>
-        <a href="/dashboard/account/update/{{ user.id }}/{{ user.id }}"><button class="btn btn-primary">Update account</button> </a>
+        <p class="text-muted">Username: {{ user.username }}</p>
+        <p class="text-muted">First name: {{ user.first_name }}</p>
+        <p class="text-muted">Last name: {{ user.last_name }}</p>
+        <p class="text-muted">Date of birth: {{ user.date_of_birth }}</p>
+        <p class="text-muted"></p>
+
     </div>
+
+
 {% endblock %}

@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'accounts',
     'categories',
     'categories.editor',
+    'members',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -106,6 +107,6 @@ EMAIL_HOST_USER = 'no.reply.shopit@gmail.com'
 EMAIL_HOST_PASSWORD = 'password333'
 EMAIL_USE_TLS = True
 
-AUTH_PROFILE_MODULE = 'accounts.UserProfile'
+AUTH_USER_MODEL = 'members.MyUser'
 
 LOGIN_REDIRECT_URL = '/'

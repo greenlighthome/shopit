@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.forms import ModelForm
 from django.template.defaultfilters import slugify
+from members.models import MyUser
 
 
 class Condition(models.Model):
@@ -31,7 +32,7 @@ class Product(models.Model):
     description = models.TextField()
     category = models.ForeignKey('categories.Category')
     image = models.ImageField(upload_to='images/products/%Y/%m/%d', blank=True)
-    saler = models.ForeignKey(User)
+    saler = models.ForeignKey(MyUser)
     on_stock = models.BooleanField(default=True)
     shipping_method = models.ForeignKey(ShippingMethod)
     shipping_cost = models.DecimalField(max_digits=6, decimal_places=2)

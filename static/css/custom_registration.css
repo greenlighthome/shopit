@@ -54,7 +54,7 @@ form .form-group .warning li {
   display: block;
   text-align: center;
   margin-top: 20px;
-  text-decoration-style: none;
+  text-decoration: none;
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {

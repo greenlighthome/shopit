@@ -1,5 +1,4 @@
 from django.shortcuts import render_to_response
-from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect, Http404
 from accounts.forms import UserCreationForm
@@ -10,7 +9,7 @@ from django.conf import settings
 from django.utils.http import base36_to_int
 from django.contrib.sites.models import Site, RequestSite
 from django.views.decorators.csrf import csrf_protect
-
+from members.models import MyUser
 
 @csrf_protect
 def signup(request, template_name='registration/signup.html',
@@ -53,7 +52,7 @@ def signup_confirm(request, uidb36=None, token=None,
     except ValueError:
         raise Http404
 
-    user = get_object_or_404(User, id=uid_int)
+    user = get_object_or_404(MyUser, id=uid_int)
     context_instance = RequestContext(request)
 
     if token_generator.check_token(user, token):

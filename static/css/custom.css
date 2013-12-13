@@ -11,56 +11,37 @@ body h3 {
 body .cog {
   font-size: 1.3em;
 }
-body .logo {
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px;
+/*
+ * Navigation
+ */
+.navbar-fixed-top {
+  width: auto;
+  height: auto;
 }
-body .popover {
-  width: 150px;
-  font-size: 0.7em;
-  color: #000000;
+.navbar-fixed-top .search {
+  border-radius: 5px;
+  width: 160px;
 }
-body .page-header {
-  margin-top: 10px;
+.navbar-fixed-top .search-button {
+  border-radius: 5px;
 }
-body footer {
-  width: 100%;
-  height: 40px;
-  background-color: #000000;
-}
-body .image-height {
-  max-height: 400px;
-}
-body .on_stock {
-  position: relative;
-  color: #009900;
-  display: inline;
-}
-body .image {
+/*
+ * Details
+ */
+.image {
   padding: 30px;
   margin: 10px;
   width: 200px;
   height: 200px;
   float: left;
 }
-body .thumbnail-fixed {
+.image-height {
+  max-height: 400px;
+}
+.thumbnail-fixed {
   width: 200px;
   float: left;
   margin-right: 10px;
-}
-body .copyright {
-  margin-top: 15px;
-}
-body .condition {
-  font-weight: bold;
-  color: #aa0000;
-}
-body .no-style {
-  text-decoration: none;
-}
-.img-thumbnail {
-  min-width: 120px;
 }
 .price {
   color: #aa0000;
@@ -70,20 +51,46 @@ body .no-style {
 #description {
   max-width: 550px;
 }
-.search {
-  border-radius: 0;
-  width: 160px;
-}
-.search-button {
-  border-radius: 0;
-}
-.navbar-fixed-top {
-  width: auto;
-  height: auto;
+.on_stock {
+  position: relative;
+  color: #009900;
+  display: inline;
 }
 .glyphicon-euro {
   color: #aa0000;
   font-family: Arial;
+}
+.condition {
+  font-weight: bold;
+  color: #aa0000;
+}
+.no-style {
+  text-decoration: none;
+}
+/*
+ * Footer
+ */
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: #000000;
+}
+footer .copyright {
+  margin-top: 15px;
+}
+/*
+ * Basic
+ */
+.page-header {
+  margin-top: 10px;
+}
+.popover {
+  width: 150px;
+  font-size: 0.7em;
+  color: #000000;
+}
+.img-thumbnail {
+  min-width: 120px;
 }
 form select#id_category {
   height: 25px;
@@ -94,29 +101,18 @@ form div#image-holder {
   height: 200px;
   border: solid 1px;
 }
-form .glyphicon-euro {
-  font-size: 1px;
-}
-/* Large desktop */
-@media (min-width: 1200px) {
-  
-}
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-  
-}
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   body {
     font-size: 1.2em;
   }
-  nav {
+  body nav {
     font-size: 1.4em;
   }
-  .search {
+  body nav .search {
     display: inline;
   }
-  .search-button {
+  body nav .search-button {
     display: inline;
   }
 }
@@ -125,7 +121,7 @@ form .glyphicon-euro {
   body {
     font-size: 1.2em;
   }
-  nav {
+  body nav {
     font-size: 1.3em;
   }
 }

@@ -20,15 +20,12 @@ INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, t
 
 
 -- User: admin (username) - admin (password)
-INSERT INTO auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES
-(1, 'pbkdf2_sha256$12000$UvU6oGn0A2o2$TbzlxQTVi3wQkC86Vmbm3eSLJNRBpMsk/1/vQkrQcgs=', '2013-11-21 21:32:44.384627+01', 't', 'admin', 'admin', 'admin', 'admin@shopit.at', 't', 't', '2013-11-21 21:32:44.384627+01');
+INSERT INTO members_myuser (id, password, last_login, is_superuser, username, first_name, last_name, email, is_active, date_joined, date_of_birth) VALUES
+(2, 'pbkdf2_sha256$12000$UvU6oGn0A2o2$TbzlxQTVi3wQkC86Vmbm3eSLJNRBpMsk/1/vQkrQcgs=', '2013-11-21 21:32:44.384627+01', 't', 'admin', 'admin', 'admin', 'admin@shopit.at', 't', '2013-11-21 21:32:44.384627+01', '1993-10-0');
 
-INSERT INTO auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES
-(3, 'pbkdf2_sha256$12000$NjD5m0yt28pS$U9+yfJ7G+rp77QDoqbt0jbhU18l8JnYWxsyoPgQbgD8=', '2013-12-08 04:55:41+01', 't', 'eddie', 'Eduardo', 'Da Silva', 'mr.brown.is.in.town@gmail.com', 't', 't', '2013-12-08 04:55:41+01');
+INSERT INTO members_myuser (id, password, last_login, is_superuser, username, first_name, last_name, email, is_active, date_joined, date_of_birth) VALUES
+(3, 'pbkdf2_sha256$12000$NjD5m0yt28pS$U9+yfJ7G+rp77QDoqbt0jbhU18l8JnYWxsyoPgQbgD8=', '2013-12-08 04:55:41+01', 't', 'eddie', 'Eduardo', 'Da Silva', 'mr.brown.is.in.town@gmail.com', 't', '2013-12-08 04:55:41+01', '1993-10-04');
 
--- accounts_userprofile
-INSERT INTO accounts_userprofile (id, user_id) VALUES (1, 1);
-INSERT INTO accounts_userprofile (id, user_id) VALUES (3, 3);
 
 -- Condition
 INSERT INTO web_shop_condition (id, condition) VALUES (1, 'new');
@@ -77,9 +74,8 @@ INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_
 INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (19, '2013-12-04 00:25:59.135253+01', 1, 4, 1, 'admin', 2, 'Changed first_name and last_name.');
 INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (20, '2013-12-04 18:50:00.29563+01', 1, 4, 1, 'admin', 2, 'Changed email.');
 
-
 -- Fix sequences
-ALTER SEQUENCE accounts_userprofile_id_seq RESTART WITH 3;
+--ALTER SEQUENCE accounts_userprofile_id_seq RESTART WITH 3;
 ALTER SEQUENCE auth_user_id_seq RESTART WITH 3;
 ALTER SEQUENCE categories_category_id_seq RESTART WITH 10;
 ALTER SEQUENCE django_admin_log_id_seq RESTART WITH 21;

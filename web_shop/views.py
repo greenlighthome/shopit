@@ -1,6 +1,4 @@
-from django.contrib.auth.models import User
-from django.core.mail import send_mail, EmailMultiAlternatives
-from accounts.models import UserProfile
+from django.core.mail import EmailMultiAlternatives
 from categories.models import Category
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context
@@ -9,7 +7,7 @@ from django.views.generic import ListView, DetailView
 from shopit.settings import EMAIL_HOST_USER, BASE_DIR
 from web_shop.models import Product
 from django.template import RequestContext
-from django.contrib import  messages
+from members.models import MyUser
 
 
 class WelcomeView(ListView):
@@ -20,7 +18,6 @@ class WelcomeView(ListView):
     def get_context_data(self, **kwargs):
         context = super(WelcomeView, self).get_context_data(**kwargs)
         context['category_list'] = Category.objects.all()
-        context['user'] = UserProfile.objects.all()
         context['title'] = 'Welcome to Shopit'
         return context
 
@@ -33,7 +30,6 @@ class CategoryListView(ListView):
     def get_context_data(self, **kwargs):
         context = super(CategoryListView, self).get_context_data(**kwargs)
         context['category_list'] = Category.objects.all()
-        context['user'] = UserProfile.objects.all()
         context['title'] = 'Market Place'
         return context
 
@@ -47,7 +43,6 @@ class ProductDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(ProductDetailView, self).get_context_data(**kwargs)
         context['category_list'] = Category.objects.all()
-        context['user'] = UserProfile.objects.all()
         context['title'] = 'Details'
         return context
 
@@ -63,7 +58,6 @@ class ProductByCategoryList(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ProductByCategoryList, self).get_context_data(**kwargs)
-        context['user'] = UserProfile.objects.all()
         context['category_list'] = Category.objects.all()
         context['title'] = self.category
         return context
@@ -75,7 +69,7 @@ def confirmation_view(request, product_id, saler_id):
 
     """ Information necesary for email processing """
     user = request.user
-    saler = User.objects.get(id=saler_id)
+    saler = MyUser.objects.get(id=saler_id)
     total = product.shipping_cost + product.price
     d = Context({'user': user, 'product': product, 'saler': saler, 'total': total})
 

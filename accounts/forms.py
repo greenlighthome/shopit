@@ -1,11 +1,11 @@
 from django.contrib.sites.models import Site
-from django.contrib.auth.models import User
 from django.contrib.auth.tokens import default_token_generator
 from django.forms import TextInput, PasswordInput, EmailInput
 from django.utils.http import int_to_base36
 from django.template import Context, loader
 from django import forms
 from django.core.mail import send_mail
+from members.models import MyUser
 
 
 class UserCreationForm(forms.ModelForm):
@@ -18,8 +18,8 @@ class UserCreationForm(forms.ModelForm):
                               help_text='Enter your email address again. A confirmation email will be sent to this address.')
 
     class Meta:
-        model = User
-        fields = ('first_name', 'last_name', 'username')
+        model = MyUser
+        fields = ('first_name', 'last_name', 'username', 'date_of_birth')
         widgets = {
             'first_name': TextInput(attrs={'required': True, 'placeholder': ' First_name', 'autofocus': True}),
             'last_name': TextInput(attrs={'required': True, 'placeholder': ' Last_name'}),
@@ -35,7 +35,7 @@ class UserCreationForm(forms.ModelForm):
 
     def clean_email1(self):
         email1 = self.cleaned_data['email1']
-        users_found = User.objects.filter(email__iexact=email1)
+        users_found = MyUser.objects.filter(email__iexact=email1)
         if len(users_found) >= 1:
             raise forms.ValidationError('A user with that email already exist.')
         return email1
@@ -62,6 +62,7 @@ class UserCreationForm(forms.ModelForm):
             domain = current_site.domain
         else:
             site_name = domain = domain_override
+
         t = loader.get_template(email_template_name)
         c = {
             'email': user.email,
