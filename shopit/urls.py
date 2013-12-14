@@ -9,3 +9,5 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('accounts.urls')),
     url(r'^dashboard/', include('dashboard.urls')),
 )
+
+handler404 = 'shopit.views.handler404'

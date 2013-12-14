@@ -20,11 +20,11 @@ INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, t
 
 
 -- User: admin (username) - admin (password)
-INSERT INTO members_myuser (id, password, last_login, is_superuser, username, first_name, last_name, email, is_active, date_joined, date_of_birth) VALUES
-(100, 'pbkdf2_sha256$12000$UvU6oGn0A2o2$TbzlxQTVi3wQkC86Vmbm3eSLJNRBpMsk/1/vQkrQcgs=', '2013-11-21 21:32:44.384627+01', 't', 'admin', 'admin', 'admin', 'admin@shopit.at', 't', '2013-11-21 21:32:44.384627+01', '1993-10-0');
+INSERT INTO members_myuser (id, password, last_login, is_superuser, username, first_name, last_name, email, is_active, date_joined, year_of_birth, month_of_birth, day_of_birth) VALUES
+(1, 'pbkdf2_sha256$12000$UvU6oGn0A2o2$TbzlxQTVi3wQkC86Vmbm3eSLJNRBpMsk/1/vQkrQcgs=', '2013-11-21 21:32:44.384627+01', 't', 'admin', 'admin', 'admin', 'admin@shopit.at', 't', '2013-11-21 21:32:44.384627+01', '1993', 'Feb', '9');
 
-INSERT INTO members_myuser (id, password, last_login, is_superuser, username, first_name, last_name, email, is_active, date_joined, date_of_birth) VALUES
-(200, 'pbkdf2_sha256$12000$NjD5m0yt28pS$U9+yfJ7G+rp77QDoqbt0jbhU18l8JnYWxsyoPgQbgD8=', '2013-12-08 04:55:41+01', 't', 'eddie', 'Eduardo', 'Da Silva', 'mr.brown.is.in.town@gmail.com', 't', '2013-12-08 04:55:41+01', '1993-10-04');
+INSERT INTO members_myuser (id, password, last_login, is_superuser, username, first_name, last_name, email, is_active, date_joined, year_of_birth, month_of_birth, day_of_birth) VALUES
+(200, 'pbkdf2_sha256$12000$NjD5m0yt28pS$U9+yfJ7G+rp77QDoqbt0jbhU18l8JnYWxsyoPgQbgD8=', '2013-12-08 04:55:41+01', 't', 'eddie', 'Eduardo', 'Da Silva', 'mr.brown.is.in.town@gmail.com', 't', '2013-12-08 04:55:41+01', '1993', 'Feb', '30');
 
 
 -- Condition

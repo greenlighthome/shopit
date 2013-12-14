@@ -4,6 +4,14 @@ body {
 
 form {
   .form-group {
+
+    .date {
+      display: inline;
+    }
+    #date {
+      margin-top: 5px;
+      width: 320px;
+    }
     .form-control {
       background: none;
       border: none;
@@ -12,6 +20,11 @@ form {
       margin-left: auto;
       margin-right: auto;
     }
+    .form-control.date {
+      margin-left: 10px;
+      padding-right: 3px;
+    }
+
     .help-text {
       font-size: 0.8em;
       text-align: center;
@@ -63,7 +76,6 @@ form {
 .error {
   display: block;
   text-align: center;
-
 }
 #register-link {
   display: block;
@@ -71,12 +83,19 @@ form {
   margin-top: 20px;
   text-decoration: none;
 }
-
 #login-header {
   padding-bottom: 20px;
   margin-top: 10px;
 }
-
+select#id_year_of_birth {
+  width: 70px;
+}
+select#id_month_of_birth {
+  width: 70px;
+}
+select#id_day_of_birth {
+  width: 50px;
+}
 
 /* Landscape phones and down */
 @media (max-width: 480px) {

@@ -11,7 +11,7 @@
         <div class="container">
             <h5 class="">Username: <span class="text-muted">{{ user.username }}</span></h5>
             <h5 class="">Full name: <span class="text-muted">{{ user.username|capfirst }} {{ user.last_name|capfirst }}</span></h5>
-            <h5 class="">Date of birth: <span class="text-muted">{{ user.date_of_birth }}</span></h5>
+            <h5 class="">Date of birth: <span class="text-muted">{{ user.day_of_birth }} {{ user.month_of_birth }} {{ user.year_of_birth }}  </span></h5>
             <h5 class="">Email address: <span class="text-muted">{{ user.email }}</span></h5>
 
         </div>
@@ -21,7 +21,7 @@
             <address>
                 {% if user.street %}
                     <h5 class="address">{{ user.street }} {{ user.number }}/{{ user.door }}</h5>
-                    <h5 class="address">{{ user.district }} {{ user.postal_code }}</h5>
+                    <h5 class="address">{{ user.district }}, {{ user.postal_code }}</h5>
                     <h5 class="address">{{ user.province }}, {{ user.country }}</h5>
 
                 {% elif not user.street %}

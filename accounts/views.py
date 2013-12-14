@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect, Http404
 from accounts.forms import UserCreationForm

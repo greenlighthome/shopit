@@ -1,6 +1,13 @@
 body {
   margin: 70px 30px 60px 30px;
 }
+form .form-group .date {
+  display: inline;
+}
+form .form-group #date {
+  margin-top: 5px;
+  width: 320px;
+}
 form .form-group .form-control {
   background: none;
   border: none;
@@ -8,6 +15,10 @@ form .form-group .form-control {
   width: 170px;
   margin-left: auto;
   margin-right: auto;
+}
+form .form-group .form-control.date {
+  margin-left: 10px;
+  padding-right: 3px;
 }
 form .form-group .help-text {
   font-size: 0.8em;
@@ -63,6 +74,15 @@ form .form-group .warning li {
 #login-header {
   padding-bottom: 20px;
   margin-top: 10px;
+}
+select#id_year_of_birth {
+  width: 70px;
+}
+select#id_month_of_birth {
+  width: 70px;
+}
+select#id_day_of_birth {
+  width: 50px;
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {

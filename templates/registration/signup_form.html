@@ -31,9 +31,14 @@
                         <p class="help-text text-muted">{{ form.username.help_text }}</p>
                     </div>
                     <hr>
-                    <div class="form-group">
+                    <div class="form-group inline-group">
+
                         <label class="control-label" for="date_of_birth">Date of birth: </label>
-                        <span class="form-control">{{ form.date_of_birth }}</span>
+                        <div id="date" class="container">
+                        <span class="form-control date">{{ form.day_of_birth }}</span>
+                        <span class="form-control date">{{ form.month_of_birth }}</span>
+                        <span class="form-control date">{{ form.year_of_birth }}</span>
+                            </div>
                     </div>
 
 

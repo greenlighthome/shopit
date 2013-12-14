@@ -1,11 +1,11 @@
 from django.contrib.sites.models import Site
 from django.contrib.auth.tokens import default_token_generator
-from django.forms import TextInput, PasswordInput, EmailInput, DateInput
+from django.forms import TextInput, PasswordInput, EmailInput, DateInput, Select
 from django.utils.http import int_to_base36
 from django.template import Context, loader
 from django import forms
 from django.core.mail import send_mail
-from members.models import MyUser
+from members.models import MyUser, YEAR, MONTH, DAY
 
 
 class UserCreationForm(forms.ModelForm):
@@ -19,12 +19,14 @@ class UserCreationForm(forms.ModelForm):
 
     class Meta:
         model = MyUser
-        fields = ('first_name', 'last_name', 'username', 'date_of_birth')
+        fields = ('first_name', 'last_name', 'username', 'day_of_birth', 'month_of_birth', 'year_of_birth')
         widgets = {
             'first_name': TextInput(attrs={'required': True, 'placeholder': ' First_name', 'autofocus': True}),
             'last_name': TextInput(attrs={'required': True, 'placeholder': ' Last_name'}),
             'username': TextInput(attrs={'required': True, 'placeholder': ' Username'}),
-            'date_of_birth': DateInput(attrs={'required': True, 'placeholder': ' yyyy-mm-dd'})
+            'day_of_birth': Select(attrs={'required': True}, choices=DAY),
+            'month_of_birth': Select(attrs={'required': True}, choices=MONTH),
+            'year_of_birth': Select(attrs={'required': True}, choices=YEAR),
         }
 
     def clean_password2(self):

@@ -108,6 +108,15 @@ h3 {
 #id_door {
   width: 35px;
 }
+select#id_year_of_birth {
+  width: 70px;
+}
+select#id_month_of_birth {
+  width: 70px;
+}
+select#id_day_of_birth {
+  width: 50px;
+}
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -163,7 +172,7 @@ form#update .form-group #update-button {
 #user-update-box {
   margin-top: 30px;
   padding: 4px 25px 20px 25px;
-  max-width: 400px;
+  max-width: 430px;
   min-width: 324px;
   margin-left: auto;
   margin-right: auto;

@@ -20,11 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'v5pz@ebydg6x2o)06d#^qo&yp$)0%@z=74gztxefg=w#tsyi_v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shopit', 'localhost']
 
 
 # Application definition
@@ -110,3 +110,5 @@ EMAIL_USE_TLS = True
 AUTH_USER_MODEL = 'members.MyUser'
 
 LOGIN_REDIRECT_URL = '/'
+
+handler404 = 'accounts.views.handler404'

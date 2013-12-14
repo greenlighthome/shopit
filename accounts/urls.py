@@ -1,5 +1,7 @@
 from django.conf.urls import patterns, url
 
+handler404 = 'views.handle404'
+
 urlpatterns = patterns('',
     url(r'^login/$', 'django.contrib.auth.views.login'),
 
