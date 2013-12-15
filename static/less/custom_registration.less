@@ -1,5 +1,6 @@
 body {
-  margin: 70px 30px 60px 30px;
+  margin: 70px 30px 0px 30px;
+  padding-bottom: 80px;
 }
 
 form {
@@ -51,7 +52,7 @@ form {
 #box, #login-box{
   margin-top: 30px;
   padding: 4px 25px 20px 25px;
-  max-width: 350px;
+  width: 350px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
@@ -99,6 +100,10 @@ select#id_day_of_birth {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  body {
+  margin: 70px 0px 60px 10px;
+}
+
   .register {
     position: relative;
     left: 20px;

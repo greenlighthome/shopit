@@ -83,7 +83,7 @@ class MyUser(AbstractBaseUser):
         return self.username
 
     def get_short_name(self):
-        pass
+        return self.username
 
     # The user is identified by their email address return self.email
     # On Python 3: def __str__(self):
