@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     url(r'^', include('web_shop.urls')),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^dashboard/', include('dashboard.urls')),
+    url(r'^search/$', include('engine.urls')),
 )
 
 handler404 = 'shopit.views.handler404'
