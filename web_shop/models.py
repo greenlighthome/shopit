@@ -1,7 +1,5 @@
 from django.core.urlresolvers import reverse
 from django.db import models
-from django.contrib.auth.models import User
-from django.forms import ModelForm
 from django.template.defaultfilters import slugify
 from members.models import MyUser
 
@@ -46,3 +44,15 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse('dashboard-detail-view', kwargs={'slug': slugify(self.name), 'pk': self.id})
 
+
+class UserSales(models.Model):
+    id = models.AutoField(primary_key=True)
+    title = models.TextField(max_length=100)
+    name = models.CharField(max_length=50)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    image = models.ImageField(upload_to='images/products/%Y/%m/%d', blank=True)
+    saler = models.ForeignKey(MyUser)
+    shipping_cost = models.DecimalField(max_digits=6, decimal_places=2)
+
+    def __unicode__(self):
+        return self.name

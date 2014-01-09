@@ -17,7 +17,8 @@ INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, t
 (5, NULL , 'video', 'video', 't', 1, 2, 9, 0, 'uploads/categories/thumbnails/video.png', 683, 558, 0, 'video', ' ', ' ', ' ', ' ');
 INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, tree_id, level, thumbnail, thumbnail_width, thumbnail_height, "order", alternate_title, alternate_url, description, meta_keywords, meta_extra) VALUES
 (9, NULL , 'software', 'software', 't', 1, 2, 7, 0, 'uploads/categories/thumbnails/software.png', 387, 432, 0, 'software', ' ', ' ', ' ', ' ');
-
+INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, tree_id, level, thumbnail, thumbnail_width, thumbnail_height, "order", alternate_title, alternate_url, description, meta_keywords, meta_extra) VALUES
+(10, NULL, 'photo',	'photo', 't',	1, 2,	7, 0,	'uploads/categories/thumbnails/camera-lens-rotated_4.png', 340,	340, 0,	'photo', '', '', '', '');
 
 -- User: admin (username) - admin (password)
 INSERT INTO members_myuser (id, password, last_login, is_superuser, username, first_name, last_name, email, is_active, date_joined, year_of_birth, month_of_birth, day_of_birth) VALUES
@@ -51,7 +52,10 @@ VALUES (3, 'Xbox One Console', 'Xbox One', 2, '2013-12-04', 1, 550.00, 'With Xbo
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
 VALUES (5, 'At Games ATARI Flashback 3', 'ATARI', 2, '2013-12-04', 1, 58.00, '60 Built-In ATARI Games.',
         7, 'images/products/2013/12/03/atari.jpg', 1, 't', 1, 13.21);
-
+INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
+VALUES (6,	'Nikon D80 10.2MP Digital SLR Camera (Body only)',	'Nikon D80', 	'2',	'2014-01-09',	'1',	'435.00',	'10.2-megapixel CCD captures enough detail for large, photo-quality prints\r\nBody only; lens must be purchased separately\r\n2.5-inch LCD display; power-up time of approximately 0.2 seconds\r\nRAW and JPEG capture; burst mode allows for capture of three frames per second for up to 100 pictures\r\nImage optimization functions and in-camera image retouching',	10,	'images/products/2014/01/09/d80.jpg',	200,	't',	1,	5.50);
+INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
+VALUES (7,	'Canon EOS Rebel T3 12.2 MP CMOS Digital SLR with 18-55mm IS II Lens', 'Canon EOS Rebel',	2, '2014-01-09',	1,	'399.00',	'2.2 MP CMOS sensor and DIGIC 4 Image Processor for high image quality and speed.\r\nISO 100 - 6400 for shooting from bright to dim light.\r\nImproved EOS HD Movie mode with expanded recording and with in-camera video editing options.\r\nHigh speed, reliable 9-point AF system utilizing a high precision, f/5.6 cross-type center point.\r\nEnhanced metering with a 63-zone, Dual-layer metering system for accurate metering between exposures.',	10,	'images/products/2014/01/09/rebel.jpg',	200, 't',	1,	5.50);
 -- Django Admin Log
 INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (1, '2013-12-03 23:52:09.187854+01', 1, 11, 1, 'audio', 1, ' ');
 INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (2, '2013-12-03 23:52:49.808881+01', 1, 11, 2, 'tablets', 1, ' ');

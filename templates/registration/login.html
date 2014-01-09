@@ -6,7 +6,7 @@
     <div class="container">
         <div id="login-box">
             <h3 id="login-header" class="text-info text-center">Login</h3>
-            <form action="{% url 'django.contrib.auth.views.login' %}" method="post">
+            <form action="{% url 'accounts.views.login' %}" method="post">
             {% csrf_token %}
                 <div class="form-horizontal">
                     <div class="form-group">

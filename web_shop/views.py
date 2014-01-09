@@ -1,5 +1,6 @@
 from django.core.mail import EmailMultiAlternatives
 from categories.models import Category
+from django.http import request
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context
 from django.template.loader import get_template
