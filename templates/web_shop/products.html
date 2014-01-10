@@ -13,8 +13,11 @@
 {% endblock %}
 
 {% block content %}
+    {% block search %}
+        <ul id="search-results"></ul>  <!-- search results will appear here -->
+    {% endblock %}
     <div class="page-header">
-        <h2 class="text-info">{{ title }}</h2>
+        <h2 class="text-info header">{{ title }}</h2>
     </div>
     <div class="container">
         {% for product in product_list %}

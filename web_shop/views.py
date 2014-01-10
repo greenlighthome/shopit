@@ -1,6 +1,6 @@
+from django.core.context_processors import csrf
 from django.core.mail import EmailMultiAlternatives
 from categories.models import Category
-from django.http import request
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context
 from django.template.loader import get_template
@@ -11,16 +11,27 @@ from django.template import RequestContext
 from members.models import MyUser
 
 
-class WelcomeView(ListView):
-    """ Index page """
-    model = Category
-    template_name = 'web_shop/index.html'
+def welcome(request):
+    language = 'en-gb'
+    session_language = 'en-gb'
 
-    def get_context_data(self, **kwargs):
-        context = super(WelcomeView, self).get_context_data(**kwargs)
-        context['category_list'] = Category.objects.all()
-        context['title'] = 'Welcome to Shopit'
-        return context
+    if 'lang' in request.COOKIES:
+        language = request.COOKIES['lang']
+
+    if 'lang' in request.session:
+        session_language = request.session['lang']
+
+    args = {}
+    args.update(csrf(request))
+
+    args['products'] = Product.objects.all()
+    args['language'] = language
+    args['session_language'] = session_language
+
+    category_list = Category.objects.all()
+    title = 'Welcome to Shopit'
+    return render_to_response('web_shop/index.html', {'args': args, 'category_list': category_list, 'title': title},
+                              context_instance=RequestContext(request))
 
 
 class CategoryListView(ListView):
@@ -96,3 +107,14 @@ def confirmation_view(request, product_id, saler_id):
     return render_to_response('web_shop/confirmation.html',
                               {'title': 'Congratulations', 'product': product, 'category_list': category_list, 'user':user},
                                 context_instance=RequestContext(request))
+
+
+def search_titles(request):
+    if request.method == 'POST':
+        search_text = request.POST['search_text']
+    else:
+        search_text = ''
+
+    products = Product.objects.filter(title__contains=search_text)
+    return render_to_response('web_shop/ajax_search.html', {'products': products},
+                              context_instance=RequestContext(request))

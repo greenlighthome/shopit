@@ -2,6 +2,7 @@ body {
   max-width: 1200px;
   overflow-y: scroll;
   overflow-x: hidden;
+  padding-left: 30px;
   margin: 70px auto 0px auto;
   padding-bottom: 80px;
 }
@@ -12,6 +13,23 @@ body h3 {
 }
 body .cog {
   font-size: 1.3em;
+}
+.search-block {
+  position: absolute;
+  padding: 10px 30px 10px 30px;
+  left: 0;
+  top: 50px;
+  width: auto;
+  height: auto;
+  background-color: #ffffff;
+  opacity: 0.7;
+  z-index: 100;
+}
+.results {
+  list-style: none;
+}
+.results a {
+  color: #000000;
 }
 .header,
 .pagination {
@@ -85,7 +103,7 @@ body .cog {
   font-weight: bold;
   color: #aa0000;
 }
-.no-style {
+a.no-style {
   text-decoration: none;
 }
 /*

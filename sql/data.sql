@@ -19,6 +19,8 @@ INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, t
 (9, NULL , 'software', 'software', 't', 1, 2, 7, 0, 'uploads/categories/thumbnails/software.png', 387, 432, 0, 'software', ' ', ' ', ' ', ' ');
 INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, tree_id, level, thumbnail, thumbnail_width, thumbnail_height, "order", alternate_title, alternate_url, description, meta_keywords, meta_extra) VALUES
 (10, NULL, 'photo',	'photo', 't',	1, 2,	7, 0,	'uploads/categories/thumbnails/camera-lens-rotated_4.png', 340,	340, 0,	'photo', '', '', '', '');
+INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, tree_id, level, thumbnail, thumbnail_width, thumbnail_height, "order", alternate_title, alternate_url, description, meta_keywords, meta_extra) VALUES
+(11,	NULL,	'video games', 'video-games',	't', 1,	2, 10, 0,	'uploads/categories/thumbnails/video-games_1.png',	800, 800,	0, 'video games', '', '', '', '');
 
 -- User: admin (username) - admin (password)
 INSERT INTO members_myuser (id, password, last_login, is_superuser, username, first_name, last_name, email, is_active, date_joined, year_of_birth, month_of_birth, day_of_birth) VALUES
@@ -45,7 +47,7 @@ VALUES (2, 'PlayStation 4', 'PS4', 1, '2013-12-03', 1, 450.00, 'The official rel
         7, 'images/products/2013/12/03/ps4_2.jpg', 1, 't', 1, 12.60);
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
 VALUES (4, 'Battlefield 4 - Playstation 3', 'Battlefield 4', 1, '2013-12-03', 1, 54.00, 'Only in Battlefield can you change the landscape in real-time with interactive environments that react to your every move.',
-        7, 'images/products/2013/12/03/battlefield_4.jpg', 1, 't', 1, 12.60);
+        11, 'images/products/2013/12/03/battlefield_4.jpg', 1, 't', 1, 12.60);
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
 VALUES (3, 'Xbox One Console', 'Xbox One', 2, '2013-12-04', 1, 550.00, 'With Xbox One, you can quickly jump from TV to movies to music to a game.',
         7, 'images/products/2013/12/03/xbox_console.jpg', 1, 't', 1, 12.60);
@@ -54,8 +56,24 @@ VALUES (5, 'At Games ATARI Flashback 3', 'ATARI', 2, '2013-12-04', 1, 58.00, '60
         7, 'images/products/2013/12/03/atari.jpg', 1, 't', 1, 13.21);
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
 VALUES (6,	'Nikon D80 10.2MP Digital SLR Camera (Body only)',	'Nikon D80', 	'2',	'2014-01-09',	'1',	'435.00',	'10.2-megapixel CCD captures enough detail for large, photo-quality prints\r\nBody only; lens must be purchased separately\r\n2.5-inch LCD display; power-up time of approximately 0.2 seconds\r\nRAW and JPEG capture; burst mode allows for capture of three frames per second for up to 100 pictures\r\nImage optimization functions and in-camera image retouching',	10,	'images/products/2014/01/09/d80.jpg',	200,	't',	1,	5.50);
+
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
 VALUES (7,	'Canon EOS Rebel T3 12.2 MP CMOS Digital SLR with 18-55mm IS II Lens', 'Canon EOS Rebel',	2, '2014-01-09',	1,	'399.00',	'2.2 MP CMOS sensor and DIGIC 4 Image Processor for high image quality and speed.\r\nISO 100 - 6400 for shooting from bright to dim light.\r\nImproved EOS HD Movie mode with expanded recording and with in-camera video editing options.\r\nHigh speed, reliable 9-point AF system utilizing a high precision, f/5.6 cross-type center point.\r\nEnhanced metering with a 63-zone, Dual-layer metering system for accurate metering between exposures.',	10,	'images/products/2014/01/09/rebel.jpg',	200, 't',	1,	5.50);
+
+INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
+VALUES (8, 'Super Mario 3D Land',	'Super Mario Land',	2, '2014-01-10', 1,	20.00, 'Mario can perform a rolling somersault attack or run fast with a dash move. Or, as Tanooki Mario, he can use his tail to hover, perform floating jumps or attacks.\r\nNew enemies include Goombas with tails, tall stacks of Goombas and a Piranha Plant that spits ink to obscure a players view.\r\nNew and familiar abilities add unique game-play strategies to the adventure\r\n3D visuals make it easier for players to judge the depths and distances in their environments. Players can more accurately judge the jump to the next platform or how far Mario is from a question block.\r\nThe Circle Pad gives players complete control to confidently move Mario through fun and challenging environments.',	11,	'images/products/2014/01/10/mario_land_2.jpg', 1,	't', 1,	5.50);
+
+INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
+VALUES (9, 'Halo 3 - Xbox 360',	'Halo 3',	2, '2014-01-10', 1,	10.00, 'Expands on the franchise and adds a wealth of technical and gameplay advancements\r\nUnparalleled first-person shooter experience and the most compelling story of the trilogy\r\nBuilds upon the social multiplayer experience and innovative, evolving, online gameplay of Halo 2\r\nLoaded with high-definition visuals, enhanced AI, an advanced lighting engine, new weapons, characters, and challenges\r\n',	11,	'images/products/2014/01/10/hallo_xbox.jpg', 200,	't', 1,	3.60);
+
+INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
+VALUES (10,	'Harman Kardon SoundSticks Wireless Bluetooth Enabled 2.1',	'Harman Kardon SoundSticks', 1,	'2014-01-10',	2, 229.00, 'Integrated Bluetooth technology for high performance wireless connectivity\r\n6-Inch (150mm) down-firing subwoofer for deep bass\r\nEight full-range transducers for crystal clear sound\r\nElegant touch controls for volume and mute\r\nAwe-inspiring industrial design\r\n1/8-Inch (3.5mm) stereo audio connection',	1, 'images/products/2014/01/10/soundsticks.jpg', 200,	't', 1,	12.00);
+
+INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
+VALUES (11,	'Audio Technica AT-LP60USB Fully Automatic Belt Driven Turntable with USB Port', 'Audio Technica AT-LP60USB', 2, '2014-01-10', 1,	99.00, 'USB output: no special drivers required for direct connection to your computer (USB port located on back of item)\r\nBuilt-in switchable stereo phono/line level pre-amplifier. Permits use of turntable with stereo systems having either magnetic-phono inputs\r\nPC & Mac compatible\r\nFully automatic operation keeps LPs scratch free\r\nTwo speeds: 33 1/3 rpm and 45 rpm\r\n2 speed turntable - 33 1/3 and 45 RPM\r\n',	1, 'images/products/2014/01/10/turn-table.jpg',	200, 't',	2, 13.55);
+
+
+
 -- Django Admin Log
 INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (1, '2013-12-03 23:52:09.187854+01', 1, 11, 1, 'audio', 1, ' ');
 INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (2, '2013-12-03 23:52:49.808881+01', 1, 11, 2, 'tablets', 1, ' ');

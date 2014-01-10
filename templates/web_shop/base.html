@@ -2,16 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" media="screen"/>
     <link rel="stylesheet" href="{% static 'css/custom.css' %}" type="text/css" media="screen"/>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
     <title>{% block title %} {{ title|capfirst }} {% endblock %}</title>
-
 </head>
 
 <body>
@@ -53,9 +50,9 @@
             </ul>
 
             <form class="navbar-form navbar-left" role="search">
+                {% csrf_token %}
                 <div class="form-inline">
-                    <input type="text" class="form-control search" placeholder="Search">
-                    <button type="submit" class="btn btn-default search-button"><span class="glyphicon glyphicon-search"></span></button>
+                    <input id="search" name="search" type="text" class="form-control search" placeholder="Search">
                 </div>
             </form>
 
@@ -81,6 +78,7 @@
 {% endblock %} <!-- End of navigation block (main horizontal navigation menu) -->
 
 {% block content %}
+    {% block search %} {% endblock %}
 
     {% block pagination %} {% endblock %}
 

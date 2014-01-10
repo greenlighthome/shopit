@@ -11,8 +11,11 @@
 {% endblock %}
 
 {% block content %}
+    {% block search %}
+        <ul id="search-results"></ul>  <!-- search results will appear here -->
+    {% endblock %}
     <div class="page-header">
-        <h2 class="text-info">Details</h2>
+        <h2 class="text-info header">Details</h2>
     </div>
     <div class="container">
         <h3 class="text-info"><span class="price"> {{ product.condition|capfirst }}</span> {{ product.title }}</h3>
