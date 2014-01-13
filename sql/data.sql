@@ -24,7 +24,7 @@ INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, t
 
 -- User: admin (username) - admin (password)
 INSERT INTO members_myuser (id, password, last_login, is_superuser, username, first_name, last_name, email, is_active, date_joined, year_of_birth, month_of_birth, day_of_birth) VALUES
-(1, 'pbkdf2_sha256$12000$UvU6oGn0A2o2$TbzlxQTVi3wQkC86Vmbm3eSLJNRBpMsk/1/vQkrQcgs=', '2013-11-21 21:32:44.384627+01', 't', 'admin', 'admin', 'admin', 'admin@shopit.at', 't', '2013-11-21 21:32:44.384627+01', '1993', 'Feb', '9');
+(100, 'pbkdf2_sha256$12000$UvU6oGn0A2o2$TbzlxQTVi3wQkC86Vmbm3eSLJNRBpMsk/1/vQkrQcgs=', '2013-11-21 21:32:44.384627+01', 't', 'admin', 'admin', 'admin', 'admin@shopit.at', 't', '2013-11-21 21:32:44.384627+01', '1993', 'Feb', '9');
 
 INSERT INTO members_myuser (id, password, last_login, is_superuser, username, first_name, last_name, email, is_active, date_joined, year_of_birth, month_of_birth, day_of_birth) VALUES
 (200, 'pbkdf2_sha256$12000$NjD5m0yt28pS$U9+yfJ7G+rp77QDoqbt0jbhU18l8JnYWxsyoPgQbgD8=', '2013-12-08 04:55:41+01', 't', 'eddie', 'Eduardo', 'Da Silva', 'mr.brown.is.in.town@gmail.com', 't', '2013-12-08 04:55:41+01', '1993', 'Feb', '30');
@@ -41,19 +41,19 @@ INSERT INTO web_shop_shippingmethod (id, shipping_method) VALUES (2, 'express');
 -- Products
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
 VALUES (1, 'Xbox One Console', 'Xbox One', 2, '2013-12-03', 3, 500.00, 'With Xbox One, you can quickly jump from TV to movies to music to a game.',
-        7, 'images/products/2013/12/03/xbox_one.jpg', 1, 't', 1, 12.60);
+        7, 'images/products/2013/12/03/xbox_one.jpg', 100, 't', 1, 12.60);
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
 VALUES (2, 'PlayStation 4', 'PS4', 1, '2013-12-03', 1, 450.00, 'The official release date for the PlayStation 4 is November 15, 2013. Confirmed orders will arrive at your shipping address based on the shipping speed selected.',
-        7, 'images/products/2013/12/03/ps4_2.jpg', 1, 't', 1, 12.60);
+        7, 'images/products/2013/12/03/ps4_2.jpg', 100, 't', 1, 12.60);
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
 VALUES (4, 'Battlefield 4 - Playstation 3', 'Battlefield 4', 1, '2013-12-03', 1, 54.00, 'Only in Battlefield can you change the landscape in real-time with interactive environments that react to your every move.',
-        11, 'images/products/2013/12/03/battlefield_4.jpg', 1, 't', 1, 12.60);
+        11, 'images/products/2013/12/03/battlefield_4.jpg', 100, 't', 1, 12.60);
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
 VALUES (3, 'Xbox One Console', 'Xbox One', 2, '2013-12-04', 1, 550.00, 'With Xbox One, you can quickly jump from TV to movies to music to a game.',
-        7, 'images/products/2013/12/03/xbox_console.jpg', 1, 't', 1, 12.60);
+        7, 'images/products/2013/12/03/xbox_console.jpg', 100, 't', 1, 12.60);
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
 VALUES (5, 'At Games ATARI Flashback 3', 'ATARI', 2, '2013-12-04', 1, 58.00, '60 Built-In ATARI Games.',
-        7, 'images/products/2013/12/03/atari.jpg', 1, 't', 1, 13.21);
+        7, 'images/products/2013/12/03/atari.jpg', 100, 't', 1, 13.21);
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
 VALUES (6,	'Nikon D80 10.2MP Digital SLR Camera (Body only)',	'Nikon D80', 	'2',	'2014-01-09',	'1',	'435.00',	'10.2-megapixel CCD captures enough detail for large, photo-quality prints\r\nBody only; lens must be purchased separately\r\n2.5-inch LCD display; power-up time of approximately 0.2 seconds\r\nRAW and JPEG capture; burst mode allows for capture of three frames per second for up to 100 pictures\r\nImage optimization functions and in-camera image retouching',	10,	'images/products/2014/01/09/d80.jpg',	200,	't',	1,	5.50);
 
@@ -61,7 +61,7 @@ INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantit
 VALUES (7,	'Canon EOS Rebel T3 12.2 MP CMOS Digital SLR with 18-55mm IS II Lens', 'Canon EOS Rebel',	2, '2014-01-09',	1,	'399.00',	'2.2 MP CMOS sensor and DIGIC 4 Image Processor for high image quality and speed.\r\nISO 100 - 6400 for shooting from bright to dim light.\r\nImproved EOS HD Movie mode with expanded recording and with in-camera video editing options.\r\nHigh speed, reliable 9-point AF system utilizing a high precision, f/5.6 cross-type center point.\r\nEnhanced metering with a 63-zone, Dual-layer metering system for accurate metering between exposures.',	10,	'images/products/2014/01/09/rebel.jpg',	200, 't',	1,	5.50);
 
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
-VALUES (8, 'Super Mario 3D Land',	'Super Mario Land',	2, '2014-01-10', 1,	20.00, 'Mario can perform a rolling somersault attack or run fast with a dash move. Or, as Tanooki Mario, he can use his tail to hover, perform floating jumps or attacks.\r\nNew enemies include Goombas with tails, tall stacks of Goombas and a Piranha Plant that spits ink to obscure a players view.\r\nNew and familiar abilities add unique game-play strategies to the adventure\r\n3D visuals make it easier for players to judge the depths and distances in their environments. Players can more accurately judge the jump to the next platform or how far Mario is from a question block.\r\nThe Circle Pad gives players complete control to confidently move Mario through fun and challenging environments.',	11,	'images/products/2014/01/10/mario_land_2.jpg', 1,	't', 1,	5.50);
+VALUES (8, 'Super Mario 3D Land',	'Super Mario Land',	2, '2014-01-10', 20,	20.00, 'Mario can perform a rolling somersault attack or run fast with a dash move. Or, as Tanooki Mario, he can use his tail to hover, perform floating jumps or attacks.\r\nNew enemies include Goombas with tails, tall stacks of Goombas and a Piranha Plant that spits ink to obscure a players view.\r\nNew and familiar abilities add unique game-play strategies to the adventure\r\n3D visuals make it easier for players to judge the depths and distances in their environments. Players can more accurately judge the jump to the next platform or how far Mario is from a question block.\r\nThe Circle Pad gives players complete control to confidently move Mario through fun and challenging environments.',	11,	'images/products/2014/01/10/mario_land_2.jpg', 100,	't', 1,	5.50);
 
 INSERT INTO web_shop_product (id, title, name, condition_id, date_added, quantity, price, description, category_id, image, saler_id, on_stock, shipping_method_id, shipping_cost)
 VALUES (9, 'Halo 3 - Xbox 360',	'Halo 3',	2, '2014-01-10', 1,	10.00, 'Expands on the franchise and adds a wealth of technical and gameplay advancements\r\nUnparalleled first-person shooter experience and the most compelling story of the trilogy\r\nBuilds upon the social multiplayer experience and innovative, evolving, online gameplay of Halo 2\r\nLoaded with high-definition visuals, enhanced AI, an advanced lighting engine, new weapons, characters, and challenges\r\n',	11,	'images/products/2014/01/10/hallo_xbox.jpg', 200,	't', 1,	3.60);
@@ -75,31 +75,29 @@ VALUES (11,	'Audio Technica AT-LP60USB Fully Automatic Belt Driven Turntable wit
 
 
 -- Django Admin Log
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (1, '2013-12-03 23:52:09.187854+01', 1, 11, 1, 'audio', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (2, '2013-12-03 23:52:49.808881+01', 1, 11, 2, 'tablets', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (3, '2013-12-03 23:53:02.866035+01', 1, 11, 3, 'ebooks', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (4, '2013-12-03 23:53:32.772051+01', 1, 11, 4, 'cellphones', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (5, '2013-12-03 23:53:46.37251+01', 1, 11, 5, 'video', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (6, '2013-12-03 23:54:02.81058+01', 1, 11, 6, 'DVD BR', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (7, '2013-12-03 23:54:25.664459+01', 1, 11, 7, 'gaming', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (8, '2013-12-03 23:54:44.008587+01', 1, 11, 8, 'computers', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (9, '2013-12-03 23:55:16.117557+01', 1, 11, 9, 'software', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (10, '2013-12-03 23:57:22.228659+01', 1, 7, 1, 'New', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (11, '2013-12-03 23:57:36.316968+01', 1, 7, 2, 'used', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (12, '2013-12-03 23:58:07.166666+01', 1, 8, 1, 'normal post', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (13, '2013-12-03 23:58:27.919388+01', 1, 9, 1, 'Xbox One', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (14, '2013-12-03 23:58:40.354577+01', 1, 7, 1, 'new', 2, 'Changed condition.');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (15, '2013-12-04 00:07:15.733453+01', 1, 9, 2, 'PS4', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (16, '2013-12-04 00:08:53.38645+01', 1, 9, 3, 'Xbox One', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (17, '2013-12-04 00:11:24.557944+01', 1, 9, 4, 'Battlefield 4', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (18, '2013-12-04 00:13:11.128921+01', 1, 9, 5, 'ATARI', 1, ' ');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (19, '2013-12-04 00:25:59.135253+01', 1, 4, 1, 'admin', 2, 'Changed first_name and last_name.');
-INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (20, '2013-12-04 18:50:00.29563+01', 1, 4, 1, 'admin', 2, 'Changed email.');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (1, '2013-12-03 23:52:09.187854+01', 100, 11, 1, 'audio', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (2, '2013-12-03 23:52:49.808881+01', 100, 11, 2, 'tablets', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (3, '2013-12-03 23:53:02.866035+01', 100, 11, 3, 'ebooks', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (4, '2013-12-03 23:53:32.772051+01', 100, 11, 4, 'cellphones', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (5, '2013-12-03 23:53:46.37251+01', 100, 11, 5, 'video', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (6, '2013-12-03 23:54:02.81058+01', 100, 11, 6, 'DVD BR', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (7, '2013-12-03 23:54:25.664459+01', 100, 11, 7, 'gaming', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (8, '2013-12-03 23:54:44.008587+01', 100, 11, 8, 'computers', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (9, '2013-12-03 23:55:16.117557+01', 100, 11, 9, 'software', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (10, '2013-12-03 23:57:22.228659+01', 100, 7, 1, 'New', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (11, '2013-12-03 23:57:36.316968+01', 100, 7, 2, 'used', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (12, '2013-12-03 23:58:07.166666+01', 100, 8, 1, 'normal post', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (13, '2013-12-03 23:58:27.919388+01', 100, 9, 1, 'Xbox One', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (14, '2013-12-03 23:58:40.354577+01', 100, 7, 1, 'new', 2, 'Changed condition.');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (15, '2013-12-04 00:07:15.733453+01', 100, 9, 2, 'PS4', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (16, '2013-12-04 00:08:53.38645+01', 100, 9, 3, 'Xbox One', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (17, '2013-12-04 00:11:24.557944+01', 100, 9, 4, 'Battlefield 4', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (18, '2013-12-04 00:13:11.128921+01', 100, 9, 5, 'ATARI', 1, ' ');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (19, '2013-12-04 00:25:59.135253+01', 100, 4, 1, 'admin', 2, 'Changed first_name and last_name.');
+INSERT INTO django_admin_log (id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message) VALUES (20, '2013-12-04 18:50:00.29563+01', 100, 4, 1, 'admin', 2, 'Changed email.');
 
 -- Fix sequences
---ALTER SEQUENCE accounts_userprofile_id_seq RESTART WITH 3;
-ALTER SEQUENCE auth_user_id_seq RESTART WITH 3;
-ALTER SEQUENCE categories_category_id_seq RESTART WITH 10;
+ALTER SEQUENCE categories_category_id_seq RESTART WITH 100;
 ALTER SEQUENCE django_admin_log_id_seq RESTART WITH 21;
 ALTER SEQUENCE web_shop_condition_id_seq RESTART WITH 3;
-ALTER SEQUENCE web_shop_product_id_seq RESTART WITH 6;
+ALTER SEQUENCE web_shop_product_id_seq RESTART WITH 100;

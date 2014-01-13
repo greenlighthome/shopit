@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'categories',
     'categories.editor',
     'members',
+    'notifications',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -1,21 +1,19 @@
 from categories.models import Category
 from dashboard.forms import ProductForm, AccountUpdateForm
 from django.contrib.messages.views import SuccessMessageMixin
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render_to_response
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView, ListView, TemplateView
 from web_shop.models import Product
 from members.models import MyUser
+from notifications.models import Notifications
 
 
-class DashboardView(ListView):
-    model = Product
-    template_name = 'dashboard/dashboard.html'
+def dashboard_view(request):
+    user = request.user
+    title = 'Dashboard'
+    notifications = Notifications.objects.filter(user=request.user, viewed=False)
 
-    def get_context_data(self, **kwargs):
-        context = super(DashboardView, self).get_context_data(**kwargs)
-        context['title'] = 'Dashboard'
-        context['user'] = MyUser.objects.all()
-        return context
+    return render_to_response('dashboard/dashboard.html', {'user': user, 'title': title, 'notifications': notifications})
 
 
 class UserActions(SuccessMessageMixin, CreateView, ListView):

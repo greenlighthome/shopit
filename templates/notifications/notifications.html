@@ -1,0 +1,8 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+    <h4>{{ notification.title }}</h4>
+    <h5>{{ notification.message }}</h5>
+    <p><a href="/notifications/delete/{{ notification.id }}">Mark as read</a></p>
+    <hr>
+{% endblock %}
