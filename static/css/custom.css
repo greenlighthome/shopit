@@ -43,6 +43,11 @@ body .cog {
 #slider .carousel-inner {
   max-width: 990px;
 }
+#slider.carousel.slide {
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(50, 50, 50, 0.69);
+  -moz-box-shadow: 0px 3px 8px 0px rgba(50, 50, 50, 0.69);
+  box-shadow: 0px 3px 8px 0px rgba(50, 50, 50, 0.69);
+}
 .carousel-caption h3 {
   color: #ffffff;
   font-size: 3.0em;
@@ -140,13 +145,6 @@ form div#image-holder {
   height: 200px;
   border: solid 1px;
 }
-
-/* Logo - active fix */
-a.navbar-brand.active {
-  color: #ffffff;
-  background-color: #080808;
-}
-
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   body {
