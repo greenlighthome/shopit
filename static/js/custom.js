@@ -32,6 +32,16 @@
         $(this).parent().addClass('active');
       }
     });
+      /**
+       * Logo - active fix
+       */
+    $('.navbar-header a').each(function(){
+      var currentPage = stripTrailingSlash($(this).attr('href'));
+
+      if (activePage == currentPage) {
+        $(this).addClass('active');
+      }
+    });
   });
 
     $(function(){

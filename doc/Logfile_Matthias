@@ -18,4 +18,5 @@ Matthias - Changes
 14.01.2014:
 [x] Fixed bug: JS search-bar fix (static/js/search_fix.js)
 [x] Fixed bug: slugs for categories (web_shop/views.py, web_shop/base.html)
+[x] Fixed bug: Logo - active fix
 

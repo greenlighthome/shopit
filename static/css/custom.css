@@ -140,6 +140,13 @@ form div#image-holder {
   height: 200px;
   border: solid 1px;
 }
+
+/* Logo - active fix */
+a.navbar-brand.active {
+  color: #ffffff;
+  background-color: #080808;
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   body {
