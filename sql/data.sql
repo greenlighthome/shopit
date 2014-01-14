@@ -8,7 +8,7 @@ INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, t
 INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, tree_id, level, thumbnail, thumbnail_width, thumbnail_height, "order", alternate_title, alternate_url, description, meta_keywords, meta_extra) VALUES
 (3, NULL , 'ebooks', 'ebooks', 't', 1, 2, 5, 0, 'uploads/categories/thumbnails/ebooks.png', 693, 693, 0, 'ebooks', ' ', ' ', ' ', ' ');
 INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, tree_id, level, thumbnail, thumbnail_width, thumbnail_height, "order", alternate_title, alternate_url, description, meta_keywords, meta_extra) VALUES
-(7, NULL , 'gaming consoles', 'gaming consoles', 't', 1, 2, 6, 0, 'uploads/categories/thumbnails/video-game-consoles.png', 385, 293, 0, 'gaming', ' ', ' ', ' ', ' ');
+(7, NULL , 'gaming consoles', 'gaming-consoles', 't', 1, 2, 6, 0, 'uploads/categories/thumbnails/video-game-consoles.png', 385, 293, 0, 'gaming', ' ', ' ', ' ', ' ');
 INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, tree_id, level, thumbnail, thumbnail_width, thumbnail_height, "order", alternate_title, alternate_url, description, meta_keywords, meta_extra) VALUES
 (8, NULL , 'computers', 'computers', 't', 1, 2, 4, 0, 'uploads/categories/thumbnails/computer.png', 1000, 945, 0, 'computers', ' ', ' ', ' ', ' ');
 INSERT INTO categories_category (id, parent_id, name, slug, active, lft, rght, tree_id, level, thumbnail, thumbnail_width, thumbnail_height, "order", alternate_title, alternate_url, description, meta_keywords, meta_extra) VALUES
