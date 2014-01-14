@@ -14,3 +14,8 @@ Matthias - Changes
 [x] Fixed bug: details page (templates/web_shop/details.html) without product image
 [x] Fixed bug: save logged in - User's id for saler field in product table (web_shop/views.py -> link)
 [x] Improved URL structure with slugs: http://localhost:8000/market/producttitle-productid/
+
+14.01.2014:
+[x] Fixed bug: JS search-bar fix (static/js/search_fix.js)
+[x] Fixed bug: slugs for categories (web_shop/views.py, web_shop/base.html)
+
