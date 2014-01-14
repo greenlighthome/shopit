@@ -65,7 +65,7 @@ class ProductByCategoryList(ListView):
     context_object_name = 'product_list'
 
     def get_queryset(self):
-        self.category = get_object_or_404(Category, name=self.args[0])
+        self.category = get_object_or_404(Category, slug=self.args[0]) # changed name=self.args[0] to slug=self.args[0]
         return Product.objects.filter(category=self.category)
 
     def get_context_data(self, **kwargs):
