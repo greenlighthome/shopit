@@ -1,6 +1,0 @@
-23/11/2013
-[√] Product by Category working in module web_shop
-[√] Refactor web_shop.view so that just Class Views are used
-[√] Pagination
-[√] Categorization
-[√] Add ne fields to database
