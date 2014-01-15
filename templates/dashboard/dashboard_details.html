@@ -13,7 +13,7 @@
     <a href="/dashboard/actions/{{ user.username }}"><button class="btn btn-primary btn-center">Back to actions</button></a>
 
     <div class="container">
-        <h3 class="text-info"><span class="price"> {{ product.condition }}</span> {{ product.title }}</h3>
+        <h3 class="text-info"><span class="price"> {{ product.condition|capfirst }}</span> {{ product.title }}</h3>
         <h4 class="text-info">{{ product.name }}</h4>
 
         {% if product.image %}
@@ -30,7 +30,7 @@
         <div class="modal-header">
             <h5 class="modal-title text-info">Description:</h5>
         </div>
-        <p class="">{{ product.description }}</p>
+        <p class="">{{ product.description|linebreaksbr }}</p>
     </div>
 
 {% endblock %}
